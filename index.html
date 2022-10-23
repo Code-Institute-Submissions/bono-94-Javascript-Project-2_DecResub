@@ -16,9 +16,86 @@
     </title>
 </head>
 <body>
+    
+    <div class="heading">
+        <img class="heading-logo" src="./assets/media/images/logo-two.png" alt="Bigger Fish official logo">
+    </div>
 
+    <div class="game">
+        <div class="game-area">
+            Table with players and pots
+        </div>
+        <div class="controls-area">
+            <div class="contols-first">
+                <button class="bttn-first">
+                    <i class="fa-duotone fa-sack-dollar"></i>
+                    STAKE
+                </button>
+                <button class="bttn-first">
+                    <i class="fa-duotone fa-sack-xmark"></i>
+                    FOLD
+                </button>
+            </div>
+            <div class="contols-second">
+                <button class="bttn-second">
+                    Invest set amounts with icons from the list
+                </button>
+            </div>
+            <div class="contols-third">
+                <button class="bttn-third">
 
-
+                    Type in your own amount
+                    Add to own amount
+                    Multiply any clicked amounts
+                </button>
+            </div>
+            <div class="contols-fourth">
+                <button class="bttn-fourth">
+                    <p>
+                        Custom Amount
+                    </p>
+                    <input id="custom-bet" type="number">
+                    <button id="custom-bet-btn">
+                    BET
+                </button>
+            </div>            
+        </div>
+        <div class="live-score-area">
+            <p class="live-score-chest">
+                Treasure Chest:
+                <span id="live-score-total">
+                    0$
+                </span>
+            </p>
+            <p class="live-score-user-bet">
+                Your Bet:
+                <span id="live-score-user-pot">
+                    0$
+                </span>
+            </p>
+            <p class="live-score-user-balance">
+                Balance:
+                <span id="live-score-user-bank">
+                    0$
+                </span>
+            </p>
+        </div>
+        <div class="past-score-area">
+            <p class="past-score-box">
+                Your Wins:
+                <span id="past-score-counter-w">
+                    0
+                </span>
+            </p>
+            <p class="past-score-box">
+                Your Losses:
+                <span id="past-score-counter-l">
+                    0
+                </span>
+            </p>
+        </div>
+    </div> 
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>   
     <script src="assets/js/script.js"></script>
 </body>
 
