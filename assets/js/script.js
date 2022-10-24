@@ -1,4 +1,10 @@
 
+/**
+ * Docstrings
+ * another row
+ * another row
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -6,33 +12,91 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
+                checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
                 alert(`You clicked $(gameType)`);
+                runGame(gameType);
             }
         })
     }
+
+    runGame("addition");
 })
 
+function runGame (gameType) {
+    if (gameType === "addition") {
+        displayAdditionQuestion(num1, num2);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type: ${gameType}. Aborting!`;
+    }
+}
 
+function checkAnswer () {
 
-function startGame () {
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Hey! You got it right! :D");
+    } else {
+        alert(`Aw snapp! you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+    }
+
+    runGame(calculatedAnswer[1]);
+}
+
+function homeScreen () {
 
 }
 
-function runGame () {
-    
+function userBalance (operand1) {
+    document.getElementById('operand1').textContent = operand1;
 }
 
-function checkReaction () {
+//dont display this to user
+function opponentBalance (operand2) {
+    document.getElementById('operand2').textContent = operand2;
+}
+
+// add this to run game segment
+function infuseBalanceRandom () {
+    let num1 = Math.floor(Math.random() * 1000000000000) + 1;
+    let num2 = Math.floor(Math.random() * 1000000000000) + 1;
+}
+
+function infuseBalanceCustom () {
 
 }
 
-function calculateReaction () {
+// check if you have no more
+function limitBalanceTracker () {
 
 }
 
-function calculateBalance () {
+function checkReactions () {
+    let operand1 = parseInt(document.getElementById('operand1').innerText)
+    let operand2 = parseInt(document.getElementById('operand2').innerText)
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+") {
+        return [operand1 + operand2, "addition"]
+    } else {
+        alert (`Unimplemented oprator ${operator}`);
+        throw `Unimplemented oprator ${operator}. Aborting!`;
+    }
+}   
+
+function userReaction () {
+
+}
+
+function opponentReaction () {
+
+}
+function calculateRemainingBalance () {
 
 }
 
@@ -53,9 +117,5 @@ function updateScoreWin () {
 }
 
 function updateScoreLoss () {
-
-}
-
-function opponentReaction () {
 
 }
