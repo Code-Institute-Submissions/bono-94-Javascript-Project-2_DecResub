@@ -1,11 +1,27 @@
 body {
-    background-color: skyblue;
+    background-color: rgb(206, 238, 251);
+    margin: 0;
+}
+
+.game {
+    background-image: url('../media/images/water-small-one.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 460px;
+    width: 100%;
 }
 
 .heading-logo {
     display: block;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
+}
+
+.bttn-first::after{
+    content:attr(data-type);
+    font-size: xx-large;
+    color: orange;
 }
