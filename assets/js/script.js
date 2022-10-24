@@ -21,12 +21,28 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
+    
     runGame("addition");
 })
 
 function runGame (gameType) {
+
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
+
+    //enter here amounts for credit
+
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "multiply") {
+        displayMultiplyQuestion(num1, num2);
+    } else if (gameType === "subtract") {
+        displaySubtractQuestion(num1, num2);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -56,6 +72,7 @@ function homeScreen () {
 
 function userBalance (operand1) {
     document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operator').textContent = "+"
 }
 
 //dont display this to user
@@ -84,15 +101,25 @@ function checkReactions () {
     let operator = document.getElementById("operator").innerText;
 
     if (operator === "+") {
-        return [operand1 + operand2, "addition"]
+        return [operand1 + operand2, "addition"];
+    } else if (operator === "x") {
+        return [opernd1 * operand2, "multiply"];
+    } else if (operator === "-") {
+        return [operand1 - operand2, "subtract"];
     } else {
         alert (`Unimplemented oprator ${operator}`);
         throw `Unimplemented oprator ${operator}. Aborting!`;
     }
 }   
 
+function liveReactions () {
+
+}
+
 function userReaction () {
 
+    document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
+    document.getElementById('operator').textContent = "x"
 }
 
 function opponentReaction () {
