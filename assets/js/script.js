@@ -41,8 +41,10 @@ function checkAnswer () {
 
     if (isCorrect) {
         alert("Hey! You got it right! :D");
+        incrementScore();
     } else {
         alert(`Aw snapp! you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongAnswer();
     }
 
     runGame(calculatedAnswer[1]);
@@ -114,8 +116,13 @@ function recordScore () {
 
 function updateScoreWin () {
 
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
 }
+
 
 function updateScoreLoss () {
 
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
