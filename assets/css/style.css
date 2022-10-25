@@ -443,8 +443,8 @@ footer {
 }
 
 #copyright {
-    background-color: black;
-    color: white;
+    background-color: coral;
+    color: rgb(44, 110, 73);
     text-align: center;
     margin-top: -70px;
     margin-bottom: -20px;
@@ -454,7 +454,7 @@ footer {
 }
 
 #footer-page-info {
-    background-color: coral;
+    background-color: rgb(91, 91, 91);
     width: 100%;
     margin-top: 20px;
     padding-top: 5px;
@@ -462,7 +462,7 @@ footer {
 }
 
 #footer-page-info p{
-    color: black;
+    color: coral;
     margin-left: 15px;
     font-size: small;
     font-weight: 900;
@@ -471,7 +471,7 @@ footer {
 #footer-page-info a{
     font-size: small;
     margin-left: 15px;
-    color: black;
+    color: coral;
     margin-top: 11px;
     font-weight: 900;
 }
