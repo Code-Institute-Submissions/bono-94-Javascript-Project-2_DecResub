@@ -9,27 +9,55 @@ h1 {
     color: coral !important;
     text-shadow: 0px 0px 1px black;
     text-decoration: none;
+    padding-top: 10px;
 }
 
 #nav-bar {
     width: 100%;
-    border-bottom: 5px solid  rgb(44, 110, 73);
+    border-bottom: 5px solid coral;
     height: fit-content;
-    display: inline-flex;
+    display: inline-block;
+    background-color: rgb(91, 91, 91) !important;
+    padding-bottom: 10px;
 }
 
 .nav-title {
     float: left;
-    margin-left: 10px;
+    margin-left: 14px;
+}
+
+.nav-title a {
+    text-decoration: none !important;
+    font-size: large;
 }
 
 #nav-menu {
     float: right;
     display: block;
+    background-color: silver;
+    border: 2px double rgb(44, 110, 73);
+    padding: 5px;
 }
 
-.game {
-    background-image: url('../media/images/water-small-one.jpg');
+#nav-menu a {
+    text-decoration: none !important;
+    color: rgb(44, 110, 73);
+    font-size: large;
+    padding: 5px;
+    font-weight: 600;
+}
+
+#nav-menu a:hover {
+    background-color: coral;
+    color: rgb(28, 71, 47);
+    font-weight: 900;
+}
+
+#cover-media {
+    border-bottom: 5px solid coral;
+}
+#game {
+    background-image: url('../media/images/water-small.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -122,7 +150,7 @@ h1, h2{
 
 #about-box {
     width: 100%;
-    margin-top: -23px;
+    margin-top: -24px;
     padding-bottom: 30px;
     background-image: url('../media/images/water-small.jpg');
     background-size: cover;
@@ -152,6 +180,8 @@ h1, h2{
 .about-boxes-content p {
     background-color: black;
     color: coral;
+    border: 3px solid rgb(44, 110, 73);
+    box-shadow: 0px 0px 10px 4px rgb(44, 110, 73);
     margin-left: 60px;
     font-size: large;
     margin-right: 70px !important;
@@ -165,6 +195,12 @@ h1, h2{
     padding-right: 5px;
     padding-left: 5px;
     font-size: x-large;
+}
+
+
+#about-boxes-title h3 {
+    border-top: 4px solid rgb(44, 110, 73);
+    border-bottom: 4px solid rgb(44, 110, 73);
 }
 
 /* Form */
@@ -226,6 +262,7 @@ h1, h2{
 #register-box {
     width: 100%;
     height: fit-content;
+    border-bottom: 5px solid coral;
 }
 
 #register-box input {
