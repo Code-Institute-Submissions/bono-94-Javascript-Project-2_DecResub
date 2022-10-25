@@ -1,6 +1,31 @@
+@import url();
+
 body {
     background-color: rgb(206, 238, 251);
     margin: 0;
+}
+
+h1 {
+    color: coral !important;
+    text-shadow: 0px 0px 1px black;
+    text-decoration: none;
+}
+
+#nav-bar {
+    width: 100%;
+    border-bottom: 5px solid  rgb(44, 110, 73);
+    height: fit-content;
+    display: inline-flex;
+}
+
+.nav-title {
+    float: left;
+    margin-left: 10px;
+}
+
+#nav-menu {
+    float: right;
+    display: block;
 }
 
 .game {
@@ -25,3 +50,392 @@ body {
     font-size: xx-large;
     color: orange;
 }
+
+
+#hero-image{
+    height:600px;
+    width: 100%;
+    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/main-image.png") no-repeat center center;
+
+    /* Animates zoom effect on loading the page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Creates the level of zoom for hero image */
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+/* More css for header from love running*/
+
+h1, h2{
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #252525;
+}
+
+#logo{
+    float: left;
+    font-size: 280%;
+    margin-left: 30px;
+}
+
+/* navigation links */
+
+#menu{
+    font-size: 110%;
+    letter-spacing: 4px;
+}
+
+#logo, #menu{
+    line-height: 75px;
+}
+
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover{
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active{
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Rules */
+
+#about-box {
+    width: 100%;
+    margin-top: -23px;
+    padding-bottom: 30px;
+    background-image: url('../media/images/water-small.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 5px solid coral;
+}
+
+#about-boxes-content {
+    border: 2px outset teal;
+}
+
+#about-boxes-title h3 {
+    background-color: black;
+    color:coral;
+    text-align: left;
+    margin-bottom: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: x-large;
+}
+
+#about-box h3{
+    padding-left: 10px;
+}
+
+.about-boxes-content p {
+    background-color: black;
+    color: coral;
+    margin-left: 60px;
+    font-size: large;
+    margin-right: 70px !important;
+    text-shadow: 0px 0px 1px black;
+    text-align: left;
+    width: fit-content;
+    padding: 12px;
+}
+
+#about-box i {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: x-large;
+}
+
+/* Form */
+.form {
+    clear: left;
+    background: url('../media/images/water-small.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+
+.feedback-form {
+    margin: 150px 10% 0 0;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width: 400px;
+    position: absolute;
+    left: 10%;
+    padding: 30px;
+}
+
+.feedback-form > h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+}
+
+.text-input:hover {
+    border-color: #f16c6b;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f16c6b;
+    color: #fafafa;
+    display: block;
+}
+
+.join-button:hover {
+    background-color: #fafafa;
+    color: #f16c6b;
+}
+
+/* REGISTER */
+
+#register-box {
+    width: 100%;
+    height: fit-content;
+}
+
+#register-box input {
+    height: 30px;
+}
+
+#register-box form:hover {
+    box-shadow: 0px 0px 5px 10px white;
+}
+
+#register-form {
+    background-image: url('../media/images/sand-mega.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+form {
+	background-color: white;
+    border-radius: 8px;
+    width: 65%;
+	margin: 25px auto;
+    padding: 15px;
+}
+
+#register-form fieldset {
+    border: 2px solid #000000;
+    margin-top: 30px;
+    padding-bottom: 25px;
+}
+
+#register-form h3 {
+    color: #000000;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+#register-form em {
+    font-size: large;
+}
+
+#register-form hr {
+    background-color:rgb(0, 128, 128);
+    height: 5px;
+}
+
+#register-swot {
+    margin-bottom: 40px;
+}
+
+#register-missions {
+    margin-bottom: 10px;
+}
+
+#personal-achievements {
+    margin-bottom: 30px;
+}
+
+.block-label {
+	display: block;
+}
+
+fieldset div {
+    margin-left: 5px;
+    margin-right: -45px;
+}
+
+fieldset label {
+    margin: 10px 15px 5px 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: large;
+    font-weight: 700;
+}
+
+#file-input input{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+	
+input[type=text], input[type=email] {
+    border: 2px solid coral;
+    height: 30px;
+    width: 70%;
+    padding-left: 5px;
+    font-size: small;
+  
+}
+
+input[type=submit] {
+	background-color: coral;
+	color: white;
+    border: 1px solid rgb(44, 110, 73);
+	border-radius: 5px;
+    height: fit-content !important;
+    margin-top: 20px;
+	margin-left: 0.75rem;
+	padding: 13px;
+    font-weight: 700;
+    font-size: small !important;
+}
+
+input[type=reset] {
+    background-color: white;
+    color: rgb(44, 110, 73);
+    border: 1px solid coral;
+    border-radius: 5px;
+    float: right;
+    height: fit-content !important;
+	margin-top: 20px;
+    margin-right: 0.75rem;
+    padding: 12px;
+    font-weight: 700;  
+    font-size: small !important;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0px 0px 5px 3px rgb(44, 110, 73);
+}
+
+input[type=reset]:hover {
+    box-shadow: 0px 0px 5px 3px coral;
+}
+
+textarea {
+    width: 72%;
+    height: 100px;
+    border: 1px solid coral;
+    border-radius: 5px;
+}
+/* REGISTER - END */
+
+
+
+/* FOOTER ELEMENTS */
+
+footer {
+    margin-top: -43px;
+}
+
+#social-networks {
+    background-color: rgb(44, 110, 73);
+    text-align: center;
+    font-weight: 900;
+    margin-top: 43px;
+    padding-top: 10px;
+}
+
+.social-networks {
+    background-color: rgb(44, 110, 73);
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-weight: 900;
+    margin-left: -30px;
+}
+
+.social-networks > li {
+    display:inline-flex;
+    padding: 10px;
+}
+
+.social-networks i {
+    color: coral;
+    margin-bottom: 15px !important;
+    padding: 10px;
+    font-size:180%;
+}
+
+.social-networks i:hover {
+    box-shadow: 0px 0px 5px 2px white inset;
+    text-shadow: 0px 0px 10px white;
+    margin-bottom: 5px;
+}
+
+#copyright {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: -70px;
+    margin-bottom: -20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 900;
+}
+
+#footer-page-info {
+    background-color: coral;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#footer-page-info p{
+    color: black;
+    margin-left: 15px;
+    font-size: small;
+    font-weight: 900;
+}
+
+#footer-page-info a{
+    font-size: small;
+    margin-left: 15px;
+    color: black;
+    margin-top: 11px;
+    font-weight: 900;
+}
+/* FOOTER ELEMENTS - END */
