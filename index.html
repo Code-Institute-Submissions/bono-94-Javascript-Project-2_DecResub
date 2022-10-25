@@ -7,8 +7,9 @@
     <meta name="description" content="Bigger Fish - Financial game part of global and collaborative natural economy for an ultimate lifetime experience">   
     <meta name="keywords" content="Play-to-Earn Games, Financial Games, Financial Tools, Bigger Fish, Crypto Games, Ocean Games, Sharky, Whale Investors, Lifecoin">
     <meta name="author" content="Bono Zekan">
+    <!--
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">-->
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <link rel="icon" href="./assets/media/images/logo-two.png" type="image">
     <title>
@@ -19,143 +20,193 @@
     <nav id="nav-bar">
         <div class="nav-title">
             <a href="index.html">
-                <h1 id="nav-menu-title">Bigger Fish</h1>
+                <h1 id="nav-menu-title">
+                    Bigger Fish
+                </h1>
             </a>
-            <i class="fa-duotone fa-fishing-rod"></i>
         </div>     
         <div id="nav-menu">
             <a href="#game">Game</a>
             <a href="#rules">Rules</a>
             <a href="#feedback">Feedback</a>
-            <a href="#social-media">Contact</a>         
+            <a href="#footer">Contact</a>         
         </div>
     </nav>
-    <section id="cover-media">
+    <header id="cover-media">
         <div class="cover-media">
-            <img class="heading-logo" src="./assets/media/images/logo-two.png" alt="Bigger Fish official logo">
+            <img id="header-logo" src="./assets/media/images/logo-two.png" alt="Bigger Fish official game logo">
         </div>
-    </section>
+    </header>
     <section id="game">
-    <div class="game">
         <div class="game-area">
-            Table with players and pots
-        </div>
-        <div class="controls-area-bottom">
-            <div class="contols-first">
-                <button class="bttn-first" data-type="staking">
-                    <i class="fa-duotone fa-sack-dollar"></i>
+            <div class="game-tracking">
+                <div id="user-profile">
+                    <div id="user-image">
+                        <i class="fa-solid fa-head-side-virus"></i>
+                    </div>
+                    <div id="user-image-title">
+                        Human
+                    </div>
+                    <div class="past-score-area" id="past-score-box-h">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-w">
+                                0
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-l">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div id="pc-profile">
+                    <div id="pc-image">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div id="pc-image-title">
+                        Robot
+                    </div>
+                    <div class="past-score-area" id="past-score-box-r">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-w">
+                                X
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-l">
+                                X
+                            </span>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="game-board">
+                <div id="treasure">
+                    Enter actions and results here
+                </div>
+            </div>
+            <div class="contols-area-right">
+                <button class="bttn-second" id="bttn-one">
+                    Prawn ($0.1)
+                </button>
+                <button class="bttn-second" id="bttn-two">
+                    Crab ($1)
+                </button>
+                <button class="bttn-second" id="bttn-three">
+                    Turtle ($10)
+                </button>
+                <button class="bttn-second" id="bttn-four">
+                    Octopus ($100) 
+                </button>
+                <button class="bttn-second" id="bttn-five">
+                    Squid ($500)
+                </button>
+                <button class="bttn-second" id="bttn-six">
+                    Lobster ($1000)
+                </button>
+                <button class="bttn-second" id="bttn-seven">
+                    Tuna ($10k)
+                </button>
+                <button class="bttn-second" id="bttn-eight">
+                    Dolphin ($100k)
+                </button>
+                <button class="bttn-second" id="bttn-nine">
+                    Whale ($1M)
+                </button>
+                <button class="bttn-second" id="bttn-ten">
+                    Dragon ($10M)
+                </button>
+            </div>
+            <div class="players-area">
+                Table with players icons and pots
+                Features live score
+                Features past score    
+            </div>
+            <div class="live-score-area">
+                <p class="live-score-chest">
+                    <i class="fa-solid fa-coins"></i>
+                    Treasure:
+                    <span id="live-score-total">
+                        0$
+                    </span>
+                </p>
+                <p class="live-score-user-bet">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    Bid:
+                    <span id="live-score-user-pot">
+                        0$
+                    </span>
+                </p>
+                <p class="live-score-user-balance">
+                    <i class="fa-solid fa-vault"></i>
+                    Balance:
+                    <span id="live-score-user-bank">
+                        0$
+                    </span>
+                </p>
+            </div>
+            
+            <div class="controls-area-bottom">
+                <button class="bttn-first" id="stake">
+                    <i class="fa-solid fa-sack-dollar"></i>
                     STAKE
                 </button>
-                <button class="bttn-first">
-                    <i class="fa-duotone fa-sack-xmark"></i>
+                <button class="bttn-first" id="fold">
+                    <i class="fa-solid fa-sack-xmark"></i>
                     FOLD
                 </button>
             </div>
-            <div class="contols-second">
-                <button class="bttn-second">
-                    Invest set amounts with icons from the list
-                </button>
-            </div>
-            <div class="contols-third">
-                <button class="bttn-third">
-
-                    Type in your own amount
-                    Add to own amount
-                    Multiply any clicked amounts
-                </button>
-            </div>
-            <div class="contols-fourth">
-                <button class="bttn-fourth">
-                    <p>
-                        Custom Amount
-                    </p>
-                    <input id="custom-bet" type="number">
-                    <input id="answer-box" type="number">
-                    <button id="custom-bet-btn"  data-type="bet">
-                    BET
-                </button>
-            </div>            
-        </div>
-        <div class="live-score-area">
-            <p class="live-score-chest">
-                Treasure Chest:
-                <span id="live-score-total">
-                    0$
-                </span>
-            </p>
-            <p class="live-score-user-bet">
-                Your Bet:
-                <span id="live-score-user-pot">
-                    0$
-                </span>
-            </p>
-            <p class="live-score-user-balance">
-                Balance:
-                <span id="live-score-user-bank">
-                    0$
-                </span>
-            </p>
-        </div>
-        <div class="past-score-area">
-            <p class="past-score-box">
-                Your Wins:
-                <span id="past-score-counter-w">
-                    0
-                </span>
-            </p>
-            <p class="past-score-box">
-                Your Losses:
-                <span id="past-score-counter-l">
-                    0
-                </span>
-            </p>
-        </div>
-    </div> 
+        </div> 
     </section>
-    <section>
-        <div id="about-box">
-            <div id="about-boxes-title">
+    <section id="rules">
+        <div id="rules-box">
+            <div id="rules-box-title">
                 <h3>
                     <i class="fa-solid fa-circle-info"></i>
                     <strong>BIGGER FISH RULES:</strong>
                 </h3>
             </div>
-            <div class="about-boxes-content">
+            <div class="rules-box-content">
                 <p>- We want to bridge every human, their knowlegde and experiences while giving a complete freedom of choice from the list of all possible options in order to collectively progress and grow.</p>
                 <p>- We are aiming to become a new and first global economy that will also include any useable physical or digital currencies under one sustainable and prosperous economic environment.</p>
             </div>    
         </div>
     </section>
-    <section></section>
-        <div id="register-box">
-        <div id="register-form">
-            <form action="https://formsubmit.co/lifecoinofficial@outlook.com" method="post" target="_blank">
-                <div id="form-intro">
-                    <h3>
-                        FEEDBACK FORM
-                    </h3>
-                </div>
-                <fieldset id ="personal-info">
-                    <div class="float-left">
-                        <label for="user-field" class="block-label">Name:</label>
-                        <input id="user-field" type="text" name="name" placeholder="Your full name" required>
+    <section id="feedback">
+        <div id="feedback-box">
+            <div id="feedback-form">
+                <form action="https://formsubmit.co/lifecoinofficial@outlook.com" method="post" target="_blank">
+                    <div id="form-intro">
+                        <h3>
+                            FEEDBACK FORM
+                        </h3>
                     </div>
-                    <div class="float-left">
-                        <label for="email-field" class="block-label">Email:</label>
-                        <input id="email-field" type="email" name="email" placeholder="Your email address" required>
-                    </div>
-                    <div class="float-left">
-                        <label for="country-field" class="block-label">Location:</label>
-                        <input id="country-field" type="text" name="country" placeholder="Your country" required>
-                    </div>
-                    <div class="float-left">
-                        <label for="feedback" class="block-label">Feedback:</label>
-                        <textarea id="feedback" name="feedback" required></textarea>
-                    </div>
-                </fieldset>
-                <input type="submit" class="submit-button" value="Submit">
-                <input type="reset" class="reset-button" value="Reset">
-            </form>
+                    <fieldset id ="personal-info">
+                        <div class="float-left">
+                            <label for="user-field" class="block-label">Name:</label>
+                            <input id="user-field" type="text" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="float-left">
+                            <label for="email-field" class="block-label">Email:</label>
+                            <input id="email-field" type="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="float-left">
+                            <label for="country-field" class="block-label">Location:</label>
+                            <input id="country-field" type="text" name="country" placeholder="Your country" required>
+                        </div>
+                        <div class="float-left">
+                            <label for="feedback" class="block-label">Feedback:</label>
+                            <textarea id="feedback" name="feedback" required></textarea>
+                        </div>
+                    </fieldset>
+                    <input type="submit" class="submit-button" value="Submit">
+                    <input type="reset" class="reset-button" value="Reset">
+                </form>
             </div>
         </div> 
     </section>
@@ -231,7 +282,4 @@
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>   
     <script src="assets/js/script.js"></script>
 </body>
-
-
-
 </html>
