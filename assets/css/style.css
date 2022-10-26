@@ -14,6 +14,11 @@ h1 {
     /*font-family:*/
 }
 
+hr {
+    background-color: green;
+    height: 1px;
+}
+
 #nav-bar {
     background-color: rgb(91, 91, 91) !important;
     border-bottom: 5px solid coral;
@@ -193,14 +198,82 @@ h1 {
     right: 90px;
 }
 
+#balance-tracker {
+    width: 44%;
+    float: left;
+    display: block;
+    margin-left: 5px;
+    border: 3px solid coral;
+    background-color: whitesmoke;
+    padding: 5px;
+    position: absolute;
+    top: 93px;
+}
+
+#balance-tracker p {
+    font-size: small;
+}
+
+#balance-tracker i {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+#balance-total {
+    padding-left: 27px;
+    font-weight: 700;
+}
+
+#treasure-total {
+    padding-left: 27px;
+    font-weight: 700;
+}
+
+#bet-total {
+    padding-left: 27px;
+    font-weight: 700;
+}
+
+#last-bets {
+    width: 44%;
+    float: left;
+    display: block;
+    margin-left: 5px;
+    border: 3px solid coral;
+    background-color: whitesmoke;
+    padding: 5px;
+    position: absolute;
+    bottom: 60px;
+}
+
+#last-bets p {
+    font-size: small;
+}
+
+#last-bets i {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+#bet-user-total {
+    padding-left: 27px;
+    font-weight: 700;
+}
+
+#bet-robot-total {
+    padding-left: 27px;
+    font-weight: 700;
+}
+
 .contols-area-right {
     width: 30%;
     float: right;
     display: block;
-    margin-top: 80px;
-    margin-right: 8px;
+    position: absolute;
+    top: 92px;
+    right: 5px;
     border: 3px solid coral;
-    background-color: lightgray;
+    background-color: whitesmoke;
     padding: 5px;
 }
 
@@ -266,24 +339,35 @@ h1 {
 }
 
 .controls-area-bottom {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     width: 100%;
     display: inline-flex;
     position: absolute;
     bottom: 1px;
-
 }
 
 #stake {
     width: 50%;
     font-size: x-large;
     font-weight: 900;
+    padding-bottom: 5px;
+}
+
+#stake i {
+    color: rgb(44, 110, 73);
+    padding-right: 5px;
 }
 
 #fold {
     width: 50%;
     font-size: x-large;
     font-weight: 900;
+    padding-bottom: 5px;
+}
+
+#fold i {
+    color: rgb(235, 95, 45);
+    padding-right: 5px;
 }
 /* Rules */
 
@@ -610,8 +694,21 @@ footer {
 /* FOOTER ELEMENTS - END */
 
 
+#game-intro{
+    width: 100%;
+    height: 600px;
+    background-color:rgb(206, 238, 251) !important;
+}
+
+#game-intro video { 
+    background-color:rgb(206, 238, 251) !important;
+    width: 100%;
+    height: 100%;
+}
+
 .bttn-first::after{
     content:attr(data-type);
     font-size: xx-large;
     color: orange;
 }
+

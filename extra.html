@@ -1,8 +1,100 @@
-<section class="form">
+Game Intro Media
+<section id="game-intro">
+    <video src="./assets/media/video/cover-video-options.mp4" controls></video>
+</section>
+
+
+Home Screen: 
+<section id="home-screen-game">
+
+</section>
+- welcome Message
+- 2x logo sharkey vs Robot
+- start game button + audio on click
+- lifecoin logo at the bottom
+
+
+Run Game
+
+- Play audio on page while game is running
+- Generate balance
+    - if coming for fresh game randomize balance and reset record
+            you can know it by either start or replay button category
+    - if game came from previous win update both balance and record
+    - if game came from previous loss randomize balance and update record
+- Values listener & value updater
+- Handle empty or invalid data or low balance or too high investment
+- First move
+    - reaction1 - stake & fold
+        --start button = new game
+        --fold button - new game
+    - reaction2 - Increasement amount if chosen STAKE
+    - update treasure, balance and last bet
+
+previous bet tracker
+previous bet reporter
+previous bet editor
+
+- Robot reaction : 
+    Robot always bets random number under the value of total holdings, preferably never over x amount or percent
+    When robot drops loses percent of holdings automatically folds:
+        14% - 100bn+ 
+        21% - 1bn / 100bn
+        35% - 100m / 1bn
+        44% - 1m / 100m
+        55% - 100k / 1m
+        69% - 1k /100k
+        77% - 100 / 1k
+        88% - 1 / 100
+- Next Moves loops - until user or robot have more balance to play
+
+increseBet buttons  and adding value to calculations, also they initiate robot response
+- takes away current balance
+- adds to treasure value
+- marks end of each turn
+- initiates response from robot
+- receives instant response from robot
+
+Results Screen
+- reaction3 
+
+update score
+inform on profit
+inform on loss
+
+
+- winning screen
++ rename start button to play again
+    - play again (keeps the balance)
+    - play again (fresh balance)
++ update wins and losses
++if you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
+
+
+- losing screen
++ rename start button to play again
+    - play again (fresh balance)
++ update wins and losses
+
+
+
+Score 
+
+
+win-loss score tracker
+win-loss score reporter
+win-loss score editor
+
+treasure chest total value
+- send this value to user if wins
+
+
+<!--UNUSED-->
+<!--<section class="form">
     <form class="feedback-form" method="POST" action="https://formdump.codeinstitute.net/">
         <h2>Let's get you signed up! <i class="fas fa-heartbeat"></i> </h2>
         <label for="username">Username:</label>
         <input id="username" class="text-input" type="text" name="username" required/>
         <input class="join-button"  type="submit" value="Let's Run!"/>
     </form>
-</section>
+</section>-->

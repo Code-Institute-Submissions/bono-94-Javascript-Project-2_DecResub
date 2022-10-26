@@ -1,3 +1,44 @@
+Next version:
+Multiplayer Mode 
+Teams and Groups Creation
+Game mode vs. Friends (custom link join)
+Game mode vs. Public (random link join)
+Usage of real digital and crypto currencies
+Digital and crypto currencies conversion
+P2P Transactions
+Multiple Accounts with free Transfers
+User Profiles & Password Protection
+Deposit Currencies & Tokens
+Withdraw Currencies & Tokens
+Virtual Bank & Balance
+Transactions List
+Balance History
+Game Breakdown Payments
+NFT Rewards
+Multiverse
+Open World Game Development
+Variety of Game Maps
+Integration with Revolut, Paypal, etc…
+Live Chat
+Rating the Opponent
+Live Leaderboard List
+Rankings, Levels & Memberships
+Opponent Last Scores
+Custom Avatars
+Multipliers and Combo’s
+Alternative Staking Options 
+Periodical Visit and Play Time Reward System
+Tournaments and Challenges
+Professional Designs and Animations
+Inclusion of secondary layer games such as card games or sport event
+
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome bono-94,

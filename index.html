@@ -70,53 +70,71 @@
                         <p class="past-score-box">
                             Win:
                             <span id="past-score-counter-w">
-                                X
+                                0
                             </span>
                         </p>
                         <p class="past-score-box">
                             Loss:
                             <span id="past-score-counter-l">
-                                X
+                                0
                             </span>
                         </p>
                     </div>
                 </div> 
             </div>
             <div class="game-board">
-                <div id="treasure">
-                    Enter actions and results here
+                <div id="balance-tracker">
+                    <div id="treasure-value">
+                        <p class="treasure-value">
+                            <i class="fa-solid fa-vault"></i>
+                            Treasure Reward:
+                        </p>
+                        <p id="treasure-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="virtual-balance">
+                        <p class="virtual-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            My Virtual Balance:
+                        </p>
+                        <p id="balance-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="total-bet">
+                        <p class="total-bet">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            My Total Bet:
+                        </p>
+                        <p id="bet-total">
+                            0$
+                        </p>
+                    </div>
                 </div>
-                <div id="treasure">
-                    Enter actions and results here
+                <div id="last-bets">
+                    <div id="last-bet-user">
+                        <p class="last-bet-user">
+                            <i class="fa-solid fa-head-side-virus"></i>
+                            Last Bet:
+                        </p>
+                        <p id="bet-user-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="last-bet-robot">
+                        <p class="last-bet-robot">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            Last Bet:
+                        </p>
+                        <p id="bet-robot-total">
+                            0$
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="players-area">
-                Table with players icons and pots
-                Features live score
-                Features past score    
-            </div>
-            <div class="live-score-area">
-                <p class="live-score-chest">
-                    <i class="fa-solid fa-coins"></i>
-                    Treasure:
-                    <span id="live-score-total">
-                        0$
-                    </span>
-                </p>
-                <p class="live-score-user-bet">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                    Bid:
-                    <span id="live-score-user-pot">
-                        0$
-                    </span>
-                </p>
-                <p class="live-score-user-balance">
-                    <i class="fa-solid fa-vault"></i>
-                    Balance:
-                    <span id="live-score-user-bank">
-                        0$
-                    </span>
-                </p>
             </div>
             <div class="contols-area-right">
                 <button class="bttn-second" id="bttn-one">
@@ -149,7 +167,7 @@
                 <button class="bttn-second" id="bttn-ten">
                     Dragon ($10M)
                 </button>
-            </div>            
+            </div>           
             <div class="controls-area-bottom">
                 <button class="bttn-first" id="stake">
                     <i class="fa-solid fa-sack-dollar"></i>
@@ -160,6 +178,7 @@
                     FOLD
                 </button>
             </div>
+        </div>
         </div> 
     </section>
     <section id="rules">
@@ -171,8 +190,11 @@
                 </h3>
             </div>
             <div class="rules-box-content">
-                <p>- We want to bridge every human, their knowlegde and experiences while giving a complete freedom of choice from the list of all possible options in order to collectively progress and grow.</p>
-                <p>- We are aiming to become a new and first global economy that will also include any useable physical or digital currencies under one sustainable and prosperous economic environment.</p>
+                <p>- Robot, AI, PC will receive a random amount of coins non-disclosed even to themselves or opponent</p>
+                <p>- Users will receive a random amount of coins only disclosed to them</p>
+                <p>- There is no time limit to make a decision</p>
+                <p>- Current version supports only direct match against a computer</p> 
+                <p>- Your score will be reset when you refresh or close this tab where game runs</p>
             </div>    
         </div>
     </section>
