@@ -1,4 +1,5 @@
 @import url();
+/*add with fonts*/
 
 body {
     background-color: rgb(206, 238, 251);
@@ -8,22 +9,23 @@ body {
 h1 {
     color: coral !important;
     text-shadow: 0px 0px 1px black;
-    text-decoration: none;
     padding-top: 10px;
+    font-size: xx-large;
+    /*font-family:*/
 }
 
 #nav-bar {
-    width: 100%;
+    background-color: rgb(91, 91, 91) !important;
     border-bottom: 5px solid coral;
+    width: 100%;
     height: fit-content;
     display: inline-block;
-    background-color: rgb(91, 91, 91) !important;
     padding-bottom: 10px;
 }
 
 .nav-title {
     float: left;
-    margin-left: 14px;
+    margin-left: 21px;
 }
 
 .nav-title a {
@@ -32,10 +34,10 @@ h1 {
 }
 
 #nav-menu {
-    float: right;
-    display: block;
     background-color: silver;
     border: 2px double rgb(44, 110, 73);
+    float: right;
+    display: block;
     padding: 5px;
 }
 
@@ -63,74 +65,19 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-}
-
-
-#hero-image{
-    height:600px;
-    width: 100%;
-    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/main-image.png") no-repeat center center;
-
-    /* Animates zoom effect on loading the page */
-    animation-name: hero-zoom;
+    animation-name: cover-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
-/* Creates the level of zoom for hero image */
-@keyframes hero-zoom {
+/*@keyframes cover-zoom {
     from{
-        transform: scale(1);
+        transform: scale(0.1);
     }
     to{
-        transform: scale(1.1);
+        transform: scale(1);
     }
-}
-
-/* More css for header from love running*/
-
-h1, h2{
-    font-family: Oswald, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #252525;
-}
-
-#logo{
-    float: left;
-    font-size: 280%;
-    margin-left: 30px;
-}
-
-/* navigation links */
-
-#menu{
-    font-size: 110%;
-    letter-spacing: 4px;
-}
-
-#logo, #menu{
-    line-height: 75px;
-}
-
-#menu li {
-    float: right;
-    list-style-type: none;
-    margin-right: 30px;
-}
-
-#menu a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-.active{
-    border-bottom: 1px solid #3a3a3a;
-}
+}*/
 
 /* Game */
 
@@ -153,6 +100,10 @@ h1, h2{
     display: inline-flex;
     position: absolute;
     top: 0px;
+}
+
+.game-tracking i {
+    font-size: xx-large;
 }
 
 #user-profile {
@@ -184,14 +135,17 @@ h1, h2{
     color: rgb(44, 110, 73);
     text-shadow: 0px 0px 1px black;
     border: 3px double black;
-    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
 }
 
 #user-image-title {
     font-weight: 900;
     position: absolute;
     bottom: 15%;
-    left: 80px;
+    left: 90px;
     font-size: large;
 }
 
@@ -215,7 +169,7 @@ h1, h2{
     font-weight: 900;
     position: absolute;
     bottom: 15%;
-    right: 90px;
+    right: 94px;
     font-size: large;
 }
 
@@ -225,7 +179,7 @@ h1, h2{
 
 #past-score-box-h {
     font-size: x-small;
-    font-weight: 700;
+    font-weight: 900;
     position: absolute;
     bottom: 35%;
     left: 90px;
@@ -233,43 +187,18 @@ h1, h2{
 
 #past-score-box-r {
     font-size: x-small;
-    font-weight: 700;
+    font-weight: 900;
     position: absolute;
     bottom: 35%;
     right: 90px;
 }
-.game-tracking i {
-    font-size: xx-large;
-}
-
-.bttn-first::after{
-    content:attr(data-type);
-    font-size: xx-large;
-    color: orange;
-}
-
-
-.controls-area-bottom {
-    width: 100%;
-    display: inline-flex;
-    position: absolute;
-    bottom: 1px;
-}
-
-#stake {
-    width: 50%;
-}
-
-#fold {
-    width: 50%;
-}
-
 
 .contols-area-right {
     width: 30%;
     float: right;
     display: block;
     margin-top: 80px;
+    margin-right: 8px;
     border: 3px solid coral;
     background-color: lightgray;
     padding: 5px;
@@ -287,33 +216,33 @@ h1, h2{
 
 #bttn-one {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset orange;
+    box-shadow: 0px 0px 3px 3px inset orange;
 
 }
 
 #bttn-two {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset rgb(252, 61, 61);
+    box-shadow: 0px 0px 3px 3px inset rgb(252, 61, 61);
 }
 
 #bttn-three {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset green;
+    box-shadow: 0px 0px 3px 3px inset green;
 }
 
 #bttn-four {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset purple;
+    box-shadow: 0px 0px 3px 3px inset purple;
 }
 
 #bttn-five {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset rgb(248, 139, 157);
+    box-shadow: 0px 0px 3px 3px inset rgb(248, 139, 157);
 }
 
 #bttn-six {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset crimson;
+    box-shadow: 0px 0px 3px 3px inset crimson;
 }
 
 #bttn-seven {
@@ -323,17 +252,38 @@ h1, h2{
 
 #bttn-eight {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset skyblue;
+    box-shadow: 0px 0px 2px 3px inset rgb(90, 194, 235);
 }
 
 #bttn-nine {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset gray;
+    box-shadow: 0px 0px 3px 3px inset gray;
 }
 
 #bttn-ten {
     background-color: white;
     box-shadow: 0px 0px 3px 2px inset black;
+}
+
+.controls-area-bottom {
+    background-color: antiquewhite;
+    width: 100%;
+    display: inline-flex;
+    position: absolute;
+    bottom: 1px;
+
+}
+
+#stake {
+    width: 50%;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+#fold {
+    width: 50%;
+    font-size: x-large;
+    font-weight: 900;
 }
 /* Rules */
 
@@ -658,3 +608,10 @@ footer {
     font-weight: 900;
 }
 /* FOOTER ELEMENTS - END */
+
+
+.bttn-first::after{
+    content:attr(data-type);
+    font-size: xx-large;
+    color: orange;
+}
