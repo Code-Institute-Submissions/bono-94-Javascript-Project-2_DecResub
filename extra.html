@@ -3,33 +3,56 @@ Game Intro Media
     <video src="./assets/media/video/cover-video-options.mp4" controls></video>
 </section>
 
-
 Home Screen: 
 <section id="home-screen-game">
-
+    <div id="home-screen-title">
+        - welcome Message
+    </div>
+    <div id="avatars">
+        - 2x logo sharkey vs Robot
+    </div>
+    <div id="start-button">
+        - start game button 
+    </div>
+    <div id="partners">
+        - lifecoin logo at the bottom
+    </div>
 </section>
-- welcome Message
-- 2x logo sharkey vs Robot
-- start game button + audio on click
-- lifecoin logo at the bottom
 
-
-Run Game
+Start Game 
 
 - Play audio on page while game is running
+<audio>
+    Insert background calming music
+</audio>
+
 - Generate balance
     - if coming for fresh game randomize balance and reset record
             you can know it by either start or replay button category
     - if game came from previous win update both balance and record
-    - if game came from previous loss randomize balance and update record
+    - if game came from previous loss update balance and update record
+
+    For replay update here to update score and balance
+for start game generate balance and wipes a score if not wiped
+
+
 - Values listener & value updater
 - Handle empty or invalid data or low balance or too high investment
+
 - First move
     - reaction1 - stake & fold
         --start button = new game
         --fold button - new game
     - reaction2 - Increasement amount if chosen STAKE
     - update treasure, balance and last bet
+
+    if user clicks any of buttons on the right
+        balance subtracts
+        my bets increase
+        vault increase
+        Last bet change to last Values
+        Last Bet calculate and answer of Last BBeta
+        calculate robots response and indtantly upda them
 
 previous bet tracker
 previous bet reporter

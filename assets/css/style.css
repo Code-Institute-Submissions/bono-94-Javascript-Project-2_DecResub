@@ -82,7 +82,7 @@ hr {
     to{
         transform: scale(1);
     }
-}*/
+}
 
 /* Game */
 
@@ -199,7 +199,7 @@ hr {
 }
 
 #balance-tracker {
-    width: 44%;
+    width: 35%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -217,6 +217,7 @@ hr {
 #balance-tracker i {
     padding-right: 6px;
     padding-left: 6px;
+    font-size: medium;
 }
 
 #balance-total {
@@ -235,7 +236,7 @@ hr {
 }
 
 #last-bets {
-    width: 44%;
+    width: 35%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -253,6 +254,7 @@ hr {
 #last-bets i {
     padding-right: 6px;
     padding-left: 6px;
+    font-size: medium;
 }
 
 #bet-user-total {
@@ -320,12 +322,12 @@ hr {
 
 #bttn-seven {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset blue;
+    box-shadow: 0px 0px 3px 3px inset blue;
 }
 
 #bttn-eight {
     background-color: white;
-    box-shadow: 0px 0px 2px 3px inset rgb(90, 194, 235);
+    box-shadow: 0px 0px 3px 3px inset rgb(90, 194, 235);
 }
 
 #bttn-nine {
@@ -335,7 +337,7 @@ hr {
 
 #bttn-ten {
     background-color: white;
-    box-shadow: 0px 0px 3px 2px inset black;
+    box-shadow: 0px 0px 3px 3px inset black;
 }
 
 .controls-area-bottom {
@@ -399,7 +401,7 @@ hr {
     border: 3px solid rgb(44, 110, 73);
     box-shadow: 0px 0px 10px 4px rgb(44, 110, 73);
     margin-left: 60px;
-    font-size: large;
+    font-size: medium;
     margin-right: 70px !important;
     text-shadow: 0px 0px 1px black;
     text-align: left;
@@ -454,7 +456,7 @@ hr {
 }
 
 .text-input:hover {
-    border-color: #f16c6b;
+    border-color: coral;
 }
 
 .join-button {
@@ -666,6 +668,9 @@ footer {
     margin-bottom: -20px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#copyright p {
     font-weight: 900;
 }
 
@@ -686,15 +691,14 @@ footer {
 
 #footer-page-info a{
     font-size: small;
-    margin-left: 15px;
+    margin-left: 20px;
     color: coral;
-    margin-top: 11px;
     font-weight: 900;
 }
 /* FOOTER ELEMENTS - END */
 
-
-#game-intro{
+/* BONUS MATERIAL*/
+#game-intro {
     width: 100%;
     height: 600px;
     background-color:rgb(206, 238, 251) !important;
@@ -706,6 +710,9 @@ footer {
     height: 100%;
 }
 
+
+
+/*UNKNOWN*/
 .bttn-first::after{
     content:attr(data-type);
     font-size: xx-large;
