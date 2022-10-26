@@ -1,74 +1,74 @@
+Javascript:
+Event listener for first interaction
+
+Insert Coin Screen:
+[locked in HTML]
+
+
+Javascript:
+onclick button insert 1 Lifecoin token creates following:
+    delete current screen and create game intro media screen
+
 Game Intro Media
-<section id="game-intro">
-    <video src="./assets/media/video/cover-video-options.mp4" controls></video>
-</section>
+[test.html]
+-listens for onend buttton
+    then it creates new element while replacing the old one
+    sends user to welcome screen
 
-Home Screen: 
-<section id="home-screen-game">
-    <div id="home-screen-title">
-        <h2>
-            There is always a "bigger fish" in the ocean.
-        </h2>
-    </div>
-    <div id="avatars">
-        <div id="sharky">
-            <img id="header-logo" src="./assets/media/images/sharky.png" alt="Sharky, the main game character">
-        </div>
-        <div id="versus">
-            <h4>
-                vs
-            </h4>
-        </div>
-        <div id="robot">
-            <img id="header-logo" src="./assets/media/images/robot-icon.jpg" alt="Robot, the main game opponent">
-        </div>
-    </div>
-    <div id="start-button">
-        <button class="bttn-zero" id="start">
-            <i class="fa-regular fa-circle-play"></i>
-            Start Game
-        </button>
-    </div>
-    <div id="partners">
-        <h3>
-            Game by:
-        </h3>
-        <a href="https://www.lifecoin.earth" target="_blank" rel="noopener">
-            <img id="header-logo" src="./assets/media/images/lifecoin.jpg" alt="Lifecoin logo representing development team">
-        </a>
-    </div>
-</section>
+Welcome Screen
+[test.html]
+- listens for action on insert button to create new html element that needs to be replaced
+    -replace it with game loading screen
 
+Game Loading Screen
+[test.html]
+- listens for onend task then it creates new element while replacing the old one
+sends user to run game screen
 
 Run Game 
+[rungame.html]
 
-- Play audio on page while game is running
-<audio>
-    Insert background calming music
-</audio>
+- Generate balances & records
 
-- Generate balance
-    - if coming for fresh game randomize balance and reset record
-            you can know it by either start or replay button category
-    - if game came from previous win update both balance and record
-    - if game came from previous loss update balance and update record
+   
 
-    For replay update here to update score and balance
-for start game generate balance and wipes a score if not wiped
-
-
-- Values listener & value updater
-- Handle empty or invalid data or low balance or too high investment
+    - if coming from firstGame function, 
+        welcome screen randomize balance and reset record
+        Generate user publicly
+        Generate robot privately
+        you can know it by either start or replay button category or create function to be followed
+    - if coming from nextGame (following the post-screen pattern)
+        Update both balance and record
+        computer number of wins and losses depends on user's opposites
 
 - First move
-    Choose if you want to stake or fold
-        - if stake = unlock the buttons and 
+    Choose if you want to stake more or fold
+        - if stake any button = continue game
+            amount goes processing
+                update vault, balance, my bets and last bet
+                generates robot reaction + alert robot has invested X amount
+
+            have a system of not allowing payments above current balance
+                alert errors
+            have same system for robot never invest more than balance without errors
+
         - fold = end game 
-    - reaction1 - stake & fold
-        --start button = new game
-        --fold button - new game
-    - reaction2 - Increasement amount if chosen STAKE
-    - update treasure, balance and last bet
+            your balance and score go post-processing to losing screen
+
+    Game won = 
+    automatic = robot balance is under 2$
+        throw alert that robot does not have enough balance
+        after confirming takes you to a next screen, winning screen
+
+    Game loss =
+        automatic = balance is under 2$
+            throw alert unfortunately you dont have enough balance
+            after confirming takes you to a next screen, losing screen
+        manual = fold
+
+    
+    
+    
 
     if user clicks any of buttons on the right
         balance subtracts
@@ -116,13 +116,17 @@ inform on loss
     - play again (fresh balance)
 + update wins and losses
 +if you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
-
++play again button
+safe opnened picture
 
 - losing screen
 + rename start button to play again
     - play again (fresh balance)
 + update wins and losses
-
++play again button
+Thank you for playing
+leave your opinions or ideas here:
+safe closed picture
 
 
 Score 
@@ -135,13 +139,5 @@ win-loss score editor
 treasure chest total value
 - send this value to user if wins
 
-
-<!--UNUSED-->
-<!--<section class="form">
-    <form class="feedback-form" method="POST" action="https://formdump.codeinstitute.net/">
-        <h2>Let's get you signed up! <i class="fas fa-heartbeat"></i> </h2>
-        <label for="username">Username:</label>
-        <input id="username" class="text-input" type="text" name="username" required/>
-        <input class="join-button"  type="submit" value="Let's Run!"/>
-    </form>
-</section>-->
+- Values listener & value updater
+- Handle empty or invalid data or low balance or too high investment

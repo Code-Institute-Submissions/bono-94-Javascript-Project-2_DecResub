@@ -153,3 +153,7 @@ function updateScoreLoss () {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
 }
+
+
+//java adjust volume and music playing
+//document.getElementById("myAudio").volume = 0.2; 1 is highest
