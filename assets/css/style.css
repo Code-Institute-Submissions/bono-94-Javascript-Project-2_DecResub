@@ -710,7 +710,54 @@ footer {
     height: 100%;
 }
 
+#home-screen-game {
+    height: 600px;
+    width: 100%;
+}
 
+#avatars {
+    display: block;
+    border: 5px solid coral;
+    width: 80%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#avatars img {
+    height: 80px;
+}
+
+#sharky {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sharky-logo {
+    border: 5px solid rgb(44, 110, 73);
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+#robot {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#robot-logo {
+    border: 5px solid rgb(44, 110, 73);   
+}
+
+#versus {
+    width: 20%;
+    display: inline-flex;
+}
+
+#home-screen-tag {
+    margin-left: 20%;
+    margin-right: 20%
+}
 
 /*UNKNOWN*/
 .bttn-first::after{

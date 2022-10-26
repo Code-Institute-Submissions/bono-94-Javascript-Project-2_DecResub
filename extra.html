@@ -6,20 +6,41 @@ Game Intro Media
 Home Screen: 
 <section id="home-screen-game">
     <div id="home-screen-title">
-        - welcome Message
+        <h2>
+            There is always a "bigger fish" in the ocean.
+        </h2>
     </div>
     <div id="avatars">
-        - 2x logo sharkey vs Robot
+        <div id="sharky">
+            <img id="header-logo" src="./assets/media/images/sharky.png" alt="Sharky, the main game character">
+        </div>
+        <div id="versus">
+            <h4>
+                vs
+            </h4>
+        </div>
+        <div id="robot">
+            <img id="header-logo" src="./assets/media/images/robot-icon.jpg" alt="Robot, the main game opponent">
+        </div>
     </div>
     <div id="start-button">
-        - start game button 
+        <button class="bttn-zero" id="start">
+            <i class="fa-regular fa-circle-play"></i>
+            Start Game
+        </button>
     </div>
     <div id="partners">
-        - lifecoin logo at the bottom
+        <h3>
+            Game by:
+        </h3>
+        <a href="https://www.lifecoin.earth" target="_blank" rel="noopener">
+            <img id="header-logo" src="./assets/media/images/lifecoin.jpg" alt="Lifecoin logo representing development team">
+        </a>
     </div>
 </section>
 
-Start Game 
+
+Run Game 
 
 - Play audio on page while game is running
 <audio>
@@ -40,6 +61,9 @@ for start game generate balance and wipes a score if not wiped
 - Handle empty or invalid data or low balance or too high investment
 
 - First move
+    Choose if you want to stake or fold
+        - if stake = unlock the buttons and 
+        - fold = end game 
     - reaction1 - stake & fold
         --start button = new game
         --fold button - new game
