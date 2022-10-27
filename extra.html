@@ -1,14 +1,16 @@
-add sound effect for buttons
-add sound effect for post-game Screen
-add that background music
-
 Insert Coin Screen:
     [locked in HTML]
 
 Javascript:
     Event listener for first interaction onclick on insert coin button creates following:
-        create game intro media screen and delete current screen
-        send user to game intro screen
+    add sound effect for insert coin button
+    delete current lifecoin sybol
+    create that lifecoin element inside of the div
+        timer that action for few seconds
+        add picture animation of placing it in <!--DONE-->
+        add additional sound of earthquake
+    create game intro media screen and delete current screen
+        send user to game intro media screen
 
 Game Intro Media
     [test.html]
@@ -19,132 +21,214 @@ Game Intro Media
 
 Welcome Screen
     [test.html]
-    - listens for action on insert button to create new html element that needs to be replaced
+    - listens for action on start game button 
+        add sound effect for start game button
+        to create new html element for loading screen
         -replace it with game loading screen
 
 Game Loading Screen
     [test.html]
-    - listens for onend task then it creates new element while replacing the old one
-    sends user to run game screen
+    - listens for onend task
+        creates new element for running the game while replacing the old one
+        sends user to run game screen
 
-Run Game 
+Run New Game 
     [rungame.html]
-    runGame
+    newGame
+        play background music until game won, loss or fold next Screen
     gameSetup
     - Records
-        - if coming from newGame function, 
-            welcome screen reset both records
-        - if coming from nextGame (won or strategically fold)
-                transfer over previous record with increase or decrease
-                Robot record is reverse user record
+        - since coming to newGame function, 
+            welcome screen makes sure to reset both records to 0 while giving them value
     - Balances 
-        - if coming from newGame function (fresh game)
-            welcome screen randomize balance
+        - since coming to newGame function (fresh game)
+            welcome screen randomize balances
                 Generate user amount publicly (minimum 4, max 1bn)
                 Generate robot amount privately (minimum and equal and equal 4, max 1bn)
-                    alert congratulations, your bonus balance is ___ value. It is your starting turn. Invest any amount withing your balance.
-        - if coming from nextGame 
-                Transfer over user's balance
-                Robot balance is random again and undisclosed
-                alert congratulations, your balance is transferred in ___ value. It is your starting turn. Invest any amount withing your balance. 
+                alert congratulations, your bonus balance is ___ value. It is your starting turn.
     Game battle
         - if stake with any of buttons 
-            amount goes processing and calculating to:
-                    balance reduce
-                    my bets increase
-                    vault increase
-                    
-                    Last bets user change to last Values
-                        previous bet trackerr
-                        previous bet reporter
-                        previous bet editor
-                    last bets robot to add his next one after yours is noted
-                        generates robot random selection 
-                        updating vault with his last bet too
-                        alert robot has invested X amount 
             rules
                 exceeding balance errors
-                    only buttons with value less than balance work for user and robot
-                    alert exceeded balance, please start a new game or enter lower amount
+                    only buttons with value less than balance work 
+                        alert exceeded balance, please start a new game or enter lower amount
 
-        continueGame loop until desired parameters:
+            amount goes processing and calculating to:
+                balance reduce
+                my bets increase
+                vault increase
+                Last bets user change to value of button pressed
+                    previous button trackerr
+                    previous button reporter
+                    previous button editor
+
+            robot reacts
+                last bets robot to add his next one after yours is noted
+                    try to time it with a short pause of few seconds
+                    generates robot random selection from constant values that is less than robot balance
+
+                    updating vault with his last bet too
+                    alert robot has invested X amount. Your turn again.
+
+        continue runGame loop until desired parameters:
 
             Game won = 
-            automatic = robot balance is under 5$
-                throw alert that robot does not have enough balance
-                after confirming takes you to a next screen, winning screen
+                automatic = robot balance is under 5$
+                    throw alert that robot does not have enough balance to continue the game. You won.
+                    after confirming ok, your balance and score go post-processing to winning screen
+                    takes user to game winning screen
 
             Game loss =
                 automatic = user balance is under 5$
-                    throw alert unfortunately you dont have enough balance
-                    after confirming ok takes you to a next screen, losing screen and play again button that takes to insert coin screen and then to newGame
+                    throw alert unfortunately you dont have enough balance to continue the game. You lost
+                    after confirming ok, your balance and score go post-processing to losing screen
+                    takes user to game losing screen
 
+            Game fold =
                 - fold button = end battle
-                    your balance and score go post-processing to battle losing screen
-                    takes user to game loss screen that offers play again but with remaining balance
+                    throw alert unfortunately you decided to escape the game.
+                    after confirming ok, 
+                    takes user to game fold screen
 
-    
+Game Results Screen
+[test.html]
+    - winning screen
+        add celebrating sound effect
+        add animation of image
+            safe opnened
+            treasure chest
+        add text: YOU WON!
+        how much you won, old and new balance
+            values listener & value updater 
+            balance score tracker
+            balance score reporter
+            balance score editor
+            balance transporter
+        update the score to +1 win
+            values listener & value updater 
+            win-loss score tracker
+            win-loss score reporter
+            win-loss score editor
+            win-loss transporter
+        New game button (fresh balance)
+            takes to insert coin function
+        Next game button (keeps the balance)
+            takes you to nextGame function
+        Bonus
+            If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
+
+    - losing screen
+        add losing sound effect
+        add animation of image
+            safe closed
+            treasure chest
+            loss
+        add text: GAME OVER! Thank you for playing. Leave your experinces with us below in the feedabck form
+        how much you lost, old and new balance
+            values listener & value updater 
+            balance score tracker
+            balance score reporter
+            balance score editor
+            balance transporter
+        update the score to +1 loss
+            values listener & value updater 
+            win-loss score tracker
+            win-loss score reporter
+            win-loss score editor
+            win-loss transporter
+        New game button (fresh balance)
+            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
+        Next game button (keeps the balance)
+            locked button 
+                gives alert you do not have enough balance. Please insert another lifecoin
+        Bonus
+        If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
+
+    - fold screen
+        add losing sound effect of a chicken
+        add animation of image
+            chicken running away from shark maybe on canva?
+            holding onto a single dolar
+        add text: You chickened out... However, it is not over yet, you held onto your remaining balance and earned another chance. 
+        how much you lost, old and new balance
+            values listener & value updater 
+            balance score tracker
+            balance score reporter
+            balance score editor
+            balance transporter
+        update the score to +1 loss
+            values listener & value updater 
+            win-loss score tracker
+            win-loss score reporter
+            win-loss score editor
+            win-loss transporter
+        New game button (fresh balance)
+            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
+        Next game button (keeps the balance)
+            takes you to nextGame function 
+        Bonus
+        If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
+            offers play again but with remaining balance
+            how much you lost, old and new balance
+
+Run Next Game screen
+[test.html]
+    nextGame
+        play background music until game won, loss or fold next Screen
+    gameSetup
+    - Records
+        - since coming from nextGame (won or strategically fold)
+                transfer over previous record with increase or decrease
+                Robot record is reverse user record
+    - Balances 
+        - since coming from nextGame 
+                Transfer over user's balance
+                Robot balance is random again and undisclosed
+                    Reminder: "Generate robot amount privately (minimum and equal and equal 4, max 1bn)"
+                alert congratulations, your balance ___ is transferred to your balance. It is your starting turn.  
+    Game battle
+        - if stake with any of buttons 
+            rules
+                exceeding balance errors
+                    only buttons with value less than balance work 
+                        alert exceeded balance, please start a new game or enter lower amount
+
+            amount goes processing and calculating to:
+                balance reduce
+                my bets increase
+                vault increase
+                Last bets user change to value of button pressed
+                    previous button trackerr
+                    previous button reporter
+                    previous button editor
+
+            robot reacts
+                last bets robot to add his next one after yours is noted
+                    try to time it with a short pause of few seconds
+                    generates robot random selection from constant values that is less than robot balance
+
+                    updating vault with his last bet too
+                    alert robot has invested X amount. Your turn again.
+
+        continue runGame loop until desired parameters:
+
+            Game won = 
+                automatic = robot balance is under 5$
+                    throw alert that robot does not have enough balance to continue the game. You won.
+                    after confirming ok, your balance and score go post-processing to winning screen
+                    takes user to game winning screen
+
+            Game loss =
+                automatic = user balance is under 5$
+                    throw alert unfortunately you dont have enough balance to continue the game. You lost
+                    after confirming ok, your balance and score go post-processing to losing screen
+                    takes user to game losing screen
+
+            Game fold =
+                - fold button = end battle
+                    throw alert unfortunately you decided to escape the game.
+                    after confirming ok, 
+                    takes user to game folded screen
 
 
-
-- Robot reaction : 
-    Robot always bets random number under the value of total holdings, preferably never over x amount
-    When robot drops loses percent of holdings automatically folds:
-        35% - 100m / 1bn
-        44% - 1m / 100m
-        55% - 100k / 1m
-        69% - 1k /100k
-        77% - 100 / 1k
-        88% - 1 / 100
-
-- Next Moves loops - until user or robot have more balance to play
-
-increseBet buttons  and adding value to calculations, also they initiate robot response
-- takes away current balance
-- adds to treasure value
-- marks end of each turn
-- initiates response from robot
-- receives instant response from robot
-
-Results Screen
-- reaction3 
-
-update score
-inform on profit
-inform on loss
-
-
-- winning screen
-+ rename start button to play again
-    - play again (keeps the balance)
-    - play again (fresh balance)
-+ update wins and losses
-+if you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
-+play again button
-safe opnened picture
-
-- losing screen
-+ rename start button to play again
-    - play again (fresh balance)
-+ update wins and losses
-+play again button
-Thank you for playing
-leave your opinions or ideas here:
-safe closed picture
-
-
-Score 
-
-
-win-loss score tracker
-win-loss score reporter
-win-loss score editor
-win-loss transporter
-
-virtual balance transporter
-
-treasure chest total value
-- send this value to user if wins
-
-- Values listener & value updater
-- Handle empty or invalid data or low balance or too high investment
+Backup current version locally and make that commit too

@@ -89,6 +89,19 @@ hr {
     height: 600px !important;
     width: 100%;
     background-color: rgb(75, 148, 106);
+    padding-top: 40px;
+}
+
+.insert-lifecoin-background {
+    background-image: url('../media/images/lifecoin-slot-small.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 300px;
+    width: 70%;
+    margin: auto;
+    margin: auto;
+    border: 3px solid coral;
 }
 
 .insert-lifecoin-image {
@@ -96,7 +109,20 @@ hr {
     padding-top: 90px;
     margin-right: auto;
     margin-left: auto;
+    animation-name: inser-lifecoin-zoom;
+    animation-duration: 4s;
+    animation-fill-mode:backwards
 }
+
+@keyframes inser-lifecoin-zoom {
+    from{
+        transform: scale(1.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
 
 .insert-lifecoin-text {
     width: fit-content;
@@ -110,6 +136,7 @@ hr {
     font-size: large;
     background-color: coral;
     color: black;
+    text-shadow: 0px 0px 1px white;
     padding: 5px
 }
 
@@ -131,7 +158,7 @@ hr {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    height: 600px;
+    height: 640px;
     width: 100%;
 }
 
@@ -284,7 +311,7 @@ hr {
     background-color: whitesmoke;
     padding: 5px;
     position: absolute;
-    bottom: 68px;
+    bottom: 50px;
 }
 
 #last-bets p {
@@ -308,7 +335,7 @@ hr {
 }
 
 .contols-area-right {
-    width: 32%;
+    width: 34%;
     float: right;
     display: block;
     position: absolute;
@@ -321,7 +348,7 @@ hr {
 
 .bttn-second {
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -700,10 +727,7 @@ footer {
     margin-bottom: -20px;
     padding-top: 5px;
     padding-bottom: 5px;
-}
-
-#copyright p {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #footer-page-info {
@@ -721,30 +745,47 @@ footer {
     font-weight: 900;
 }
 
-#footer-page-info a{
+#footer-page-info a {
     font-size: small;
-    margin-left: 20px;
+    margin-left: 15px;
     color: coral;
     font-weight: 900;
 }
+
+#footer-page-info a:hover {
+    color: white;
+}
+
 /* FOOTER ELEMENTS - END */
 
 /* BONUS MATERIAL*/
 
 #game-intro {
     width: 100%;
-    height: 600px;
+    height: 640px;
     background-color:black !important;
 }
 
 #game-intro video { 
     background-color: black !important;
     width: 100%;
-    height: 600px;
+    height: 640px;
+}
+
+#game-outro {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
 }
 
 #home-screen-game {
-    height: 600px;
+    height: 640px;
     width: 100%;
     background-color: black;
 }
@@ -769,7 +810,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    height: 600px;
+    height: 60px;
     border: 5px solid coral;
     width: 80%;
     height: 130px;
@@ -821,6 +862,7 @@ footer {
     font-family: 'Titan One', cursive;
     font-size: large;
     background-color: rgb(44, 110, 73);
+    text-shadow: 0px 0px 1px black;
     color: coral;
     padding: 5px;
 }
