@@ -1,3 +1,7 @@
+add sound effect for buttons
+add sound effect for post-game Screen
+add that background music
+
 Insert Coin Screen:
     [locked in HTML]
 
@@ -36,77 +40,63 @@ Run Game
     - Balances 
         - if coming from newGame function (fresh game)
             welcome screen randomize balance
-                Generate user amount publicly
-                Generate robot amountprivately
+                Generate user amount publicly (minimum 4, max 1bn)
+                Generate robot amount privately (minimum and equal and equal 4, max 1bn)
                     alert congratulations, your bonus balance is ___ value. It is your starting turn. Invest any amount withing your balance.
         - if coming from nextGame 
                 Transfer over user's balance
                 Robot balance is random again and undisclosed
                 alert congratulations, your balance is transferred in ___ value. It is your starting turn. Invest any amount withing your balance. 
     Game battle
-        - if stake with any button 
-            amount goes processing and calculating
-                my balance, my bets, update vault and last bet
-
-            generates robot random selection 
-                updating vault and his last bet
-                alert robot has invested X amount 
-
+        - if stake with any of buttons 
+            amount goes processing and calculating to:
+                    balance reduce
+                    my bets increase
+                    vault increase
+                    
+                    Last bets user change to last Values
+                        previous bet trackerr
+                        previous bet reporter
+                        previous bet editor
+                    last bets robot to add his next one after yours is noted
+                        generates robot random selection 
+                        updating vault with his last bet too
+                        alert robot has invested X amount 
             rules
                 exceeding balance errors
                     only buttons with value less than balance work for user and robot
                     alert exceeded balance, please start a new game or enter lower amount
 
-                fold button = end battle
-                    your balance and score go post-processing to battle losing screen
-
-            continueGame loop until desired parameters:
+        continueGame loop until desired parameters:
 
             Game won = 
-            automatic = robot balance is under 2$
+            automatic = robot balance is under 5$
                 throw alert that robot does not have enough balance
                 after confirming takes you to a next screen, winning screen
 
             Game loss =
-                automatic = user balance is under 2$
+                automatic = user balance is under 5$
                     throw alert unfortunately you dont have enough balance
-                    after confirming takes you to a next screen, losing screen
-                manual = fold
+                    after confirming ok takes you to a next screen, losing screen and play again button that takes to insert coin screen and then to newGame
 
-            Balance loss
-                you lost
-                new game button
-                complete loss that brings you to the newGame function
+                - fold button = end battle
+                    your balance and score go post-processing to battle losing screen
+                    takes user to game loss screen that offers play again but with remaining balance
 
-        add sound effect for buttons
-        add sound effect for post-game Screen
-        add that background music
-    
     
 
-    if user clicks any of buttons on the right
-        balance subtracts
-        my bets increase
-        vault increase
-        Last bet change to last Values
-        Last Bet calculate and answer of Last BBeta
-        calculate robots response and indtantly upda them
 
-previous bet trackerr
-previous bet reporter
-previous bet editor
 
 - Robot reaction : 
-    Robot always bets random number under the value of total holdings, preferably never over x amount or percent
+    Robot always bets random number under the value of total holdings, preferably never over x amount
     When robot drops loses percent of holdings automatically folds:
-        14% - 100bn+ 
-        21% - 1bn / 100bn
         35% - 100m / 1bn
         44% - 1m / 100m
         55% - 100k / 1m
         69% - 1k /100k
         77% - 100 / 1k
         88% - 1 / 100
+
 - Next Moves loops - until user or robot have more balance to play
 
 increseBet buttons  and adding value to calculations, also they initiate robot response
@@ -149,6 +139,9 @@ Score
 win-loss score tracker
 win-loss score reporter
 win-loss score editor
+win-loss transporter
+
+virtual balance transporter
 
 treasure chest total value
 - send this value to user if wins
