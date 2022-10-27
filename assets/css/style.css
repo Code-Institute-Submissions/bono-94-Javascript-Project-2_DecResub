@@ -243,7 +243,7 @@ hr {
     float: left;
     display: block;
     margin-left: 5px;
-    border: 3px solid coral;
+    border: 4px solid coral;
     background-color: whitesmoke;
     padding: 5px;
     position: absolute;
@@ -280,11 +280,11 @@ hr {
     float: left;
     display: block;
     margin-left: 5px;
-    border: 3px solid coral;
+    border: 4px solid coral;
     background-color: whitesmoke;
     padding: 5px;
     position: absolute;
-    bottom: 60px;
+    bottom: 68px;
 }
 
 #last-bets p {
@@ -298,35 +298,36 @@ hr {
 }
 
 #bet-user-total {
-    padding-left: 27px;
+    padding-left: 29px;
     font-weight: 700;
 }
 
 #bet-robot-total {
-    padding-left: 27px;
+    padding-left: 28px;
     font-weight: 700;
 }
 
 .contols-area-right {
-    width: 30%;
+    width: 32%;
     float: right;
     display: block;
     position: absolute;
-    top: 92px;
+    top: 93px;
     right: 5px;
-    border: 3px solid coral;
+    border: 4px solid coral;
     background-color: whitesmoke;
     padding: 5px;
 }
 
 .bttn-second {
     width: 100%;
-    font-size: x-small;
-    font-weight: 800;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin-bottom: 5px;
     margin-top: 5px;
+    font-family: 'Titan One', cursive;
 }
 
 #bttn-one {
@@ -389,15 +390,18 @@ hr {
 }
 
 #fold {
+    font-family: 'Titan One', cursive;
     width: 100%;
     font-size: x-large;
-    font-weight: 900;
+    font-weight: 700;
     padding-bottom: 5px;
+    padding-top:5px;
+    letter-spacing: 1px;
 }
 
 #fold i {
     color: rgb(235, 95, 45);
-    padding-right: 5px;
+    padding-right: 10px;
 }
 /* Rules */
 
@@ -757,14 +761,18 @@ footer {
 #home-screen-title h2{
     padding: 5px;
     border: 4px double green;
-    background-color: whitesmoke;
+    background-color: rgb(206, 238, 251);
 }
 
 #avatars {
-    background-color: red;
+    background-image: url('../media/images/versus.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 600px;
     border: 5px solid coral;
     width: 80%;
-    height: 120px;
+    height: 130px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -772,6 +780,7 @@ footer {
 
 #avatars img {
     height: 110px;
+    padding: 5px;
 }
 
 #sharky-logo {
@@ -779,13 +788,13 @@ footer {
     float: right;
     padding-right: 10px;
     padding-left: 10px;
-    background-color: white !important;
+    background-color: rgb(206, 238, 251) !important;
 }
 
 #robot-logo {
     border: 5px solid rgb(44, 110, 73);   
     float: left;
-    background-color: white !important;
+    background-color: rgb(206, 238, 251) !important;
 }
 
 #home-screen-tag {
@@ -793,12 +802,12 @@ footer {
     margin-right: auto;
     width: fit-content;
     font-size: x-small;
-    background-color: whitesmoke;
     margin-top: 10px;
     margin-bottom: 50px;
 }
 
 #home-screen-tag h2{
+    background-color: rgb(206, 238, 251);
     padding: 5px;
     border: 4px double green;
 }
@@ -813,7 +822,7 @@ footer {
     font-size: large;
     background-color: rgb(44, 110, 73);
     color: coral;
-    padding: 5px
+    padding: 5px;
 }
 
 #start-button button:hover {
@@ -829,11 +838,15 @@ footer {
     text-shadow: 0px 0px 1px black;
 }
 
+#start-button i {
+    padding-right: 3px;
+}
+
 #partners h3 {
     font-size: x-small;
     padding: 5px;
     border: 4px double green;
-    background-color: whitesmoke;
+    background-color: rgb(206, 238, 251);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -848,5 +861,10 @@ footer {
     padding: 10px;
     border: 3px solid coral;
     background-color: rgb(44, 110, 73);
+}
+
+#lifecoin-logo:hover {
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px 5px white;
 }
 

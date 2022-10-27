@@ -1,72 +1,86 @@
-Javascript:
-Event listener for first interaction
-
 Insert Coin Screen:
-[locked in HTML]
-
+    [locked in HTML]
 
 Javascript:
-onclick button insert 1 Lifecoin token creates following:
-    delete current screen and create game intro media screen
+    Event listener for first interaction onclick on insert coin button creates following:
+        create game intro media screen and delete current screen
+        send user to game intro screen
 
 Game Intro Media
-[test.html]
--listens for onend buttton
-    then it creates new element while replacing the old one
-    sends user to welcome screen
+    [test.html]
+    if video doesnt autoplay make function
+    listens for onend buttton
+        create Welcome Screen element while replacing the old one
+        sends user to welcome screen
 
 Welcome Screen
-[test.html]
-- listens for action on insert button to create new html element that needs to be replaced
-    -replace it with game loading screen
+    [test.html]
+    - listens for action on insert button to create new html element that needs to be replaced
+        -replace it with game loading screen
 
 Game Loading Screen
-[test.html]
-- listens for onend task then it creates new element while replacing the old one
-sends user to run game screen
+    [test.html]
+    - listens for onend task then it creates new element while replacing the old one
+    sends user to run game screen
 
 Run Game 
-[rungame.html]
+    [rungame.html]
+    runGame
+    gameSetup
+    - Records
+        - if coming from newGame function, 
+            welcome screen reset both records
+        - if coming from nextGame (won or strategically fold)
+                transfer over previous record with increase or decrease
+                Robot record is reverse user record
+    - Balances 
+        - if coming from newGame function (fresh game)
+            welcome screen randomize balance
+                Generate user amount publicly
+                Generate robot amountprivately
+                    alert congratulations, your bonus balance is ___ value. It is your starting turn. Invest any amount withing your balance.
+        - if coming from nextGame 
+                Transfer over user's balance
+                Robot balance is random again and undisclosed
+                alert congratulations, your balance is transferred in ___ value. It is your starting turn. Invest any amount withing your balance. 
+    Game battle
+        - if stake with any button 
+            amount goes processing and calculating
+                my balance, my bets, update vault and last bet
 
-- Generate balances & records
+            generates robot random selection 
+                updating vault and his last bet
+                alert robot has invested X amount 
 
-   
+            rules
+                exceeding balance errors
+                    only buttons with value less than balance work for user and robot
+                    alert exceeded balance, please start a new game or enter lower amount
 
-    - if coming from firstGame function, 
-        welcome screen randomize balance and reset record
-        Generate user publicly
-        Generate robot privately
-        you can know it by either start or replay button category or create function to be followed
-    - if coming from nextGame (following the post-screen pattern)
-        Update both balance and record
-        computer number of wins and losses depends on user's opposites
+                fold button = end battle
+                    your balance and score go post-processing to battle losing screen
 
-- First move
-    Choose if you want to stake more or fold
-        - if stake any button = continue game
-            amount goes processing
-                update vault, balance, my bets and last bet
-                generates robot reaction + alert robot has invested X amount
+            continueGame loop until desired parameters:
 
-            have a system of not allowing payments above current balance
-                alert errors
-            have same system for robot never invest more than balance without errors
+            Game won = 
+            automatic = robot balance is under 2$
+                throw alert that robot does not have enough balance
+                after confirming takes you to a next screen, winning screen
 
-        - fold = end game 
-            your balance and score go post-processing to losing screen
+            Game loss =
+                automatic = user balance is under 2$
+                    throw alert unfortunately you dont have enough balance
+                    after confirming takes you to a next screen, losing screen
+                manual = fold
 
-    Game won = 
-    automatic = robot balance is under 2$
-        throw alert that robot does not have enough balance
-        after confirming takes you to a next screen, winning screen
+            Balance loss
+                you lost
+                new game button
+                complete loss that brings you to the newGame function
 
-    Game loss =
-        automatic = balance is under 2$
-            throw alert unfortunately you dont have enough balance
-            after confirming takes you to a next screen, losing screen
-        manual = fold
-
-    
+        add sound effect for buttons
+        add sound effect for post-game Screen
+        add that background music
     
     
 
