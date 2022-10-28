@@ -34,8 +34,9 @@ Game Loading Screen
 Run New Game 
 [rungame.html]
 newGame
-    play background music until game won, loss or fold next Screen
-    play background music for 14 minutes then stop and replay until gameEnd which is function taking you to game results screen
+    background music
+        play background music until game won, loss or fold next Screen
+        play background music for 14 minutes then stop and replay until gameEnd which is function taking you to game results screen
     gameSetup
     - Records
         - since coming to newGame function, 
@@ -64,7 +65,7 @@ newGame
             robot reacts
                 last bets robot to add his next one after yours is noted
                     try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
-                    generates robot random selection from constant values that is less than robot balance and more than 2$
+                    generates robot random selection from constant values that is less than robot balance
 
                     updating vault with his last bet too
                     alert robot has invested X amount. Your turn again.
@@ -75,26 +76,32 @@ newGame
                 automatic = robot balance is under 2$
                     throw alert that robot surrenders. It does not have enough balance to continue the game. You won. Congratulations!
                     after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
-                    takes user to game winning screen
+                    takes user to game winning screen + game loading
 
             Game loss =
                 automatic = user balance is under 2$
                     throw alert unfortunately you do not have enough balance to continue the game. You lost. Goodluck next time@!
-                    after confirming ok, takes user to game losing screen
+                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
+                    takes user to game losing screen + game loading
 
             Game fold =
                 - fold button = end battle
 
-                    throw alert unfortunately you decided to escape this game. Not all ships have sinked yet, try again!
-                    after confirming ok, your current balance + score go post-processing to game folded screen
-                    takes user to game fold screen
+                    throw alert unfortunately you decided to escape this game. Not all ships have sinked yet, try again! 
+                    after confirming ok, your current balance + Vault + score go post-processing to game folded screen
+                    takes user to game fold screen + game loading
+
+Game Loading Screen
+[game.html]
+    - listens for onend task
+        creates new element for running the game while replacing the old one
+        sends user to run game results screen appropriate to where it came from
 
 Game Results Screen
-[test.html]
+[game.html]
     - winning screen
         add celebrating sound effect
         add animation of image
-            safe opnened
             treasure chest
         add text: YOU WON!
         how much you won, old and new balance + vault = newBalance
@@ -111,16 +118,14 @@ Game Results Screen
             win-loss transporter
         Next game button (keeps the balance)
             takes you to nextGame function
-        Bonus
-            If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
-
+       
     - losing screen
         add losing sound effect
         add animation of image
             safe closed
             treasure chest
             loss
-        add text: GAME OVER! Thank you for playing. Leave your experinces with us below in the feedabck form
+        add text: GAME OVER!
         how much you lost, old and new balance
             values listener & value updater 
             balance score tracker
@@ -135,16 +140,11 @@ Game Results Screen
             win-loss transporter
         New game button (fresh balance)
             takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-        Bonus
-        If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
-
+       
     - fold screen
         add losing sound effect of a chicken
         add animation of image
-            chicken running away from shark maybe on canva?
-            holding onto a single dolar
-        add text: You chickened out... However, it is not over yet, you held onto your remaining balance and earned another chance. 
-        how much you lost, old and new balance
+               how much you lost, old and new balance
             values listener & value updater 
             balance score tracker
             balance score reporter
@@ -160,9 +160,12 @@ Game Results Screen
             takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
         Next game button (keeps the balance)
             takes you to nextGame function 
-        Bonus
-        If you have more than 10 wins in a row contact us on lifecoinofficial@outlook.com with your address so we can send you this FREE T-SHIRT
-            how much you lost, old and new balance
+
+Game Loading Screen
+[game.html]
+    - listens for onend task
+        creates new element while replacing the old one
+        sends user to run new game or next game depending on choice
 
 Run Next Game screen
 [test.html]
@@ -170,7 +173,7 @@ Run Next Game screen
         play background music until game won, loss or fold next Screen
     gameSetup
     - Records
-        - since coming from nextGame (won or strategically fold)
+        - since coming to nextGame (won or strategically fold)
                 transfer over previous record with increase or decrease
                 Robot record is reverse user record
     - Balances 
@@ -209,19 +212,24 @@ Run Next Game screen
                 automatic = robot balance is under 5$
                     throw alert that robot does not have enough balance to continue the game. You won.
                     after confirming ok, your balance and score go post-processing to winning screen
-                    takes user to game winning screen
+                    takes user to game winning screen + game loading
 
             Game loss =
                 automatic = user balance is under 5$
                     throw alert unfortunately you dont have enough balance to continue the game. You lost
                     after confirming ok, your balance and score go post-processing to losing screen
-                    takes user to game losing screen
+                    takes user to game losing screen + game loading
 
             Game fold =
                 - fold button = end battle
                     throw alert unfortunately you decided to escape the game.
                     after confirming ok, 
-                    takes user to game folded screen
+                    takes user to game folded screen + game loading
 
+Game Loading Screen
+[game.html]
+    - listens for onend task
+        creates new element for running the game while replacing the old one
+        sends user to run game results screen appropriate to where it came from in the last game
 
 Backup current version locally and make that commit too

@@ -72,12 +72,12 @@ hr {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    animation-name: cover-zoom;
+    animation-name: header-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
-/*@keyframes cover-zoom {
+@keyframes header-zoom {
     from{
         transform: scale(0.1);
     }
@@ -85,8 +85,6 @@ hr {
         transform: scale(1);
     }
 }
-
-/* Game */
 
 #insert-lifecoin {
     height: 600px !important;
@@ -126,7 +124,6 @@ hr {
     }
 }
 
-
 .insert-lifecoin-text {
     width: fit-content;
     padding-top: 160px;
@@ -154,6 +151,445 @@ hr {
     color: coral;
     box-shadow: 0px 0px 5px 4px coral;
     text-shadow: 0px 0px 1px black;
+}
+
+#rules-box {
+    width: 100%;
+    margin-top: -24px;
+    padding-bottom: 50px;
+    background-image: url('../media/images/water-small.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 8px solid rgb(91, 91, 91);
+}
+
+#rules-box-title h3 {
+    background-color: black;
+    color:coral;
+    text-align: left;
+    margin-bottom: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    font-size: x-large;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.rules-box-content p {
+    background-color: black;
+    color: coral;
+    border: 3px solid rgb(44, 110, 73);
+    box-shadow: 0px 0px 10px 4px rgb(44, 110, 73);
+    margin-left: 60px;
+    font-size: medium;
+    margin-right: 70px !important;
+    margin-bottom: 28px;
+    text-shadow: 0px 0px 1px black;
+    text-align: left;
+    width: fit-content;
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#rules-box-title i {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: x-large;
+}
+
+
+#rules-box-title h3 {
+    border-top: 6px solid coral;
+}
+
+#feedback-box {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 8px solid rgb(65, 64, 64);
+}
+
+#feedback-box input {
+    height: 30px;
+}
+
+#feedback-box form:hover {
+    box-shadow: 0px 0px 5px 10px white;
+}
+
+#feedback-form {
+    background-image: url('../media/images/sand-mega.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+form {
+	background-color: white;
+    border-radius: 8px;
+    width: 65%;
+	margin: 25px auto;
+    padding: 15px;
+}
+
+#feedback-form fieldset {
+    border: 2px solid rgb(91, 91, 91);
+    margin-top: 30px;
+    padding-bottom: 25px;
+}
+
+#feedback-form h3 {
+    color: rgb(91, 91, 91);
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.block-label {
+	display: block;
+}
+
+fieldset div {
+    margin-left: 5px;
+    margin-right: -45px;
+}
+
+fieldset label {
+    margin: 10px 15px 5px 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: large;
+    font-weight: 700;
+    color:rgb(48, 47, 47);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+	
+input[type=text], input[type=email] {
+    border: 2px solid coral;
+    height: 30px;
+    width: 70%;
+    padding-left: 5px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+  
+}
+
+input[type=submit] {
+	background-color: coral;
+	color: white;
+    border: 3px solid rgb(44, 110, 73);
+	border-radius: 5px;
+    height: fit-content !important;
+    margin-top: 20px;
+	margin-left: 0.75rem;
+	padding: 5px;
+    font-weight: 700;
+    font-size: medium !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+input[type=reset] {
+    background-color: white;
+    color: rgb(44, 110, 73);
+    border: 3px solid coral;
+    border-radius: 5px;
+    float: right;
+    height: fit-content !important;
+	margin-top: 20px;
+    margin-right: 0.75rem;
+    padding: 5px;
+    font-weight: 700;  
+    font-size: medium !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0px 0px 5px 3px rgb(44, 110, 73);
+}
+
+input[type=reset]:hover {
+    box-shadow: 0px 0px 5px 3px coral;
+}
+
+textarea {
+    width: 72%;
+    height: 100px;
+    border: 2px solid coral;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-left: 5px;
+    color:black;
+}
+
+footer {
+    margin-top: -44px;
+}
+
+#social-networks {
+    background-color: rgb(44, 110, 73);
+    text-align: center;
+    font-weight: 900;
+    margin-top: 43px;
+    padding-top: 10px;
+}
+
+.social-networks {
+    background-color: rgb(44, 110, 73);
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-weight: 900;
+    margin-left: -30px;
+}
+
+.social-networks > li {
+    display:inline-flex;
+    padding: 10px;
+}
+
+.social-networks i {
+    color: coral;
+    margin-bottom: 15px !important;
+    padding: 10px;
+    font-size:180%;
+}
+
+.social-networks i:hover {
+    box-shadow: 0px 0px 5px 2px white inset;
+    text-shadow: 0px 0px 10px white;
+    margin-bottom: 5px;
+}
+
+#copyright {
+    background-color: coral;
+    color: rgb(44, 110, 73);
+    text-align: center;
+    margin-top: -70px;
+    margin-bottom: -20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer-page-info {
+    background-color: rgb(91, 91, 91);
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#footer-page-info p {
+    color: coral;
+    margin-left: 20px;
+    font-size: small;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer-page-info a {
+    font-size: small;
+    margin-left: 20px;
+    color: coral;
+    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer-page-info a:hover {
+    color: white;
+}
+
+#game-intro {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-intro video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
+}
+
+#home-screen-game {
+    height: 640px;
+    width: 100%;
+    background-color: black;
+}
+
+#home-screen-title {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: small;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#home-screen-title h2{
+    padding: 5px;
+    border: 4px double green;
+    background-color: rgb(206, 238, 251);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#avatars {
+    background-image: url('../media/images/versus.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 60px;
+    border: 5px solid coral;
+    width: 80%;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#avatars img {
+    height: 110px;
+    padding: 5px;
+
+}
+
+#sharky-logo {
+    border: 5px solid rgb(44, 110, 73);
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(206, 238, 251) !important;
+}
+
+
+#robot-logo {
+    border: 5px solid rgb(44, 110, 73);   
+    float: left;
+    background-color: rgb(206, 238, 251) !important;
+}
+
+
+#home-screen-tag {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: x-small;
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+#home-screen-tag h2{
+    background-color: rgb(206, 238, 251);
+    padding: 5px;
+    border: 4px double green;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#start-button button {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    font-family: 'Titan One', cursive;
+    font-size: large;
+    background-color: rgb(44, 110, 73);
+    text-shadow: 0px 0px 1px black;
+    color: coral;
+    padding: 5px;
+}
+
+#start-button button:hover {
+    color: white;
+    box-shadow: 0px 0px 5px 4px white;
+    text-shadow: 0px 0px 1px black;
+}
+
+#start-button button:after {
+    background-color: white;
+    color: coral;
+    box-shadow: 0px 0px 5px 4px coral;
+    text-shadow: 0px 0px 1px black;
+}
+
+#start-button i {
+    padding-right: 3px;
+}
+
+#partners {
+    height: 120px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+#partners-text {
+    width: 45%;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#partners-text h3 {
+    padding: 5px;
+    font-size: medium;
+    border: 4px double green;
+    background-color: rgb(206, 238, 251);
+    width: fit-content;
+    margin-left: 80px;
+    margin-top: 25px;
+}
+
+#partners a {
+    padding: 5px;
+    width: 45%;
+    float: right;
+    height: 64px;
+}
+
+#partners img {
+    width: 40%;
+    margin-left: 10px;
+}
+
+#lifecoin-logo {
+    height: 100%;
+    width: 80%;
+    border-radius: 50px;
+    border: 5px solid rgb(206, 238, 251);
+}
+
+#lifecoin-logo:hover {
+    box-shadow: 0px 0px 3px 8px teal;
+}
+
+#game-outro {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
 }
 
 #game {
@@ -456,536 +892,6 @@ hr {
     color: rgb(235, 95, 45);
     padding-right: 10px;
 }
-/* Rules */
-
-#rules-box {
-    width: 100%;
-    margin-top: -24px;
-    padding-bottom: 50px;
-    background-image: url('../media/images/water-small.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-bottom: 8px solid rgb(91, 91, 91);
-}
-
-#rules-box-title h3 {
-    background-color: black;
-    color:coral;
-    text-align: left;
-    margin-bottom: 50px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    font-size: x-large;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-.rules-box-content p {
-    background-color: black;
-    color: coral;
-    border: 3px solid rgb(44, 110, 73);
-    box-shadow: 0px 0px 10px 4px rgb(44, 110, 73);
-    margin-left: 60px;
-    font-size: medium;
-    margin-right: 70px !important;
-    margin-bottom: 28px;
-    text-shadow: 0px 0px 1px black;
-    text-align: left;
-    width: fit-content;
-    padding: 12px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#rules-box-title i {
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: x-large;
-}
-
-
-#rules-box-title h3 {
-    border-top: 6px solid coral;
-}
-/* Form */
-.form {
-    clear: left;
-    background: url('../media/images/water-small.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 1000px;
-}
-
-.feedback-form {
-    margin: 150px 10% 0 0;
-    color: #fff;
-    background-color: rgba(60, 60, 60, 0.6);
-    max-width: 400px;
-    position: absolute;
-    left: 10%;
-    padding: 30px;
-}
-
-.feedback-form > h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
-}
-
-.text-input {
-    background: transparent;
-    color: #fafafa;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #fafafa;
-    border-radius: 2px;
-}
-
-.text-input:hover {
-    border-color: coral;
-}
-
-.join-button {
-    margin-top: 20px;
-    border-radius: 2px;
-    padding: 15px 32px 15px 32px;
-    text-align: center;
-    font-size: 100%;
-    background-color: #f16c6b;
-    color: #fafafa;
-    display: block;
-}
-
-.join-button:hover {
-    background-color: #fafafa;
-    color: #f16c6b;
-}
-
-/* REGISTER */
-
-#feedback-box {
-    width: 100%;
-    height: fit-content;
-    border-bottom: 8px solid rgb(65, 64, 64);
-}
-
-#feedback-box input {
-    height: 30px;
-}
-
-#feedback-box form:hover {
-    box-shadow: 0px 0px 5px 10px white;
-}
-
-#feedback-form {
-    background-image: url('../media/images/sand-mega.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-form {
-	background-color: white;
-    border-radius: 8px;
-    width: 65%;
-	margin: 25px auto;
-    padding: 15px;
-}
-
-#feedback-form fieldset {
-    border: 2px solid rgb(91, 91, 91);
-    margin-top: 30px;
-    padding-bottom: 25px;
-}
-
-#feedback-form h3 {
-    color: rgb(91, 91, 91);
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: 900;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#feedback-form em {
-    font-size: large;
-}
-
-#feedback-form hr {
-    background-color:rgb(0, 128, 128);
-    height: 5px;
-}
-
-#register-swot {
-    margin-bottom: 40px;
-}
-
-#register-missions {
-    margin-bottom: 10px;
-}
-
-#personal-achievements {
-    margin-bottom: 30px;
-}
-
-.block-label {
-	display: block;
-}
-
-fieldset div {
-    margin-left: 5px;
-    margin-right: -45px;
-}
-
-fieldset label {
-    margin: 10px 15px 5px 0;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    font-size: large;
-    font-weight: 700;
-    color:rgb(48, 47, 47);
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#file-input input{
-    margin-left: 10px;
-    margin-top: 5px;
-}
-	
-input[type=text], input[type=email] {
-    border: 2px solid coral;
-    height: 30px;
-    width: 70%;
-    padding-left: 5px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-  
-}
-
-input[type=submit] {
-	background-color: coral;
-	color: white;
-    border: 3px solid rgb(44, 110, 73);
-	border-radius: 5px;
-    height: fit-content !important;
-    margin-top: 20px;
-	margin-left: 0.75rem;
-	padding: 5px;
-    font-weight: 700;
-    font-size: medium !important;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-input[type=reset] {
-    background-color: white;
-    color: rgb(44, 110, 73);
-    border: 3px solid coral;
-    border-radius: 5px;
-    float: right;
-    height: fit-content !important;
-	margin-top: 20px;
-    margin-right: 0.75rem;
-    padding: 5px;
-    font-weight: 700;  
-    font-size: medium !important;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-input[type=submit]:hover {
-    box-shadow: 0px 0px 5px 3px rgb(44, 110, 73);
-}
-
-input[type=reset]:hover {
-    box-shadow: 0px 0px 5px 3px coral;
-}
-
-textarea {
-    width: 72%;
-    height: 100px;
-    border: 2px solid coral;
-    border-radius: 5px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 600;
-    padding-left: 5px;
-}
-/* REGISTER - END */
-
-
-
-/* FOOTER ELEMENTS */
-
-footer {
-    margin-top: -44px;
-}
-
-#social-networks {
-    background-color: rgb(44, 110, 73);
-    text-align: center;
-    font-weight: 900;
-    margin-top: 43px;
-    padding-top: 10px;
-}
-
-.social-networks {
-    background-color: rgb(44, 110, 73);
-    text-align: center;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    font-weight: 900;
-    margin-left: -30px;
-}
-
-.social-networks > li {
-    display:inline-flex;
-    padding: 10px;
-}
-
-.social-networks i {
-    color: coral;
-    margin-bottom: 15px !important;
-    padding: 10px;
-    font-size:180%;
-}
-
-.social-networks i:hover {
-    box-shadow: 0px 0px 5px 2px white inset;
-    text-shadow: 0px 0px 10px white;
-    margin-bottom: 5px;
-}
-
-#copyright {
-    background-color: coral;
-    color: rgb(44, 110, 73);
-    text-align: center;
-    margin-top: -70px;
-    margin-bottom: -20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: 700;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#footer-page-info {
-    background-color: rgb(91, 91, 91);
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
-#footer-page-info p{
-    color: coral;
-    margin-left: 20px;
-    font-size: small;
-    font-weight: 900;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#footer-page-info a {
-    font-size: small;
-    margin-left: 20px;
-    color: coral;
-    font-weight: 900;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#footer-page-info a:hover {
-    color: white;
-}
-
-/* FOOTER ELEMENTS - END */
-
-/* BONUS MATERIAL*/
-
-
-#game-intro {
-    width: 100%;
-    height: 640px;
-    background-color:black !important;
-}
-
-#game-intro video { 
-    background-color: black !important;
-    width: 100%;
-    height: 640px;
-}
-
-#game-outro {
-    width: 100%;
-    height: 640px;
-    background-color:black !important;
-}
-
-#game-outro video { 
-    background-color: black !important;
-    width: 100%;
-    height: 640px;
-}
-
-#home-screen-game {
-    height: 640px;
-    width: 100%;
-    background-color: black;
-}
-
-#home-screen-title {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: small;
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
-
-#home-screen-title h2{
-    padding: 5px;
-    border: 4px double green;
-    background-color: rgb(206, 238, 251);
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#avatars {
-    background-image: url('../media/images/versus.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    height: 60px;
-    border: 5px solid coral;
-    width: 80%;
-    height: 130px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-#avatars img {
-    height: 110px;
-    padding: 5px;
-
-}
-
-#sharky-logo {
-    border: 5px solid rgb(44, 110, 73);
-    float: right;
-    padding-right: 10px;
-    padding-left: 10px;
-    background-color: rgb(206, 238, 251) !important;
-}
-
-
-#robot-logo {
-    border: 5px solid rgb(44, 110, 73);   
-    float: left;
-    background-color: rgb(206, 238, 251) !important;
-}
-
-
-#home-screen-tag {
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    font-size: x-small;
-    margin-top: 30px;
-    margin-bottom: 55px;
-}
-
-#home-screen-tag h2{
-    background-color: rgb(206, 238, 251);
-    padding: 5px;
-    border: 4px double green;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#start-button button {
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 35px;
-    font-family: 'Titan One', cursive;
-    font-size: large;
-    background-color: rgb(44, 110, 73);
-    text-shadow: 0px 0px 1px black;
-    color: coral;
-    padding: 5px;
-}
-
-#start-button button:hover {
-    color: white;
-    box-shadow: 0px 0px 5px 4px white;
-    text-shadow: 0px 0px 1px black;
-}
-
-#start-button button:after {
-    background-color: white;
-    color: coral;
-    box-shadow: 0px 0px 5px 4px coral;
-    text-shadow: 0px 0px 1px black;
-}
-
-#start-button i {
-    padding-right: 3px;
-}
-
-#partners {
-    height: 120px;
-    width: 100%;
-    margin-top: 70px;
-}
-
-#partners-text {
-    width: 45%;
-    float: left;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-}
-
-#partners-text h3 {
-    padding: 5px;
-    font-size: medium;
-    border: 4px double green;
-    background-color: rgb(206, 238, 251);
-    width: fit-content;
-    margin-left: 80px;
-    margin-top: 25px;
-}
-
-#partners a {
-    padding: 5px;
-    width: 45%;
-    float: right;
-    height: 64px;
-}
-
-#partners img {
-    width: 40%;
-    margin-left: 10px;
-}
-
-#lifecoin-logo {
-    height: 100%;
-    width: 80%;
-    border-radius: 50px;
-    border: 5px solid rgb(206, 238, 251);
-}
-
-#lifecoin-logo:hover {
-    box-shadow: 0px 0px 3px 8px teal;
-}
 
 #winning-screen {
     height: 640px;
@@ -1124,3 +1030,11 @@ footer {
 .results-button i {
     padding-right: 5px;
 }
+
+
+
+
+
+
+
+
