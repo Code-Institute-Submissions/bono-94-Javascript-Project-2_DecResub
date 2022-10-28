@@ -21,7 +21,7 @@
     <section id="home-screen-game">
         <div id="home-screen-title">
             <h2>
-                Welcome to Bigger Fish game!
+                Welcome to the Bigger Fish game!
             </h2>
         </div>
         <div id="avatars">
@@ -48,7 +48,7 @@
                 Game by:
             </h3>
             <a href="https://www.lifecoin.earth" target="_blank" rel="noopener">
-                <img id="lifecoin-logo" src="./assets/media/images/lifecoin.jpg" alt="Lifecoin logo representing development team">
+                <img id="lifecoin-logo" src="./assets/media/images/coin-logo-2d-slim.png" alt="Lifecoin logo representing development team">
             </a>
         </div>
     </section>
@@ -57,68 +57,105 @@
     </section>
     <section id="winning-screen">
         <div id="winning-screen-title">
-            YOU WON!
+            <h2 class="game-results-screen-h-two">
+                YOU WON!
+                <i class="fa-solid fa-trophy"></i>
+            </h2>
         </div>
         <div id="winning-screen-image">
-
+            <img class="results-covers" id="winning-cover" src="./assets/media/images/treasure-small.jpg" alt="Image of treasure chest with a glow for winners">
         </div>
-        <div id="winning-screen-text">
-
+        <div class="results-text"id="winning-screen-text">
+            <h3>
+                Congratulations! You were the bigger fish this time.
+            </h3>
         </div>
-        <div id="winning-screen-results">
-
+        <div class="results-results" id="winning-screen-results">
+            <p>
+                - You won a treasure chest in value of <span>0$</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span>0$</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+            </p>
         </div>
-        <div id="winning-screen-button">
+        <div class="results-button" id="winning-screen-button">
             <button>
+                <i class="fa-regular fa-circle-play"></i>
                 Next Game
             </button>
-        </div>
-        <div id="winning-screen-reward">
-
         </div>
     </section>
     <section id="losing-screen">
         <div id="losing-screen-title">
-            GAME OVER!
+            <h2 class="game-results-screen-h-two">
+                GAME OVER!
+                <i class="fa-solid fa-skull-crossbones"></i>
+            </h2>
         </div>
-        <div id="losing-screen-image">
-
+        <div class="result-covers-box" id="losing-screen-image">
+            <img class="results-covers" id="losing-cover" src="./assets/media/images/broke-small.jpg" alt="Image of person emptying out their pockets with small change representing no funds to proceed">
         </div>
-        <div id="losing-screen-text">
-
+        <div class="results-text" id="losing-screen-text">
+            <h3>
+                Unfortunately, you were the smaller fish this time.
+            </h3>
         </div>
-        <div id="losing-screen-results">
-
+        <div class="results-results" id="losing-screen-results">
+            <p>
+                - You lost a treasure chest in value of <span>0$</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span>0$</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+            </p>
         </div>
-        <div id="losing-screen-button">
+        <div class="results-button" id="losing-screen-button">
             <button>
-                Next Game
+                <i class="fa-solid fa-rotate-left"></i>
+                New Game
             </button>
-        </div>
-        <div id="losing-screen-reward">
-
         </div>
     </section>
     <section id="folded-screen">
         <div id="folded-screen-title">
-            TRY AGAIN!
+            <h2 class="game-results-screen-h-two">
+                TRY AGAIN!
+                <i class="fa-solid fa-dice"></i>
+            </h2>
         </div>
-        <div id="folded-screen-image">
-
+        <div class="result-covers-box" id="folded-screen-image">
+            <img class="results-covers" id="folded-cover" src="./assets/media/images/orca-small.jpg" alt="Image of orca approaching surface, represents another opportunity for one of the largest fish to hunt again">
         </div>
-        <div id="folded-screen-text">
-
+        <div class="results-text" id="folded-screen-text">
+            <h3>
+                Luckily, you were a decent size of a fish. Enough to escape!
+            </h3>
         </div>
-        <div id="folded-screen-results">
-
+        <div class="results-results" id="losing-screen-results">
+            <p>
+                - You have lost a treasure chest in value of <span>0$</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span>0$</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+            </p>
         </div>
-        <div id="folded-screen-button">
+        <div class="results-button" id="folded-screen-button">
             <button>
+                <i class="fa-regular fa-circle-play"></i>
                 Next Game
             </button>
-        </div>
-        <div id="folded-screen-reward">
-
+            <button>
+                <i class="fa-solid fa-rotate-left"></i>
+                New Game
+            </button>
         </div>
     </section>
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>   

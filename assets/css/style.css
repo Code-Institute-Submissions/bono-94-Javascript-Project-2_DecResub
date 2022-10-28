@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Titan+One&display=swap');
 
 body {
     background-color: rgb(206, 238, 251);
@@ -10,7 +10,8 @@ h1 {
     text-shadow: 0px 0px 1px black;
     padding-top: 10px;
     font-size: xx-large;
-    /*font-family:*/
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 hr {
@@ -51,6 +52,8 @@ hr {
     font-size: large;
     padding: 5px;
     font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #nav-menu a:hover {
@@ -209,16 +212,18 @@ hr {
     border: 3px double black;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #user-image-title {
     font-weight: 900;
     position: absolute;
-    bottom: 15%;
-    left: 90px;
-    font-size: large;
+    bottom: 16%;
+    left: 132px;
+    font-size: medium;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #pc-image {
@@ -240,33 +245,41 @@ hr {
 #pc-image-title {
     font-weight: 900;
     position: absolute;
-    bottom: 15%;
-    right: 94px;
-    font-size: large;
+    bottom: 17%;
+    right: 135px;
+    font-size: medium;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 .past-score-area p {
     color: black;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: x-small;
+    background-color: whitesmoke;
+    padding: 1px;
+    border: 1px solid coral;
 }
 
 #past-score-box-h {
     font-size: x-small;
     font-weight: 900;
     position: absolute;
-    bottom: 35%;
-    left: 90px;
+    bottom: 6%;
+    left: 86px;
 }
 
 #past-score-box-r {
     font-size: x-small;
     font-weight: 900;
     position: absolute;
-    bottom: 35%;
-    right: 90px;
+    bottom: 6%;
+    right: 88px;
 }
 
 #balance-tracker {
-    width: 35%;
+    width: 33%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -279,6 +292,9 @@ hr {
 
 #balance-tracker p {
     font-size: small;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 #balance-tracker i {
@@ -303,7 +319,7 @@ hr {
 }
 
 #last-bets {
-    width: 35%;
+    width: 33%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -316,6 +332,9 @@ hr {
 
 #last-bets p {
     font-size: small;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 #last-bets i {
@@ -452,6 +471,8 @@ hr {
     padding-bottom: 8px;
     padding-left: 10px;
     font-size: x-large;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 .rules-box-content p {
@@ -466,6 +487,8 @@ hr {
     text-align: left;
     width: fit-content;
     padding: 12px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #rules-box-title i {
@@ -575,8 +598,10 @@ form {
     color: rgb(91, 91, 91);
     padding-bottom: 10px;
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #feedback-form em {
@@ -616,6 +641,8 @@ fieldset label {
     font-size: large;
     font-weight: 700;
     color:rgb(48, 47, 47);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #file-input input{
@@ -628,7 +655,8 @@ input[type=text], input[type=email] {
     height: 30px;
     width: 70%;
     padding-left: 5px;
-    font-size: small;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
   
 }
 
@@ -640,9 +668,11 @@ input[type=submit] {
     height: fit-content !important;
     margin-top: 20px;
 	margin-left: 0.75rem;
-	padding: 13px;
+	padding: 5px;
     font-weight: 700;
-    font-size: small !important;
+    font-size: medium !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 input[type=reset] {
@@ -654,9 +684,11 @@ input[type=reset] {
     height: fit-content !important;
 	margin-top: 20px;
     margin-right: 0.75rem;
-    padding: 12px;
+    padding: 5px;
     font-weight: 700;  
-    font-size: small !important;
+    font-size: medium !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 input[type=submit]:hover {
@@ -672,6 +704,10 @@ textarea {
     height: 100px;
     border: 2px solid coral;
     border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-left: 5px;
 }
 /* REGISTER - END */
 
@@ -727,6 +763,8 @@ footer {
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #footer-page-info {
@@ -739,16 +777,20 @@ footer {
 
 #footer-page-info p{
     color: coral;
-    margin-left: 15px;
+    margin-left: 20px;
     font-size: small;
     font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #footer-page-info a {
     font-size: small;
-    margin-left: 15px;
+    margin-left: 20px;
     color: coral;
     font-weight: 900;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #footer-page-info a:hover {
@@ -758,6 +800,7 @@ footer {
 /* FOOTER ELEMENTS - END */
 
 /* BONUS MATERIAL*/
+
 
 #game-intro {
     width: 100%;
@@ -802,6 +845,8 @@ footer {
     padding: 5px;
     border: 4px double green;
     background-color: rgb(206, 238, 251);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #avatars {
@@ -821,6 +866,7 @@ footer {
 #avatars img {
     height: 110px;
     padding: 5px;
+
 }
 
 #sharky-logo {
@@ -831,11 +877,13 @@ footer {
     background-color: rgb(206, 238, 251) !important;
 }
 
+
 #robot-logo {
     border: 5px solid rgb(44, 110, 73);   
     float: left;
     background-color: rgb(206, 238, 251) !important;
 }
+
 
 #home-screen-tag {
     margin-left: auto;
@@ -850,6 +898,8 @@ footer {
     background-color: rgb(206, 238, 251);
     padding: 5px;
     border: 4px double green;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 #start-button button {
@@ -857,7 +907,7 @@ footer {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-family: 'Titan One', cursive;
     font-size: large;
     background-color: rgb(44, 110, 73);
@@ -884,33 +934,153 @@ footer {
 }
 
 #partners h3 {
-    font-size: x-small;
+    font-size: small;
     padding: 5px;
     border: 4px double green;
     background-color: rgb(206, 238, 251);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#partners a {
+    display: block;
+    padding: 5px;
+    width: 21%;
+    height: 77px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #lifecoin-logo {
-    display: block;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    border: 3px solid coral;
-    background-color: rgb(44, 110, 73);
-}
-
-#lifecoin-logo:hover {
-    border: 1px solid white;
-    box-shadow: 0px 0px 5px 5px white;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    border: 5px solid rgb(206, 238, 251);
 }
 
 #winning-screen {
     height: 640px;
     width: 100%;
-    background-color: rgb(91, 91, 91);
+    background-color: black;
+}
+
+#losing-screen {
+    height: 640px;
+    width: 100%;
+    background-color: black;
+}
+
+#folded-screen {
+    height: 640px;
+    width: 100%;
+    background-color: black;
+}
+
+.game-results-screen-h-two {
+    color: coral;
+    font-size: xx-large;
+    font-family: 'Titan One', cursive;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.game-results-screen-h-two i {
+    padding-left: 4px;
+}
+
+.results-covers {
+    width: 70%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 15%;
+    border: 3px solid coral
+}
+
+.results-text {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: x-small;
+    font-weight: 600;
+}
+    
+.results-text h3{
+    background-color: rgb(206, 238, 251);
+    padding: 5px;
+    border: 4px double green;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.results-results {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px double green;
+    background-color: rgb(206, 238, 251);
+    padding: 5px;
+    font-size: small;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.results-button {
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.results-button button {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Titan One', cursive;
+    font-size: large;
+    background-color: rgb(44, 110, 73);
+    text-shadow: 0px 0px 1px black;
+    color: coral;
+    padding: 5px;
+}
+
+.results-button button:hover {
+    color: white;
+    box-shadow: 0px 0px 5px 4px white;
+    text-shadow: 0px 0px 1px black;
+}
+
+.results-button button:after {
+    background-color: white;
+    color: coral;
+    box-shadow: 0px 0px 5px 4px coral;
+    text-shadow: 0px 0px 1px black;
+}
+
+#winning-screen-button button {
+    display: block;
+}
+
+#losing-screen-button button {
+    display: block;
+}
+
+#folded-screen-button{
+    width: 100%;
+}
+
+#folded-screen-button button {
+    display: inline-block;
+    width: 40%;
+    font-size: medium !important;
+}
+
+.results-button i {
+    padding-right: 5px;
 }

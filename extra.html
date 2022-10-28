@@ -35,6 +35,7 @@ Run New Game
 [rungame.html]
 newGame
     play background music until game won, loss or fold next Screen
+    play background music for 14 minutes then stop and replay until gameEnd which is function taking you to game results screen
     gameSetup
     - Records
         - since coming to newGame function, 
@@ -46,7 +47,6 @@ newGame
                 Generate robot amount privately (minimum and equal 50, max 1bn)
                 alert congratulations, your lifecoin yielded ____ balance. It is your turn to start the first bet.
     Game battle
-        - play audio for buttons
         - if stake with any of buttons 
             exceeding balance errors:
                 only buttons with value less than balance work 
