@@ -20,7 +20,7 @@ hr {
 
 #nav-bar {
     background-color: rgb(91, 91, 91) !important;
-    border-bottom: 5px solid coral;
+    border-bottom: 6px solid coral;
     width: 100%;
     height: fit-content;
     display: inline-block;
@@ -60,7 +60,7 @@ hr {
 }
 
 #cover-media {
-    border-bottom: 5px solid coral;
+    border-bottom: 6px solid coral;
 }
 
 #header-logo {
@@ -440,7 +440,7 @@ hr {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-bottom: 5px solid rgb(44, 110, 73);
+    border-bottom: 8px solid rgb(91, 91, 91);
 }
 
 #rules-box-title h3 {
@@ -476,10 +476,8 @@ hr {
 
 
 #rules-box-title h3 {
-    border-top: 4px solid coral;
-    border-bottom: 6px solid rgb(44, 110, 73);
+    border-top: 6px solid coral;
 }
-
 /* Form */
 .form {
     clear: left;
@@ -539,7 +537,7 @@ hr {
 #feedback-box {
     width: 100%;
     height: fit-content;
-    border-bottom: 5px solid coral;
+    border-bottom: 8px solid rgb(65, 64, 64);
 }
 
 #feedback-box input {
@@ -568,13 +566,13 @@ form {
 }
 
 #feedback-form fieldset {
-    border: 2px solid #000000;
+    border: 2px solid rgb(91, 91, 91);
     margin-top: 30px;
     padding-bottom: 25px;
 }
 
 #feedback-form h3 {
-    color: #000000;
+    color: rgb(91, 91, 91);
     padding-bottom: 10px;
     text-align: center;
     font-size: x-large;
@@ -617,6 +615,7 @@ fieldset label {
     padding-bottom: 5px;
     font-size: large;
     font-weight: 700;
+    color:rgb(48, 47, 47);
 }
 
 #file-input input{
@@ -636,7 +635,7 @@ input[type=text], input[type=email] {
 input[type=submit] {
 	background-color: coral;
 	color: white;
-    border: 1px solid rgb(44, 110, 73);
+    border: 3px solid rgb(44, 110, 73);
 	border-radius: 5px;
     height: fit-content !important;
     margin-top: 20px;
@@ -649,7 +648,7 @@ input[type=submit] {
 input[type=reset] {
     background-color: white;
     color: rgb(44, 110, 73);
-    border: 1px solid coral;
+    border: 3px solid coral;
     border-radius: 5px;
     float: right;
     height: fit-content !important;
@@ -671,7 +670,7 @@ input[type=reset]:hover {
 textarea {
     width: 72%;
     height: 100px;
-    border: 1px solid coral;
+    border: 2px solid coral;
     border-radius: 5px;
 }
 /* REGISTER - END */
@@ -681,7 +680,7 @@ textarea {
 /* FOOTER ELEMENTS */
 
 footer {
-    margin-top: -43px;
+    margin-top: -44px;
 }
 
 #social-networks {
