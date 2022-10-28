@@ -220,7 +220,7 @@ hr {
     font-weight: 900;
     position: absolute;
     bottom: 16%;
-    left: 132px;
+    left: 127px;
     font-size: medium;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
@@ -246,7 +246,7 @@ hr {
     font-weight: 900;
     position: absolute;
     bottom: 17%;
-    right: 135px;
+    right: 130px;
     font-size: medium;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
@@ -267,7 +267,7 @@ hr {
     font-weight: 900;
     position: absolute;
     bottom: 6%;
-    left: 86px;
+    left: 83px;
 }
 
 #past-score-box-r {
@@ -275,11 +275,11 @@ hr {
     font-weight: 900;
     position: absolute;
     bottom: 6%;
-    right: 88px;
+    right: 85px;
 }
 
 #balance-tracker {
-    width: 33%;
+    width: 41%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -292,13 +292,13 @@ hr {
 
 #balance-tracker p {
     font-size: small;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Titan One', cursive;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 100 !important;
 }
 
 #balance-tracker i {
-    padding-right: 6px;
+    padding-right: 4px;
     padding-left: 6px;
     font-size: medium;
 }
@@ -319,7 +319,7 @@ hr {
 }
 
 #last-bets {
-    width: 33%;
+    width: 41%;
     float: left;
     display: block;
     margin-left: 5px;
@@ -332,13 +332,13 @@ hr {
 
 #last-bets p {
     font-size: small;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Titan One', cursive;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 100 !important;
 }
 
 #last-bets i {
-    padding-right: 6px;
+    padding-right: 4px;
     padding-left: 6px;
     font-size: medium;
 }
@@ -354,7 +354,7 @@ hr {
 }
 
 .contols-area-right {
-    width: 34%;
+    width: 35%;
     float: right;
     display: block;
     position: absolute;
@@ -367,13 +367,13 @@ hr {
 
 .bttn-second {
     width: 100%;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     padding-top: 8px;
     padding-bottom: 8px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: 'Titan One', cursive;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    font-family: 'Titan One', cursive !important;
 }
 
 #bttn-one {
@@ -454,7 +454,7 @@ hr {
 #rules-box {
     width: 100%;
     margin-top: -24px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     background-image: url('../media/images/water-small.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -466,7 +466,7 @@ hr {
     background-color: black;
     color:coral;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 10px;
@@ -483,6 +483,7 @@ hr {
     margin-left: 60px;
     font-size: medium;
     margin-right: 70px !important;
+    margin-bottom: 28px;
     text-shadow: 0px 0px 1px black;
     text-align: left;
     width: fit-content;
@@ -890,8 +891,8 @@ footer {
     margin-right: auto;
     width: fit-content;
     font-size: x-small;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 55px;
 }
 
 #home-screen-tag h2{
@@ -907,7 +908,7 @@ footer {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-family: 'Titan One', cursive;
     font-size: large;
     background-color: rgb(44, 110, 73);
@@ -933,33 +934,50 @@ footer {
     padding-right: 3px;
 }
 
-#partners h3 {
-    font-size: small;
-    padding: 5px;
-    border: 4px double green;
-    background-color: rgb(206, 238, 251);
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
+#partners {
+    height: 120px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+#partners-text {
+    width: 45%;
+    float: left;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
 }
 
-#partners a {
-    display: block;
+#partners-text h3 {
     padding: 5px;
-    width: 21%;
-    height: 77px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: medium;
+    border: 4px double green;
+    background-color: rgb(206, 238, 251);
+    width: fit-content;
+    margin-left: 80px;
+    margin-top: 25px;
+}
+
+#partners a {
+    padding: 5px;
+    width: 45%;
+    float: right;
+    height: 64px;
+}
+
+#partners img {
+    width: 40%;
+    margin-left: 10px;
 }
 
 #lifecoin-logo {
     height: 100%;
-    width: 100%;
+    width: 80%;
     border-radius: 50px;
     border: 5px solid rgb(206, 238, 251);
+}
+
+#lifecoin-logo:hover {
+    box-shadow: 0px 0px 3px 8px teal;
 }
 
 #winning-screen {
@@ -991,7 +1009,7 @@ footer {
 }
 
 .game-results-screen-h-two i {
-    padding-left: 4px;
+    padding-left: 8px;
 }
 
 .results-covers {
@@ -1033,10 +1051,13 @@ footer {
     letter-spacing: 1px;
 }
 
+.results-results p {
+    font-weight: 900 !important;
+}
+
 .results-button {
-    margin-right: 10%;
-    margin-left: 10%;
-    width: 80%;
+    
+    width: 100%;
 }
 
 .results-button button {
@@ -1076,11 +1097,20 @@ footer {
 }
 
 #folded-screen-button button {
-    display: inline-block;
-    width: 40%;
+    display: inline-flex;
+    width: fit-content;
     font-size: medium !important;
 }
 
+#results-f-next-game {
+    position: absolute;
+    left: 14%;
+}
+
+#results-f-new-game {
+    position: absolute;
+    right: 14%;
+}
 .results-button i {
     padding-right: 5px;
 }
