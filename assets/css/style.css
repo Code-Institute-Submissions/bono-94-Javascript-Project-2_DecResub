@@ -272,10 +272,17 @@ hr {
 
 #past-score-box-r {
     font-size: x-small;
-    font-weight: 900;
     position: absolute;
     bottom: 6%;
     right: 85px;
+}
+
+#past-score-box-h p {
+    font-weight: 900 !important;
+}
+
+#past-score-box-r p {
+    font-weight: 900 !important;
 }
 
 #balance-tracker {
@@ -984,18 +991,21 @@ footer {
     height: 640px;
     width: 100%;
     background-color: black;
+    margin-top: -30px;
 }
 
 #losing-screen {
     height: 640px;
     width: 100%;
     background-color: black;
+    margin-top: -30px;
 }
 
 #folded-screen {
     height: 640px;
     width: 100%;
     background-color: black;
+    margin-top: -30px;
 }
 
 .game-results-screen-h-two {
