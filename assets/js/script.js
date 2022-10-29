@@ -7,7 +7,6 @@ let specificHeading = document.getElementById('third-heading');
 
 
 
-
 if condition{
 
     if condition2{
@@ -22,6 +21,14 @@ if condition{
 
 
 document.write('<h1>Hello!</h1>');
+
+
+let placeLifecoin = document.getElementById('insert-lifecoin-background');
+
+placeLifecoin.innerHTML = "<div class="insert-lifecoin-image">
+<img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
+</div>"
+
 
 
 let userRandomBalance = parseInt(Math.random)//math random + parseInt
@@ -74,6 +81,8 @@ function addTwo(num1, num2) {
 
 
 
+
+
 if userBalance < 2 {
     Start function of game loss
 }
@@ -81,8 +90,12 @@ if userBalance < 2 {
 
 
 
+window.onload - afteer everything is loaded
+1.	In the HTML lifecycle, the document will always complete loading before the window, and you can use the onload event on both objects. To use this event, just set the onload property on the window to whatever JavaScript you would like to execute:
 
-
+load- everything is loaded
+BeforeUnloadEvent - before user leaves
+unload when user confirms they want to leave
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -236,3 +249,116 @@ function updateScoreLoss () {
 
 //java adjust volume and music playing
 //document.getElementById("myAudio").volume = 0.2; 1 is highest
+
+
+
+// remove attributes
+function update() {
+    let paragraph = document.getElementsByClassName('special')[0];
+    paragraph.removeAttribute('class');
+
+
+
+
+// createElement(), appendChild(), cloneNode() or remove().
+
+const body = document.body;
+
+const screenInsertLifecoin = getElementById('insert-lifecoin');
+
+const insertLifecoinBackground = getElementsByClassName ('insert-lifecoin-background');
+
+const insertButton = getElementsById ('insert-button')
+
+function insertLifecoin () {
+
+    SOUND FX
+    insertButton.setAttribute('onclick', 'placementLifecoin();')
+}
+
+function placementLifecoin () {
+
+    let insertLifecoinAction = document.createElement('div');
+    insertLifecoinAction.classList.add('insert-lifecoin-image');
+    insertLifecoinAction.innerHTML = `<img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">`;
+    insertLifecoinAction.appendChild(insertLifecoinBackground);
+}
+
+function inserLifecoinSound () {
+
+    timer
+    picture animation
+}
+
+function screenInsertLifecoinRemove () {
+
+    screenInsertLifecoin.remove ();
+}
+
+function screenGameIntroCreate () {
+
+    let anchorCoverMedia = document.getElementsById ('rules');
+    let screenGameIntro = document.createElement('section');
+    screenGameIntro.setAttribute("id","game-intro")
+    screenGameIntro.innerHTML = `
+      <video src="./assets/media/video/intro.mp4" alt="Logo with game introduction effects">
+        </video>
+    `;
+    document.body.insertBefore(screenGameIntro, anchorCoverMedia);
+}
+
+function screenWelcome () {
+
+    const newGameButton = getElementsById ('start-button')
+    newGameButton.addEventListener('click', screenWelcome)
+    SOUND FX
+    newGameButton.setAttribute('onclick', 'screenGameLoadingOne();')
+
+}
+
+
+function screenGameLoadingOne {
+    add to section id = "loading":
+    <section id="x" onload="screenGameLoadingOne();"></section></section>
+
+
+}
+
+
+Balance and score updater
+let userLiveBalance = document.getElementById('balance-total');
+userLiveBalance.value = "previousBalance + betIncrease + '$'""
+
+
+// INSERT COIN SCREEN
+
+
+// GAME INTRO MEDIA SCREEN
+
+
+// WELCOME SCREEN
+
+
+// GAME LOADING SCREEN
+
+
+// RUN NEW GAME SCREEN
+
+
+// GAME LOADING SCREEN 2
+
+
+// GAME RESULTS SCREEN 
+
+
+// GAME LOADING SCREEN 3
+
+
+// RUN NEXT GAME SCREEN
+
+
+// GAME LOADING SCREEN 4 
+
+
+// GAME RESULTS SCREEN 2 = SCREEN 1 + rename variables 
+
