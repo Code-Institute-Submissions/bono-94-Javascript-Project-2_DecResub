@@ -1,4 +1,70 @@
 
+let allParagraphs = document.getElementsByTagName('p');
+
+let blueThings = document.getElementsByClassName('blue');
+
+let specificHeading = document.getElementById('third-heading');
+
+
+
+
+if condition{
+
+    if condition2{
+
+    } else if{
+
+    }
+
+} else {
+    blah
+}
+
+
+document.write('<h1>Hello!</h1>');
+
+
+let userRandomBalance = parseInt(Math.random)//math random + parseInt
+
+var robotRandomBalance = // math random + parseInt
+
+
+
+
+var userRandomBet = 
+
+
+const robotRandomBet = //math random between 10 choices + parseInt numbers of your buttons
+
+if (robotRandomBet === 0.1) {
+    prawnRobotBet function
+} else if (robotRandomBet === 1) {
+    crabRobotBet function
+}
+
+//you can only choose amount only one 
+
+
+if prawnUserBet.onclick {
+
+    treasureVaultLive += 0.1
+    userLiveBalance -= 0.1
+    userLastBet = 0.1
+    userTotalBets += 0.1
+}
+
+prawnRobotBet {
+
+    treasureVaultLive += 0.1
+    robotLiveBalance += 0.1
+    robotLastBet = 0.1
+}
+
+function addTwo(num1, num2) {
+    return num1 + num2;
+  }
+  let sum = addTwo(3, 5);
+  console.log(sum);  // 8
 
 
 
@@ -6,6 +72,11 @@
 
 
 
+
+
+if userBalance < 2 {
+    Start function of game loss
+}
 
 
 
