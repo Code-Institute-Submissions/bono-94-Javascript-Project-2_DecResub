@@ -22,8 +22,67 @@ if condition{
 
 document.write('<h1>Hello!</h1>');
 
+and, or, not
 
-let placeLifecoin = document.getElementById('insert-lifecoin-background');
+some_value = (1 + 2) * (3 + 4)
+if(userBalanceLive > 2) {...}
+
+
+.children
+.children[0]
+.nextElement sibling
+
+onmouseenter
+onmouseleave
+onmouseover
+onmouseout
+
+
+reateElement()
+setAttribute()
+appendChild() 
+insertBefore()
+
+function add(a,b) {
+    let sum = a + b;
+    return sum;
+}
+
+const 
+
+const screenInsertLifecoin = getElementById('insert-lifecoin');
+const placeLifecoin = document.getElementById('insert-lifecoin-background');
+
+
+const prawnUserBet = document.getElementById("bttn-one")
+for (let button of prawnUserBet) {
+    button.addEventListener("click", function()) {
+        let userCustomBet = this.getAttribute(data-choice);
+        userLiveBalanceUpdater
+    }
+}
+
+let robotRandomBalance = Math.floor(math.random(<100000000))
+
+let robotRandomBet = Math.floor(math.random(0.1, 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000));
+    if number !== 0.1
+        math.floor(math.random)
+    else number !== 1
+    
+    else number !==10
+
+
+while (robotLiveBalance < 50) {
+    robotRandomBet = Math.floor(math.random(0,1 ,1, 10))
+}
+
+userLiveBalance (infinite number or looop) = new userLiveBalance
+
+
+
+userCustomBet firstBet = new userCustomBet();
+userCustomBet secondBet = new userCustomBet();
+
 
 placeLifecoin.innerHTML = "<div class="insert-lifecoin-image">
 <img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
@@ -38,7 +97,7 @@ var robotRandomBalance = // math random + parseInt
 
 
 
-var userRandomBet = 
+var userCustomBet = 
 
 
 const robotRandomBet = //math random between 10 choices + parseInt numbers of your buttons
@@ -264,7 +323,7 @@ function update() {
 
 const body = document.body;
 
-const screenInsertLifecoin = getElementById('insert-lifecoin');
+
 
 const insertLifecoinBackground = getElementsByClassName ('insert-lifecoin-background');
 
@@ -298,7 +357,7 @@ function screenInsertLifecoinRemove () {
 function screenGameIntroCreate () {
 
     let anchorCoverMedia = document.getElementsById ('rules');
-    let screenGameIntro = document.createElement('section');
+    screenGameIntro = document.createElement('section');
     screenGameIntro.setAttribute("id","game-intro")
     screenGameIntro.innerHTML = `
       <video src="./assets/media/video/intro.mp4" alt="Logo with game introduction effects">
@@ -327,10 +386,12 @@ function screenGameLoadingOne {
 
 Balance and score updater
 let userLiveBalance = document.getElementById('balance-total');
-userLiveBalance.value = "previousBalance + betIncrease + '$'""
+userLiveBalance.value 
 
+let userLiveBalanceUpdater = `$(userLastBet) $`;
 
-// INSERT COIN SCREEN
+let userLastBetUpdater = `$(userCustomBet) $`;
+// INSERT COIN SCREN
 
 
 // GAME INTRO MEDIA SCREEN

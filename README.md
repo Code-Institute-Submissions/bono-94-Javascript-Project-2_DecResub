@@ -31,6 +31,9 @@ Periodical Visit and Play Time Reward System
 Tournaments and Challenges
 Professional Designs and Animations
 Inclusion of secondary layer games such as card games or sport event
+Investing Custom Amount
+Amounts Mathematical Calculations
+
 
 # [Lifecoin](https://lifecoin.earth) 
 
