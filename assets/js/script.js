@@ -15,36 +15,29 @@ const screenGameLoadingThree = document.getElementById('game-outro-three');
 const screenNextGame = document.getElementById('new-game');
 const screenGameLoadingFour = document.getElementById('game-outro-four');
 
+function insertLifecoinAnimation (screenInsertLifecoin) {
 
-document.addEventListener("DOMContentLoaded", function() {
-    insertButton.addEventListener("click", function() {
-        insertLifecoinAnimation();
-    });
-})
-
-function insertLifecoinAnimation () {
-
-    placeLifecoinBackground.innerHTML =`
-    <div class="insert-lifecoin-image">
+    placeLifecoinBackground.innerHTML =`<div class="insert-lifecoin-image">
         <img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
     </div>"
     `;
-    document.getElementById("insert-lifecoin-background").appendChild(placeLifecoin);
+    document.getElementsByClassName("insert-lifecoin-background").appendChild(placeLifecoin);
+    document.getElementById("insert-lifecoin").appendChild(placeLifecoinBackground)
     screenInsertLifecoin.remove ();  
     screenGameIntroCreate ();
 }
 
 function screenGameIntroCreate () {
 
-    document.getElementsByTagName('body').innerHTML = `
+    document.body.innerHTML = `
     <section id="game-intro">
         <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects"></video>
     </section>
     `;
-    gameIntroCreate.insertBefore(rulesBox);
+    document.getElementById("game-intro").insertBefore(rulesBox);
     gameIntroTransfer();
 }
-
+/*
 // GAME INTRO MEDIA SCREEN
 
 function gameIntroTransfer {

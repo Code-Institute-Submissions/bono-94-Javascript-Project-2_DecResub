@@ -110,12 +110,12 @@ hr {
     padding-top: 90px;
     margin-right: auto;
     margin-left: auto;
-    animation-name: inser-lifecoin-zoom;
+    animation-name: insert-lifecoin-zoom;
     animation-duration: 4s;
-    animation-fill-mode:backwards
+    animation-fill-mode:forwards;
 }
 
-@keyframes inser-lifecoin-zoom {
+@keyframes insert-lifecoin-zoom {
     from{
         transform: scale(1.8);
     }
