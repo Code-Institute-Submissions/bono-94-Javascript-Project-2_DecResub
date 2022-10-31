@@ -1,7 +1,8 @@
 const screenInsertLifecoin = document.getElementById('insert-lifecoin');
-const placeLifecoinBackground = document.getElementsByClassName('insert-lifecoin-background');
+const placeLifecoinBackground = document.getElementById('insert-lifecoin-background');
 const insertButton = document.getElementById('insert-button');
-const placeLifecoin = document.getElementsByClassName('insert-lifecoin-image');
+const placeLifecoin = document.getElementById('insert-lifecoin-image');
+const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation')
 const gameIntroCreate = document.getElementById('game-intro');
 const rulesBox = document.getElementById('rules');
 const screenWelcome = document.getElementById('home-screen-game');
@@ -15,15 +16,34 @@ const screenGameLoadingThree = document.getElementById('game-outro-three');
 const screenNextGame = document.getElementById('new-game');
 const screenGameLoadingFour = document.getElementById('game-outro-four');
 
-function insertLifecoinAnimation (screenInsertLifecoin) {
+var audioInsert = document.getElementById("audio-insert");
 
-    placeLifecoinBackground.innerHTML =`<div class="insert-lifecoin-image">
-        <img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
+
+function inserLifecoinButtonClick () {
+
+    document.getElementById("insert-button").addEventListener("click", insertLifecoinButtonSound);
+}
+
+function insertLifecoinButtonSound () {
+
+    insertLifecoinAnimation();
+    audioInsert.play();
+}
+
+function insertLifecoinAnimation () {
+    
+    placeLifecoinBackground.innerHTML =`<div id="insert-lifecoin-image">
+        <img id="insert-lifecoin-image-animation" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
     </div>"
     `;
-    document.getElementsByClassName("insert-lifecoin-background").appendChild(placeLifecoin);
-    document.getElementById("insert-lifecoin").appendChild(placeLifecoinBackground)
-    screenInsertLifecoin.remove ();  
+    document.getElementById("insert-lifecoin-background").appendChild(placeLifecoin);
+    document.getElementById("insert-lifecoin-image").appendChild(placeLifecoinImage);
+    document.getElementById('insert-lifecoin-image-animation').addEventListener("ended", insertLifecoinAnimationTransfer);
+}  
+
+function insertLifecoinAnimationTransfer () {
+    
+    screenInsertLifecoin.remove (); 
     screenGameIntroCreate ();
 }
 
@@ -37,10 +57,10 @@ function screenGameIntroCreate () {
     document.getElementById("game-intro").insertBefore(rulesBox);
     gameIntroTransfer();
 }
-/*
+
 // GAME INTRO MEDIA SCREEN
 
-function gameIntroTransfer {
+function gameIntroTransfer() {
 
     document.getElementById("intro-video").addEventListener("ended", welcomeScreenCreate);
 }
@@ -48,7 +68,7 @@ function gameIntroTransfer {
 function welcomeScreenCreate () {
 
     document.getElementById("game-intro").remove ();  
-    document.getElementsByTagName('body').innerHTML = `
+    document.body.innerHTML = `
     <section id="home-screen-game">
         <div id="home-screen-title">
             <h2>
@@ -86,15 +106,15 @@ function welcomeScreenCreate () {
         </div>
     </section>
     `;
-    document.body.insertBefore(screenGameIntroCreate, rulesBox);
+    document.body.insertBefore(screenWelcome, rulesBox);
+    document.getElementById("start-button").addEventListener("ended", welcomeScreenCreate);
     welcomeScreenTransfer();
 }
 
-// WELCOME SCREEN
-
+/*/ WELCOME SCREEN
 
 function welcomeScreenTransfer () {
-    document.getElementById("intro-video").addEventListener("ended", welcomeScreenCreate);
+   
 }
 - listens for action on start game button 
         add sound effect for start game button

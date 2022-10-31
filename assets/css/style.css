@@ -93,7 +93,7 @@ hr {
     padding-top: 40px;
 }
 
-.insert-lifecoin-background {
+#insert-lifecoin-background {
     background-image: url('../media/images/lifecoin-slot-small.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,11 +105,16 @@ hr {
     border: 3px solid coral;
 }
 
-.insert-lifecoin-image {
-    width: 80%;
-    padding-top: 90px;
-    margin-right: auto;
-    margin-left: auto;
+#insert-lifecoin-image {
+    width: 100%;
+    background-color: orange;
+}
+
+#insert-lifecoin-image-animation {
+    height: 114px;
+    position: absolute;
+    top: 77%;
+    left: 35%;
     animation-name: insert-lifecoin-zoom;
     animation-duration: 4s;
     animation-fill-mode:forwards;
@@ -117,7 +122,7 @@ hr {
 
 @keyframes insert-lifecoin-zoom {
     from{
-        transform: scale(1.8);
+        transform: scale(2.8);
     }
     to{
         transform: scale(1);
