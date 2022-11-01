@@ -796,6 +796,11 @@ footer {
     font-weight: 700;
 }
 
+#robot-balance-total {
+
+    padding-left: 8px;
+}
+
 .contols-area-right {
     width: 35%;
     float: right;
@@ -814,7 +819,7 @@ footer {
     font-weight: 500;
     padding-top: 8px;
     padding-bottom: 8px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
     margin-top: 6px;
     font-family: 'Titan One', cursive !important;
 }

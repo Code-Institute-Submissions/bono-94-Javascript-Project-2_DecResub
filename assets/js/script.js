@@ -10,7 +10,18 @@ const rulesBox = document.getElementById('rules');
 const screenWelcome = document.getElementById('home-screen-game');
 
 const screenGameLoadingOne = document.getElementById('game-outro-one');
+
 const screenNewGame = document.getElementById('game');
+const userWins = document.getElementById('past-score-counter-hw');
+const userLoss = document.getElementById('past-score-counter-hl');
+const robotWins = document.getElementById('past-score-counter-rw');
+const robotLoss = document.getElementById('past-score-counter-rl');
+const userBalance = document.getElementById('balance-total');
+const userTotalBets = document.getElementById('bet-total');
+const vaultReward = document.getElementById('treasure-total');
+const userLastBet = document.getElementById('bet-user-total');
+const robotLastBet = document.getElementById('bet-robot-total');
+
 const screenGameLoadingTwo = document.getElementById('game-outro-two');
 const screenWinGameResults = document.getElementById('winning-screen');
 const screenLoseGameResults = document.getElementById('losing-screen');
@@ -32,7 +43,7 @@ function insertLifecoinAnimation () {
     placeLifecoinBackground.innerHTML =`
     <div id="insert-lifecoin-image">
         <img id="insert-lifecoin-image-animation" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
-    </div>"
+    </div>
     `;
     audioRocks.volume = 0.5;
     audioRocks.play();
@@ -50,8 +61,10 @@ function screenGameIntroCreate () {
     <section id="game-intro">
         <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
-    document.getElementById("intro-video").volume = 0.2; 
+    document.getElementById("intro-video").volume = 0.1; 
 }
 
 function welcomeScreenTransfer () {
@@ -105,12 +118,15 @@ function welcomeScreenCreate () {
             <source src="./assets/media/audio/welcome-music.mp3" type="audio/mpeg">
         </audio>
     </section>
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-welcome").volume = 0.2;
 }
 
 function gameLoadingOneTransfer () {
     
+    document.getElementById("audio-newgame").volume = 0.4;
     document.getElementById("audio-newgame").play();
 }
 
@@ -121,8 +137,10 @@ function screenGameLoadingCreate () {
     <section id="game-outro-one">
         <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
     </section>
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
-    document.getElementById("video-loading").volume = 0.2; 
+    document.getElementById("video-loading").volume = 0.1; 
 }
 
 function newGameScreenTransfer () {
@@ -146,13 +164,13 @@ function screenNewGameCreate () {
                     <div class="past-score-area" id="past-score-box-h">
                         <p class="past-score-box">
                             Win:
-                            <span id="past-score-counter-w">
+                            <span id="past-score-counter-hw">
                                 0
                             </span>
                         </p>
                         <p class="past-score-box">
                             Loss:
-                            <span id="past-score-counter-l">
+                            <span id="past-score-counter-hl">
                                 0
                             </span>
                         </p>
@@ -168,13 +186,13 @@ function screenNewGameCreate () {
                     <div class="past-score-area" id="past-score-box-r">
                         <p class="past-score-box">
                             Win:
-                            <span id="past-score-counter-w">
+                            <span id="past-score-counter-rw">
                                 0
                             </span>
                         </p>
                         <p class="past-score-box">
                             Loss:
-                            <span id="past-score-counter-l">
+                            <span id="past-score-counter-rl">
                                 0
                             </span>
                         </p>
@@ -203,23 +221,23 @@ function screenNewGameCreate () {
                         </p>
                     </div>
                     <hr>
-                    <div id="treasure-value">
-                        <p class="treasure-value">
-                            <i class="fa-solid fa-vault"></i>
-                            Vault Reward:
-                        </p>
-                        <p id="treasure-total">
-                            0$
-                        </p>
-                    </div>
-                </div>
-                <div id="last-bets">
                     <div id="last-bet-user">
                         <p class="last-bet-user">
                             <i class="fa-solid fa-user"></i>
                             Last Bet:
                         </p>
                         <p id="bet-user-total">
+                            0$
+                        </p>
+                    </div>
+                </div>
+                <div id="last-bets">
+                    <div id="treasure-value">
+                        <p class="treasure-value">
+                            <i class="fa-solid fa-vault"></i>
+                            Vault Reward:
+                        </p>
+                        <p id="treasure-total">
                             0$
                         </p>
                     </div>
@@ -231,6 +249,16 @@ function screenNewGameCreate () {
                         </p>
                         <p id="bet-robot-total">
                             0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="robot-balance">
+                        <p class="robot-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            AI Balance:
+                        </p>
+                        <p id="robot-balance-total">
+                            [UNDISCLOSED]
                         </p>
                     </div>
                 </div>
@@ -279,29 +307,126 @@ function screenNewGameCreate () {
         </audio>
     </section>
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-game-background").volume = 0.7;
 }
+/*
+function newGameSetupRecord {
 
-function screenNewGame
+    userWins.innerHTML = `0`;
+    userLoss.innerHTML = `0`;
+    robotWins.innerHTML = `0`;
+    robotLoss.innerHTML = `0`;
+}
+/*
+function newGameSetupBalance () {
 
-document.getElementById
+    userNewBalance = random number until 100million and greater than 2
+    robotNewBalance = random number until 100million and greater than 2
+
+}
+
+function userChoicePrawn () {
+    if userChoice < userLiveBalance {
+        userChoicePrawnPush();
+    }
+    else:
+        display error sound and alert: "Low balance! Please select smaller amount."
+      
+}
+
+function userChoiceCrab () {
+    
+}
+
+function userChoiceTurtle () {
+    
+}
+
+function userChoiceOctopus () {
+    
+}
+
+function userChoiceSquid () {
+    
+}
+
+function userChoiceLobster () {
+    
+}
+
+function userChoiceTuna () {
+    
+}
+
+function userChoiceDolphin () {
+    
+}
+
+function userChoiceWhale () {
+    
+}
+
+function userChoiceDragon () {
+    
+}
+
+function newGameUpdateBalances
+    userLiveBalance = userNewBalance - userLastLiveBet;
+    robotLiveBalance =  robotNewBalance - robotLastLiveBet;
+
+    userLiveBets = userLastLiveBet + userAllLiveBets;
+    robotLiveBets = robotLastLiveBet + robotAllLiveBets;
+
+    vaultLiveReward = userLiveBets + robotLiveBets
+    vaultLiveRewardUserUpdate = user
+
+    userBalance.innerHTML = `$(userLiveBalance)`;
+    userTotalBets.innerHTML = `$(userLiveBets)`; 
+    vaultReward.innerHTML = `$(vaultLiveReward)`; 
+    userLastBet.innerHTML = ``; = synchronizes which button was played last
+    robotLastBet.innerHTML = ``; = synchronizes which robot reaction was last out of any number < LiveBalance 
+/*
+\
+function screenWinningTransfer () {
+
+    document.getElementById("game").remove();
+    screenWinningCreate();
+}
+
+function screenLosingTransfer () {
+
+    document.getElementById("game").remove();
+    screenLosingCreate();
+}
+
+function screenFoldedTransfer () {
+
+    document.getElementById("game").remove();
+    screenFoldedCreate();
+}
+
+function screenWinningCreate () {
+
+
+}
+
+function screenLosingCreate () {
+
+
+}
+
+function screenFoldedCreate () {
+
+
+}
 
 /*
-
-if your choice is less value than balance, proceed
-else your input is more value than balance display error sound and alert        
+    
         
-// RUN NEW GAME SCREEN
 
-newGame
-    gameSetup
-    - Records
-        - since coming to newGame function, 
-            welcome screen makes sure to reset both records to 0 while giving them value
-    - Balances 
-        - since coming to newGame function (fresh game)
-            welcome screen randomize balances
+    
                 Generate user amount publicly (minimum 50, max 1bn)
                 Generate robot amount privately (minimum and equal 50, max 1bn)
                 alert congratulations, your lifecoin yielded ____ balance. It is your turn to start the first bet.

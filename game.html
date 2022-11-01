@@ -72,13 +72,13 @@
                     <div class="past-score-area" id="past-score-box-h">
                         <p class="past-score-box">
                             Win:
-                            <span id="past-score-counter-w">
+                            <span id="past-score-counter-hw">
                                 0
                             </span>
                         </p>
                         <p class="past-score-box">
                             Loss:
-                            <span id="past-score-counter-l">
+                            <span id="past-score-counter-hl">
                                 0
                             </span>
                         </p>
@@ -94,13 +94,13 @@
                     <div class="past-score-area" id="past-score-box-r">
                         <p class="past-score-box">
                             Win:
-                            <span id="past-score-counter-w">
+                            <span id="past-score-counter-rw">
                                 0
                             </span>
                         </p>
                         <p class="past-score-box">
                             Loss:
-                            <span id="past-score-counter-l">
+                            <span id="past-score-counter-rl">
                                 0
                             </span>
                         </p>
@@ -129,23 +129,23 @@
                         </p>
                     </div>
                     <hr>
-                    <div id="treasure-value">
-                        <p class="treasure-value">
-                            <i class="fa-solid fa-vault"></i>
-                            Vault Reward:
-                        </p>
-                        <p id="treasure-total">
-                            0$
-                        </p>
-                    </div>
-                </div>
-                <div id="last-bets">
                     <div id="last-bet-user">
                         <p class="last-bet-user">
                             <i class="fa-solid fa-user"></i>
                             Last Bet:
                         </p>
                         <p id="bet-user-total">
+                            0$
+                        </p>
+                    </div>
+                </div>
+                <div id="last-bets">
+                    <div id="treasure-value">
+                        <p class="treasure-value">
+                            <i class="fa-solid fa-vault"></i>
+                            Vault Reward:
+                        </p>
+                        <p id="treasure-total">
                             0$
                         </p>
                     </div>
@@ -157,6 +157,16 @@
                         </p>
                         <p id="bet-robot-total">
                             0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="robot-balance">
+                        <p class="robot-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            AI Balance:
+                        </p>
+                        <p id="robot-balance-total">
+                            [UNDISCLOSED]
                         </p>
                     </div>
                 </div>
@@ -200,6 +210,9 @@
                 </button>
             </div>
         </div>
+        <audio id="audio-game-background" autoplay loop>
+            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="game-outro-two">
         <video src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind"></video>
