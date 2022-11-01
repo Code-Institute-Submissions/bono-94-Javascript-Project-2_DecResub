@@ -278,20 +278,23 @@ function screenNewGameCreate () {
             <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
         </audio>
     </section>
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
     `;
     document.getElementById("audio-game-background").volume = 0.7;
 }
 
+function screenNewGame
+
+document.getElementById
+
 /*
 
-        
+if your choice is less value than balance, proceed
+else your input is more value than balance display error sound and alert        
         
 // RUN NEW GAME SCREEN
 
 newGame
-    background music
-        play background music until game won, loss or fold next Screen
-        play background music for 14 minutes then stop and replay until gameEnd which is function taking you to game results screen
     gameSetup
     - Records
         - since coming to newGame function, 
