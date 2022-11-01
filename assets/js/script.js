@@ -2,7 +2,7 @@ const screenInsertLifecoin = document.getElementById('insert-lifecoin');
 const placeLifecoinBackground = document.getElementById('insert-lifecoin-background');
 const insertButton = document.getElementById('insert-button');
 const placeLifecoin = document.getElementById('insert-lifecoin-image');
-const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation')
+const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation');
 
 const gameIntroCreate = document.getElementById('game-intro');
 const rulesBox = document.getElementById('rules');
@@ -21,10 +21,9 @@ const screenGameLoadingFour = document.getElementById('game-outro-four');
 
 var audioInsert = document.getElementById("audio-insert");
 var audioRocks = document.getElementById("audio-insert-rocks");
-var audioWelcome = document.getElementById('audio-welcome')
-var audioSelect = document.getElementById('audio-select')
-
-var videoIntro = document.getElementById('intro-video');
+var audioWelcome = document.getElementById("audio-welcome");
+var audioNewGame = document.getElementById("audio-select");
+var videoIntro = document.getElementById("intro-video");
 
 function insertLifecoinAnimation () {
     
@@ -88,10 +87,10 @@ function welcomeScreenCreate () {
                 <i class="fa-regular fa-circle-play"></i>
                 START GAME
             </button>
-            <audio id="audio-select">
-                <source src="./assets/media/audio/start-game.mp3" type="audio/mpeg" onended="newGameScreenTransfer()">
-            </audio>
         </div>
+        <audio id="audio-newgame" onended="screenGameLoadingCreate()">
+            <source src="./assets/media/audio/start.mp3" type="audio/mpeg">
+        </audio>
         <div id="partners">
             <div id="partners-text">
                 <h3>
@@ -107,13 +106,12 @@ function welcomeScreenCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-welcome").volume = 0.3; 
+    document.getElementById("audio-welcome").volume = 0.2;
 }
 
 function gameLoadingOneTransfer () {
-    audioInsert.volume = 0.5;
-    audioInsert.play();
-    screenGameLoadingCreate ();
+    
+    document.getElementById("audio-newgame").play();
 }
 
 function screenGameLoadingCreate () {
@@ -124,7 +122,7 @@ function screenGameLoadingCreate () {
         <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
     </section>
     `;
-    document.getElementById("video-loading").volume = 0.3; 
+    document.getElementById("video-loading").volume = 0.2; 
 }
 
 function newGameScreenTransfer () {
@@ -281,55 +279,11 @@ function screenNewGameCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-game-background").volume = 0.5;
+    document.getElementById("audio-game-background").volume = 0.7;
 }
+
 /*
-- listens for action on start game button 
-        add sound effect for start game button
-        to create new html element for loading screen
-        -replace it with game loading screen
 
-function screenWelcome () {
-
-    const newGameButton = getElementsById ('start-button')
-    newGameButton.addEventListener('click', screenWelcome)
-    SOUND FX
-    newGameButton.setAttribute('onclick', 'screenGameLoadingOne();')
-
-}
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-
-            let insertButton = document.getElementsById("insert-button");
-            for (let button of insert-button) {
-                button.addEventListener("click", function() {
-                    if (this.getAttribute("data-type") === "new-game") {
-                        runNewGame();
-                    } else {
-                        runNextGame();
-                    }
-                })
-            }
-            
-            document.getElementById("answer-box").addEventListener("keydown", function(event) {
-                if (event.key === "Enter") {
-                    createIntroScreen();
-                }
-            })
-            
-        })
-
-// GAME LOADING SCREEN
-
-- listens for onend task
-        creates new element for running the game while replacing the old one
-        sends user to run new game screen
-
-        function screenGameLoadingOne {
-            add to section id = "loading":
-            <section id="x" onload="screenGameLoadingOne();"></section></section>
-        }
         
         
 // RUN NEW GAME SCREEN
