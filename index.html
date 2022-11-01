@@ -23,8 +23,8 @@
             </a>
         </div>     
         <div id="nav-menu">
-            <a href="#insert-lifecoin">Game</a>
             <a href="#rules">Rules</a>
+            <a href="#insert-lifecoin">Game</a>
             <a href="#feedback">Feedback</a>
             <a href="#footer">Contact</a>         
         </div>
@@ -34,18 +34,6 @@
             <img id="header-logo" src="./assets/media/images/logo-two.png" alt="Bigger Fish official game logo">
         </div>
     </header>
-    <section id="insert-lifecoin">
-        <div id="insert-lifecoin-background">
-        </div>
-        <div class="insert-lifecoin-text">
-            <button onclick="insertLifecoinAnimation()" id="insert-button">
-                INSERT LIFECOIN
-            </button>
-            <audio id="audio-insert">
-                <source src="horse.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </section>
     <section id="rules">
         <div id="rules-box">
             <div id="rules-box-title">
@@ -62,6 +50,21 @@
                 <p>- Your score will be reset when you refresh or close this tab where game runs</p>
             </div>    
         </div>
+    </section>
+    <section id="insert-lifecoin">
+        <div id="insert-lifecoin-background">
+        </div>
+        <div class="insert-lifecoin-text">
+            <button onclick="insertLifecoinAnimation()" id="insert-button">
+                INSERT LIFECOIN
+            </button>
+        </div>
+        <audio id="audio-insert">
+            <source src="./assets/media/audio/coin-insert.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-insert-rocks" onended="gameIntroTransfer()">
+            <source src="./assets/media/audio/rocks.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="feedback">
         <div id="feedback-box">

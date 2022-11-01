@@ -3,9 +3,12 @@ const placeLifecoinBackground = document.getElementById('insert-lifecoin-backgro
 const insertButton = document.getElementById('insert-button');
 const placeLifecoin = document.getElementById('insert-lifecoin-image');
 const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation')
+
 const gameIntroCreate = document.getElementById('game-intro');
 const rulesBox = document.getElementById('rules');
+
 const screenWelcome = document.getElementById('home-screen-game');
+
 const screenGameLoadingOne = document.getElementById('game-outro-one');
 const screenNewGame = document.getElementById('game');
 const screenGameLoadingTwo = document.getElementById('game-outro-two');
@@ -17,57 +20,49 @@ const screenNextGame = document.getElementById('new-game');
 const screenGameLoadingFour = document.getElementById('game-outro-four');
 
 var audioInsert = document.getElementById("audio-insert");
+var audioRocks = document.getElementById("audio-insert-rocks");
+var audioWelcome = document.getElementById('audio-welcome')
+var audioSelect = document.getElementById('audio-select')
 
-
-function inserLifecoinButtonClick () {
-
-    document.getElementById("insert-button").addEventListener("click", insertLifecoinButtonSound);
-}
-
-function insertLifecoinButtonSound () {
-
-    insertLifecoinAnimation();
-    audioInsert.play();
-}
+var videoIntro = document.getElementById('intro-video');
 
 function insertLifecoinAnimation () {
     
-    placeLifecoinBackground.innerHTML =`<div id="insert-lifecoin-image">
+    audioInsert.volume = 0.5;
+    audioInsert.play();
+    placeLifecoinBackground.innerHTML =`
+    <div id="insert-lifecoin-image">
         <img id="insert-lifecoin-image-animation" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
     </div>"
     `;
-    document.getElementById("insert-lifecoin-background").appendChild(placeLifecoin);
-    document.getElementById("insert-lifecoin-image").appendChild(placeLifecoinImage);
-    document.getElementById('insert-lifecoin-image-animation').addEventListener("ended", insertLifecoinAnimationTransfer);
+    audioRocks.volume = 0.5;
+    audioRocks.play();
 }  
 
-function insertLifecoinAnimationTransfer () {
+function gameIntroTransfer () {
     
     screenInsertLifecoin.remove (); 
     screenGameIntroCreate ();
 }
 
 function screenGameIntroCreate () {
-
-    document.body.innerHTML = `
+ 
+    document.body.innerHTML =`
     <section id="game-intro">
-        <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects"></video>
+        <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
     `;
-    document.getElementById("game-intro").insertBefore(rulesBox);
-    gameIntroTransfer();
+    document.getElementById("intro-video").volume = 0.2; 
 }
 
-// GAME INTRO MEDIA SCREEN
-
-function gameIntroTransfer() {
-
-    document.getElementById("intro-video").addEventListener("ended", welcomeScreenCreate);
+function welcomeScreenTransfer () {
+    
+    document.getElementById("game-intro").remove (); 
+    welcomeScreenCreate ();
 }
 
 function welcomeScreenCreate () {
 
-    document.getElementById("game-intro").remove ();  
     document.body.innerHTML = `
     <section id="home-screen-game">
         <div id="home-screen-title">
@@ -89,10 +84,13 @@ function welcomeScreenCreate () {
             </h2>
         </div>
         <div id="start-button">
-            <button class="bttn-zero" id="start">
+            <button class="bttn-zero" id="start" onclick="gameLoadingOneTransfer()">
                 <i class="fa-regular fa-circle-play"></i>
                 START GAME
             </button>
+            <audio id="audio-select">
+                <source src="./assets/media/audio/start-game.mp3" type="audio/mpeg" onended="newGameScreenTransfer()">
+            </audio>
         </div>
         <div id="partners">
             <div id="partners-text">
@@ -104,18 +102,188 @@ function welcomeScreenCreate () {
                 <img id="lifecoin-logo" src="./assets/media/images/coin-logo-2d-slim.png" alt="Lifecoin logo representing development and ownership organization">
             </a>
         </div>
+        <audio id="audio-welcome" autoplay loop>
+            <source src="./assets/media/audio/welcome-music.mp3" type="audio/mpeg">
+        </audio>
     </section>
     `;
-    document.body.insertBefore(screenWelcome, rulesBox);
-    document.getElementById("start-button").addEventListener("ended", welcomeScreenCreate);
-    welcomeScreenTransfer();
+    document.getElementById("audio-welcome").volume = 0.3; 
 }
 
-/*/ WELCOME SCREEN
-
-function welcomeScreenTransfer () {
-   
+function gameLoadingOneTransfer () {
+    audioInsert.volume = 0.5;
+    audioInsert.play();
+    screenGameLoadingCreate ();
 }
+
+function screenGameLoadingCreate () {
+
+    document.getElementById("home-screen-game").remove ();
+    document.body.innerHTML = `
+    <section id="game-outro-one">
+        <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
+    </section>
+    `;
+    document.getElementById("video-loading").volume = 0.3; 
+}
+
+function newGameScreenTransfer () {
+    document.getElementById("game-outro-one").remove (); 
+    screenNewGameCreate ();
+}
+
+function screenNewGameCreate () {
+
+    document.body.innerHTML = `
+    <section id="game">
+        <div class="game-area">
+            <div class="game-tracking">
+                <div id="user-profile">
+                    <div id="user-image">
+                        <i class="fa-solid fa-head-side-virus"></i>
+                    </div>
+                    <div id="user-image-title">
+                        Human
+                    </div>
+                    <div class="past-score-area" id="past-score-box-h">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-w">
+                                0
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-l">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div id="pc-profile">
+                    <div id="pc-image">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div id="pc-image-title">
+                        Robot
+                    </div>
+                    <div class="past-score-area" id="past-score-box-r">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-w">
+                                0
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-l">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="game-board">
+                <div id="balance-tracker">
+                    <div id="virtual-balance">
+                        <p class="virtual-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            My Balance:
+                        </p>
+                        <p id="balance-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="total-bet">
+                        <p class="total-bet">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            My Bets:
+                        </p>
+                        <p id="bet-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="treasure-value">
+                        <p class="treasure-value">
+                            <i class="fa-solid fa-vault"></i>
+                            Vault Reward:
+                        </p>
+                        <p id="treasure-total">
+                            0$
+                        </p>
+                    </div>
+                </div>
+                <div id="last-bets">
+                    <div id="last-bet-user">
+                        <p class="last-bet-user">
+                            <i class="fa-solid fa-user"></i>
+                            Last Bet:
+                        </p>
+                        <p id="bet-user-total">
+                            0$
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="last-bet-robot">
+                        <p class="last-bet-robot">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            Last Bet:
+                        </p>
+                        <p id="bet-robot-total">
+                            0$
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contols-area-right">
+                <button class="bttn-second" id="bttn-one" data-choice="0">
+                    Prawn ($0.1)
+                </button>
+                <button class="bttn-second" id="bttn-two" data-choice="1">
+                    Crab ($1)
+                </button>
+                <button class="bttn-second" id="bttn-three" data-choice="2">
+                    Turtle ($10)
+                </button>
+                <button class="bttn-second" id="bttn-four" data-choice="3">
+                    Octopus ($100) 
+                </button>
+                <button class="bttn-second" id="bttn-five" data-choice="4">
+                    Squid ($500)
+                </button>
+                <button class="bttn-second" id="bttn-six" data-choice="5">
+                    Lobster ($1k)
+                </button>
+                <button class="bttn-second" id="bttn-seven" data-choice="6">
+                    Tuna ($10k)
+                </button>
+                <button class="bttn-second" id="bttn-eight" data-choice="7">
+                    Dolphin ($100k)
+                </button>
+                <button class="bttn-second" id="bttn-nine" data-choice="8">
+                    Whale ($1M)
+                </button>
+                <button class="bttn-second" id="bttn-ten" data-choice="9">
+                    Dragon ($10M)
+                </button>
+            </div>           
+            <div class="controls-area-bottom">
+                <button class="bttn-first" id="fold">
+                    <i class="fa-solid fa-sack-xmark"></i>
+                    FOLD
+                </button>
+            </div>
+        </div>
+        <audio id="audio-game-background" autoplay loop>
+            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    `;
+    document.getElementById("audio-game-background").volume = 0.5;
+}
+/*
 - listens for action on start game button 
         add sound effect for start game button
         to create new html element for loading screen
@@ -666,5 +834,6 @@ sends user to run game results screen appropriate to where it came from in the l
             takes you to nextGame function
 
 
+Exit game option brings to the home screen
 
 */
