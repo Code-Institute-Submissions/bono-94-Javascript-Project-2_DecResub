@@ -36,6 +36,17 @@ var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
 var videoIntro = document.getElementById("intro-video");
 
+const prawnChoice = 0.1;
+const crabChoice = 1;
+const turtleChoice = 10;
+const octopusChoice = 100;
+const squidChoice = 500;
+const lobsterChoice = 1000;
+const tunaChoice = 10000;
+const dolphinChoice = 100000;
+const whaleChoice = 1000000;
+const dragonChoice = 10000000;
+
 function insertLifecoinAnimation () {
     
     audioInsert.volume = 0.5;
@@ -310,31 +321,95 @@ function screenNewGameCreate () {
     <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-game-background").volume = 0.7;
+    newGameSetupScores();
+}
+
+function newGameSetupScores () {
+
+    document.getElementById("past-score-counter-hw").innerHTML = "0";
+    document.getElementById("past-score-counter-hl").innerHTML = "0";
+    document.getElementById("past-score-counter-rw").innerHTML = "0";
+    document.getElementById("past-score-counter-rl").innerHTML = "0";    
 }
 /*
-function newGameSetupRecord {
+function newGameSetupBalances () {
 
-    userWins.innerHTML = `0`;
-    userLoss.innerHTML = `0`;
-    robotWins.innerHTML = `0`;
-    robotLoss.innerHTML = `0`;
+    let userNewBalance = 
+    let robotNewBalance = 
+
+    alert unfortunate
+    alert congratulations, your lifecoin yielded ____ balance. It is your turn to start the first bet.
+    
+    let userRandomBalance = "parseInt(Math.random)"; //math random + parseInt
+    var robotRandomBalance = // math random + parseInt
 }
-/*
-function newGameSetupBalance () {
+let robotRandomBalance = Math.floor(math.random(<100000000))
 
-    userNewBalance = random number until 100million and greater than 2
-    robotNewBalance = random number until 100million and greater than 2
-
+// add this to run game segment
+function infuseBalanceRandom () {
+    let num1 = Math.floor(Math.random() * 1000000000000) + 1;
+    let num2 = Math.floor(Math.random() * 1000000000000) + 1;
 }
 
-function userChoicePrawn () {
-    if userChoice < userLiveBalance {
+
+
+userLiveBalance (infinite number or loop) = new userLiveBalance
+userCustomBet firstBet = new userCustomBet();
+userCustomBet secondBet = new userCustomBet();
+treasureVaultLive += 0.1
+    userLiveBalance -= 0.1
+    userLastBet = 0.1
+    userTotalBets += 0.1
+
+function userChoicePrawnValidator () {
+    if prawnChoice < userLiveBalance {
         userChoicePrawnPush();
     }
     else:
         display error sound and alert: "Low balance! Please select smaller amount."
-      
 }
+
+function userChoicePrawnPush () {
+
+    play sound fx
+    calculate exact last bet
+    push total bets increase by newBet
+    push to my balance decrease
+    push to vault reward increase
+    initiateRobotResponse();
+    amount goes processing and calculating to:
+                balance reduce
+                my bets increase
+                vault increase
+                Last bets user change to value of button pressed
+                    previous button trackerr
+                    previous button reporter
+                    previous button editor
+                initiateRobotBet
+}
+
+const prawnUserBet = document.getElementById("bttn-one")
+for (let button of prawnUserBet) {
+    button.addEventListener("click", function()) {
+        let userCustomBet = this.getAttribute(data-choice);
+        userLiveBalanceUpdater
+    }
+}
+
+function addTwo(num1, num2) {
+    return num1 + num2;
+  }
+  let sum = addTwo(3, 5);
+  console.log(sum);  // 8
+
+initiateRobotResponse();
+    robot reacts
+                last bets robot to add his next one after yours is noted
+                    try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
+                    generates robot random selection from constant values that is less than robot balance
+
+                    updating vault with his last bet too
+                    alert robot has invested X amount. Your turn again.
 
 function userChoiceCrab () {
     
@@ -372,6 +447,42 @@ function userChoiceDragon () {
     
 }
 
+prawnRobotBet {
+
+    treasureVaultLive += 0.1
+    robotLiveBalance += 0.1
+    robotLastBet = 0.1
+}
+
+const robotRandomBet = //math random between 10 choices + parseInt numbers of your buttons
+
+if (robotRandomBet === 0.1) {
+    prawnRobotBet function
+} else if (robotRandomBet === 1) {
+    crabRobotBet function
+}
+
+
+let robotRandomBet = Math.floor(math.random(0.1, 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000));
+    if number !== 0.1
+        math.floor(math.random)
+    else number !== 1
+    
+    else number !==10
+
+
+
+    function robotLiveBalance () {
+    just no need to write update to html as userLiveBalance
+}
+
+
+
+while (robotLiveBalance < 50) {
+    robotRandomBet = Math.floor(math.random(0,1 ,1, 10))
+}
+
+
 function newGameUpdateBalances
     userLiveBalance = userNewBalance - userLastLiveBet;
     robotLiveBalance =  robotNewBalance - robotLastLiveBet;
@@ -388,7 +499,103 @@ function newGameUpdateBalances
     userLastBet.innerHTML = ``; = synchronizes which button was played last
     robotLastBet.innerHTML = ``; = synchronizes which robot reaction was last out of any number < LiveBalance 
 /*
-\
+
+function gameTracker () {
+
+ continue runGame loop until desired parameters:
+
+            Game won = 
+                automatic = robot balance is under 2$
+                    throw alert that robot surrenders. It does not have enough balance to continue the game. You won. Congratulations!
+                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
+                    takes user to game winning screen + game loading
+
+            Game loss =
+                automatic = user balance is under 2$
+                    throw alert unfortunately you do not have enough balance to continue the game. You lost. Goodluck next time@!
+                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
+                    takes user to game losing screen + game loading
+
+            Game fold =
+                - fold button = end battle
+
+                throw alert unfortunately you decided to escape this game. Not all ships have sinked yet, try again! 
+                after confirming ok, your current balance + Vault + score go post-processing to game folded screen
+                takes user to game fold screen + game loading
+
+
+                if userBalance < 2 {
+    Start function of game loss
+}
+function checkAnswer () {
+
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Hey! You got it right! :D");
+        incrementScore();
+    } else {
+        alert(`Aw snapp! you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongAnswer();
+    }
+
+            }
+
+
+
+function checkReactions () {
+    let operand1 = parseInt(document.getElementById('operand1').innerText)
+    let operand2 = parseInt(document.getElementById('operand2').innerText)
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+") {
+        return [operand1 + operand2, "addition"];
+    } else if (operator === "x") {
+        return [opernd1 * operand2, "multiply"];
+    } else if (operator === "-") {
+        return [operand1 - operand2, "subtract"];
+    } else {
+        alert (`Unimplemented oprator ${operator}`);
+        throw `Unimplemented oprator ${operator}. Aborting!`;
+    }
+}   
+
+
+function runGame (gameType) {
+
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
+
+    //enter here amounts for credit
+
+    if (gameType === "addition") {
+        displayAdditionQuestion(num1, num2);
+    } else if (gameType === "multiply") {
+        displayMultiplyQuestion(num1, num2);
+    } else if (gameType === "subtract") {
+        displaySubtractQuestion(num1, num2);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type: ${gameType}. Aborting!`;
+    }
+}
+
+            
+Balance and score updater
+let userLiveBalance = document.getElementById('balance-total');
+userLiveBalance.value 
+
+let userLiveBalanceUpdater = `$(userLastBet) $`;
+let userLastBetUpdater = `$(userCustomBet) $`;
+
+function userBalance (operand1) {
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operator').textContent = "+"
+}
+
+here focus on playing game loading first
 function screenWinningTransfer () {
 
     document.getElementById("game").remove();
@@ -422,247 +629,15 @@ function screenFoldedCreate () {
 
 }
 
-/*
-    
-        
-
-    
-                Generate user amount publicly (minimum 50, max 1bn)
-                Generate robot amount privately (minimum and equal 50, max 1bn)
-                alert congratulations, your lifecoin yielded ____ balance. It is your turn to start the first bet.
-    Game battle
-        - if stake with any of buttons 
-            exceeding balance errors:
-                only buttons with value less than balance work 
-                    alert exceeded balance, please start a new game or select a lower amount
-
-            amount goes processing and calculating to:
-                balance reduce
-                my bets increase
-                vault increase
-                Last bets user change to value of button pressed
-                    previous button trackerr
-                    previous button reporter
-                    previous button editor
-
-            robot reacts
-                last bets robot to add his next one after yours is noted
-                    try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
-                    generates robot random selection from constant values that is less than robot balance
-
-                    updating vault with his last bet too
-                    alert robot has invested X amount. Your turn again.
-
-        continue runGame loop until desired parameters:
-
-            Game won = 
-                automatic = robot balance is under 2$
-                    throw alert that robot surrenders. It does not have enough balance to continue the game. You won. Congratulations!
-                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
-                    takes user to game winning screen + game loading
-
-            Game loss =
-                automatic = user balance is under 2$
-                    throw alert unfortunately you do not have enough balance to continue the game. You lost. Goodluck next time@!
-                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
-                    takes user to game losing screen + game loading
-
-            Game fold =
-                - fold button = end battle
-
-throw alert unfortunately you decided to escape this game. Not all ships have sinked yet, try again! 
-after confirming ok, your current balance + Vault + score go post-processing to game folded screen
-takes user to game fold screen + game loading
-
-
-let userRandomBalance = "parseInt(Math.random)"; //math random + parseInt
-
-var robotRandomBalance = // math random + parseInt
-
-
-
-
-var userCustomBet = 
-
-
-const robotRandomBet = //math random between 10 choices + parseInt numbers of your buttons
-
-if (robotRandomBet === 0.1) {
-    prawnRobotBet function
-} else if (robotRandomBet === 1) {
-    crabRobotBet function
-}
-
-
-
-
-const prawnUserBet = document.getElementById("bttn-one")
-for (let button of prawnUserBet) {
-    button.addEventListener("click", function()) {
-        let userCustomBet = this.getAttribute(data-choice);
-        userLiveBalanceUpdater
-    }
-}
-
-let robotRandomBalance = Math.floor(math.random(<100000000))
-
-let robotRandomBet = Math.floor(math.random(0.1, 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000));
-    if number !== 0.1
-        math.floor(math.random)
-    else number !== 1
-    
-    else number !==10
-
-
-while (robotLiveBalance < 50) {
-    robotRandomBet = Math.floor(math.random(0,1 ,1, 10))
-}
-
-userLiveBalance (infinite number or looop) = new userLiveBalance
-
-
-
-userCustomBet firstBet = new userCustomBet();
-userCustomBet secondBet = new userCustomBet();
-
-
-if prawnUserBet.onclick {
-
-    treasureVaultLive += 0.1
-    userLiveBalance -= 0.1
-    userLastBet = 0.1
-    userTotalBets += 0.1
-}
-
-prawnRobotBet {
-
-    treasureVaultLive += 0.1
-    robotLiveBalance += 0.1
-    robotLastBet = 0.1
-}
-
-function addTwo(num1, num2) {
-    return num1 + num2;
-  }
-  let sum = addTwo(3, 5);
-  console.log(sum);  // 8
-
-
-  
-
-if userBalance < 2 {
-    Start function of game loss
-}
-
-
-Balance and score updater
-let userLiveBalance = document.getElementById('balance-total');
-userLiveBalance.value 
-
-let userLiveBalanceUpdater = `$(userLastBet) $`;
-
-let userLastBetUpdater = `$(userCustomBet) $`;
-
-function userBalance (operand1) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operator').textContent = "+"
-}
-
-//dont display this to user
-function opponentBalance (operand2) {
-    document.getElementById('operand2').textContent = operand2;
-}
-
-// add this to run game segment
-function infuseBalanceRandom () {
-    let num1 = Math.floor(Math.random() * 1000000000000) + 1;
-    let num2 = Math.floor(Math.random() * 1000000000000) + 1;
-}
-
-function infuseBalanceCustom () {
-
-}
-
-// check if you have no more
-function limitBalanceTracker () {
-
-}
-
-function checkReactions () {
-    let operand1 = parseInt(document.getElementById('operand1').innerText)
-    let operand2 = parseInt(document.getElementById('operand2').innerText)
-    let operator = document.getElementById("operator").innerText;
-
-    if (operator === "+") {
-        return [operand1 + operand2, "addition"];
-    } else if (operator === "x") {
-        return [opernd1 * operand2, "multiply"];
-    } else if (operator === "-") {
-        return [operand1 - operand2, "subtract"];
-    } else {
-        alert (`Unimplemented oprator ${operator}`);
-        throw `Unimplemented oprator ${operator}. Aborting!`;
-    }
-}   
-
-function liveReactions () {
-
-}
-
-function userReaction () {
-
-    document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
-    document.getElementById('operator').textContent = "x"
-}
-
-function opponentReaction () {
-
-}
-
-function runGame (gameType) {
-
-    document.getElementById("answer-box").value = "";
-    document.getElementById("answer-box").focus();
-
-    //enter here amounts for credit
-
-    if (gameType === "addition") {
-        displayAdditionQuestion(num1, num2);
-    } else if (gameType === "multiply") {
-        displayMultiplyQuestion(num1, num2);
-    } else if (gameType === "subtract") {
-        displaySubtractQuestion(num1, num2);
-    } else {
-        alert(`Unknown game type: ${gameType}`);
-        throw `Unknown game type: ${gameType}. Aborting!`;
-    }
-}
-
-function checkAnswer () {
-
-    let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculatedAnswer[0];
-
-    if (isCorrect) {
-        alert("Hey! You got it right! :D");
-        incrementScore();
-    } else {
-        alert(`Aw snapp! you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
-        incrementWrongAnswer();
-    }
-
-    runGame(calculatedAnswer[1]);
-} 
-
-// remove attributes
-function update() {
-    let paragraph = document.getElementsByClassName('special')[0];
-    paragraph.removeAttribute('class');
-
+screenGameLoadingTwoTransfer ();
 
 // GAME LOADING SCREEN 2
-- listens for onend task
+
+function screenGameLoadingTwoTransfer () {
+
+    
+}
+- get sent to by gameTracker
         creates new element for running the game while replacing the old one
         sends user to run game results screen appropriate to where it came from
 
