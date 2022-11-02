@@ -9,9 +9,9 @@ h1 {
     color: coral !important;
     text-shadow: 0px 0px 1px black;
     padding-top: 10px;
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 hr {

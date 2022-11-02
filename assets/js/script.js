@@ -34,12 +34,13 @@ var audioBetSplash = document.getElementById("audio-button-splash")
 
 var videoIntro = document.getElementById("intro-video");
 
-var userRandomBalance = Math.floor(Math.random() * 21000000) + 2;
-var robotRandomBalance = Math.floor(Math.random() * 21000000) + 2;
+var userRandomBalance = Math.floor(Math.random() * 21042004) + 2;
+var robotRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var userTotalBets = 0;
 var userLastBet = 0;
 var vaultReward = 0;
 var robotLastBet = 0;
+
 /*
 const prawnChoice = 0.1;
 const crabChoice = 1;
@@ -223,7 +224,7 @@ function screenNewGameCreate () {
                             My Balance:
                         </p>
                         <p id="balance-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -233,7 +234,7 @@ function screenNewGameCreate () {
                             My Bets:
                         </p>
                         <p id="bet-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -243,7 +244,7 @@ function screenNewGameCreate () {
                             Last Bet:
                         </p>
                         <p id="bet-user-total">
-                            0$
+                            $0
                         </p>
                     </div>
                 </div>
@@ -254,7 +255,7 @@ function screenNewGameCreate () {
                             Vault Reward:
                         </p>
                         <p id="treasure-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -281,13 +282,13 @@ function screenNewGameCreate () {
             </div>
             <div class="contols-area-right">
                 <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
-                    Prawn ($0.1)
+                    Prawn ($1)
                 </button>
                 <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
-                    Crab ($1)
+                    Crab ($10)
                 </button>
                 <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
-                    Turtle ($10)
+                    Turtle ($50)
                 </button>
                 <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
                     Octopus ($100) 
@@ -327,11 +328,20 @@ function screenNewGameCreate () {
         <audio id="audio-button-splash">
             <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
         </audio>
+        <audio id="audio-cashout">
+            <source src="./assets/media/audio/cashier.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-calculating">
+            <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-game-background").volume = 0.7;
+    document.getElementById("audio-cashout").play();
+    document.getElementById("audio-cashout").volume = 0.5;
+    alert ("Congratulations! Your lifecoin has yielded a new game balance.");
     newGameSetupScores();
 }
 
@@ -348,15 +358,14 @@ function newGameSetupBalances () {
 
     let userBalanceDisplayed = document.getElementById('balance-total');
     document.getElementById('balance-total').innerHTML = userRandomBalance;
-    alert ("Congratulations! Your lifecoin has yielded a new game balance.");
 }
 
 function userChoicePrawnValidator () {
-    if (0.1 < userRandomBalance) {
+    if (1 < userRandomBalance) {
         userChoicePrawnPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.7;
+        document.getElementById("audio-error").volume = 0.3;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -364,115 +373,366 @@ function userChoicePrawnValidator () {
 function userChoicePrawnPush () {
 
     document.getElementById("audio-button-splash").play();
-    document.getElementById("audio-button-splash").volume = 0.7;
-    userRandomBalance -= 0.1;
-    userTotalBets += 0.1;
-    userLastBet = 0.1;
-    vaultReward += 0.1;
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 1;
+    userTotalBets += 1;
+    userLastBet = 1;
+    vaultReward += 1;
+    choicesUpdaters();
+}
+
+function userChoiceCrabValidator () {
+    
+    if (10 < userRandomBalance) {
+        userChoiceCrabPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceCrabPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 10;
+    userTotalBets += 10;
+    userLastBet = 10;
+    vaultReward += 10;
+    choicesUpdaters();
+}
+
+function userChoiceTurtleValidator () {
+    
+    if (50 < userRandomBalance) {
+        userChoiceTurtlePush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceTurtlePush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 50;
+    userTotalBets += 50;
+    userLastBet = 50;
+    vaultReward += 50;
+    choicesUpdaters();
+}
+
+function userChoiceOctopusValidator () {
+    
+    if (100 < userRandomBalance) {
+        userChoiceOctopusPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceOctopusPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 100;
+    userTotalBets += 100;
+    userLastBet = 100;
+    vaultReward += 100;
+    choicesUpdaters();
+}
+
+function userChoiceSquidValidator () {
+    
+    if (500 < userRandomBalance) {
+        userChoiceSquidPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceSquidPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 500;
+    userTotalBets += 500;
+    userLastBet = 500;
+    vaultReward += 500;
+    choicesUpdaters();
+}
+
+function userChoiceLobsterValidator () {
+    
+    if (1000 < userRandomBalance) {
+        userChoiceLobsterPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceLobsterPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 1000;
+    userTotalBets += 1000;
+    userLastBet = 1000;
+    vaultReward += 1000;
+    choicesUpdaters();
+}
+
+function userChoiceTunaValidator () {
+    
+    if (10000 < userRandomBalance) {
+        userChoiceTunaPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceTunaPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 10000;
+    userTotalBets += 10000;
+    userLastBet = 10000;
+    vaultReward += 10000;
+    choicesUpdaters();
+}
+
+function userChoiceDolphinValidator () {
+    
+    if (100000 < userRandomBalance) {
+        userChoiceDolphinPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceDolphinPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 100000;
+    userTotalBets += 100000;
+    userLastBet = 100000;
+    vaultReward += 100000;
+    choicesUpdaters();
+}
+
+function userChoiceWhaleValidator () {
+    
+    if (1000000 < userRandomBalance) {
+        userChoiceWhalePush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceWhalePush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 1000000;
+    userTotalBets += 1000000;
+    userLastBet = 1000000;
+    vaultReward += 1000000;
+    choicesUpdaters();
+}
+
+function userChoiceDragonValidator () {
+    
+    if (10000000 < userRandomBalance) {
+        userChoiceDragonPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.3;
+        alert ("Low balance! Please select smaller amount.");
+    }
+}
+
+function userChoiceDragonPush () {
+
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.5;
+    userRandomBalance -= 10000000;
+    userTotalBets += 10000000;
+    userLastBet = 10000000;
+    vaultReward += 10000000;
     choicesUpdaters();
 }
 
 function choicesUpdaters () {
 
+    let userBalanceDisplayedUpdater = document.getElementById('balance-total');
+    document.getElementById('balance-total').innerHTML = "$" + userRandomBalance;
     let userTotalBetseDisplayed = document.getElementById('bet-total');
-    document.getElementById('bet-total').innerHTML = userTotalBets;
+    document.getElementById('bet-total').innerHTML = "$" + userTotalBets;
     let userLastBetDisplayed = document.getElementById('bet-user-total');
-    document.getElementById('bet-user-total').innerHTML = parseInt(userLastBet);
+    document.getElementById('bet-user-total').innerHTML = "$" + userLastBet;
     let vaultRewardDisplayed = document.getElementById('treasure-total');
-    document.getElementById('treasure-total').innerHTML = vaultReward;
+    document.getElementById('treasure-total').innerHTML = "$" + vaultReward;
     let robotLastBetDisplayed = document.getElementById('bet-robot-total');
-    document.getElementById('bet-robot-total').innerHTML = robotLastBet;
+    document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
+    initiateRobotResponse();
 }
+
+
+function initiateRobotResponse () {
+
+    var robotRandomBet = Math.floor(Math.random() * 10000000) + 1 < robotRandomBalance; 
+    if (0 < robotRandomBet && robotRandomBet < 10) {
+        prawnRobotBet ();
+    } else if (10 < robotRandomBet && robotRandomBet < 50) {
+        crabRobotBet ();
+    } else if (50 < robotRandomBet && robotRandomBet < 100) {
+        turtleRobotBet
+    } else if (100 < robotRandomBet && robotRandomBet < 500) {
+        octoRobotBet ();
+    } else if (500 < robotRandomBet && robotRandomBet < 1000) {
+        squidRobotBet ();
+    } else if (1000 < robotRandomBet && robotRandomBet < 10000) {
+        lobsterRobotBet ();
+    } else if (10000 < robotRandomBet && robotRandomBet < 100000) {
+        tunaRobotBet ();
+    } else if (100000 < robotRandomBet && robotRandomBet < 1000000) {
+        dolphinRobotBet ();
+    } else if (1000000 < robotRandomBet && robotRandomBet < 5000000) {
+        whaleRobotBet ();
+    } else if (5000000 < robotRandomBet && robotRandomBet < 10000000) {
+        dragonRobotBet ();
+    }
+}
+
+function prawnRobotBet () {
+
+    robotRandomBalance -= 1;
+    robotLastBet = 1;
+    vaultReward += 1;
+    choicesUpdatersRobot();
+}
+
+function crabRobotBet () {
+
+    robotRandomBalance -= 10;
+    robotLastBet = 10;
+    vaultReward += 10;
+    choicesUpdatersRobot();
+}
+
+function turtleRobotBet () {
+
+    robotRandomBalance -= 50;
+    robotLastBet = 50;
+    vaultReward += 50;
+    choicesUpdatersRobot();
+}
+
+function octopusRobotBet () {
+
+    robotRandomBalance -= 100;
+    robotLastBet = 100;
+    vaultReward += 100;
+    choicesUpdatersRobot();
+}
+
+function squidRobotBet () {
+
+    robotRandomBalance -= 500;
+    robotLastBet = 500;
+    vaultReward += 500;
+    choicesUpdatersRobot();
+}
+
+function lobsterRobotBet () {
+
+    robotRandomBalance -= 1000;
+    robotLastBet = 1000;
+    vaultReward += 1000;
+    choicesUpdatersRobot();
+}
+
+function tunaRobotBet () {
+
+    robotRandomBalance -= 10000;
+    robotLastBet = 10000;
+    vaultReward += 10000;
+    choicesUpdatersRobot();
+}
+
+function dolphinRobotBet () {
+
+    robotRandomBalance -= 100000;
+    robotLastBet = 100000;
+    vaultReward += 100000;
+    choicesUpdatersRobot();
+}
+
+function whaleRobotBet () {
+
+    robotRandomBalance -= 1000000;
+    robotLastBet = 1000000;
+    vaultReward += 1000000;
+    choicesUpdatersRobot();
+}
+
+function dragonRobotBet () {
+
+    robotRandomBalance -= 10000000;
+    robotLastBet = 10000000;
+    vaultReward += 10000000;
+    choicesUpdatersRobot();
+}
+
+function choicesUpdatersRobot () {
+
+    document.getElementById("audio-calculating").play();
+    document.getElementById("audio-calculating").volume = 0.5;
+    let vaultRewardDisplayed = document.getElementById('treasure-total');
+    document.getElementById('treasure-total').innerHTML = "$" + vaultReward;
+    let robotLastBetDisplayed = document.getElementById('bet-robot-total');
+    document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
+}
+
+function gameTracking () {
+
+    if (robotRandomBalance < 2) {
+        alert("game-won");
+    } else if (userRandomBalance < 2) {
+        alert("game-lost");
+    }
+}
+
+
 /*
-function userChoiceCrabValidator () {
-    
-}
-
-function userChoiceTurtleValidator () {
-    
-}
-
-function userChoiceOctopusValidator () {
-    
-}
-
-function userChoiceSquidValidator () {
-    
-}
-
-function userChoiceLobsterValidator () {
-    
-}
-
-function userChoiceTunaValidator () {
-    
-}
-
-function userChoiceDolphinValidator () {
-    
-}
-
-function userChoiceWhaleValidator () {
-    
-}
-
-function userChoiceDragonValidator () {
-    
-}
-/*
-initiateRobotResponse();
-
-prawnRobotBet {
-
-    treasureVaultLive += 0.1
-    robotLiveBalance += 0.1
-    robotLastBet = 0.1
-}
-
-const robotRandomBet = //math random between 10 choices + parseInt numbers of your buttons
-
-if (robotRandomBet === 0.1) {
-    prawnRobotBet function
-} else if (robotRandomBet === 1) {
-    crabRobotBet function
-}
-
-
-let robotRandomBet = Math.floor(math.random(0.1, 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000));
-    if number !== 0.1
-        math.floor(math.random)
-    else number !== 1
-    
-    else number !==10
-
-
-
-    function robotLiveBalance () {
-    just no need to write update to html as userLiveBalance
-}
-
-function addTwo(num1, num2) {
-    return num1 + num2;
-  }
-  let sum = addTwo(3, 5);
-  console.log(sum);  // 8
-
-while (robotLiveBalance < 50) {
-    robotRandomBet = Math.floor(math.random(0,1 ,1, 10))
-}
-
-
-
 initiateRobotResponse();
     robot reacts
-                last bets robot to add his next one after yours is noted
-                    try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
-                    generates robot random selection from constant values that is less than robot balance
+    last bets robot to add his next one after yours is noted
+        try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
+        generates robot random selection from constant values that is less than robot balance
 
-                    updating vault with his last bet too
-                    alert robot has invested X amount. Your turn again.
+        updating vault with his last bet too
+        alert robot has invested X amount. Your turn again.
 
 
+/*
 function newGameUpdateBalances
     userLiveBalance = userNewBalance - userLastLiveBet;
     robotLiveBalance =  robotNewBalance - robotLastLiveBet;
@@ -488,7 +748,7 @@ function newGameUpdateBalances
     vaultReward.innerHTML = `$(vaultLiveReward)`; 
     userLastBet.innerHTML = ``; = synchronizes which button was played last
     robotLastBet.innerHTML = ``; = synchronizes which robot reaction was last out of any number < LiveBalance 
-/*
+
 
 function gameTracker () {
 
@@ -533,6 +793,11 @@ function checkAnswer () {
 
             }
 
+function addTwo(num1, num2) {
+    return num1 + num2;
+  }
+  let sum = addTwo(3, 5);
+  console.log(sum);  // 8
 
 
 function checkReactions () {
