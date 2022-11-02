@@ -16,11 +16,6 @@ const userWins = document.getElementById('past-score-counter-hw');
 const userLoss = document.getElementById('past-score-counter-hl');
 const robotWins = document.getElementById('past-score-counter-rw');
 const robotLoss = document.getElementById('past-score-counter-rl');
-const userBalance = document.getElementById('balance-total');
-const userTotalBets = document.getElementById('bet-total');
-const vaultReward = document.getElementById('treasure-total');
-const userLastBet = document.getElementById('bet-user-total');
-const robotLastBet = document.getElementById('bet-robot-total');
 
 const screenGameLoadingTwo = document.getElementById('game-outro-two');
 const screenWinGameResults = document.getElementById('winning-screen');
@@ -34,8 +29,18 @@ var audioInsert = document.getElementById("audio-insert");
 var audioRocks = document.getElementById("audio-insert-rocks");
 var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
+var audioError = document.getElementById("audio-error")
+var audioBetSplash = document.getElementById("audio-button-splash")
+
 var videoIntro = document.getElementById("intro-video");
 
+var userRandomBalance = Math.floor(Math.random() * 21000000) + 2;
+var robotRandomBalance = Math.floor(Math.random() * 21000000) + 2;
+var userTotalBets = 0;
+var userLastBet = 0;
+var vaultReward = 0;
+var robotLastBet = 0;
+/*
 const prawnChoice = 0.1;
 const crabChoice = 1;
 const turtleChoice = 10;
@@ -46,7 +51,7 @@ const tunaChoice = 10000;
 const dolphinChoice = 100000;
 const whaleChoice = 1000000;
 const dragonChoice = 10000000;
-
+*/
 function insertLifecoinAnimation () {
     
     audioInsert.volume = 0.5;
@@ -275,34 +280,34 @@ function screenNewGameCreate () {
                 </div>
             </div>
             <div class="contols-area-right">
-                <button class="bttn-second" id="bttn-one" data-choice="0">
+                <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
                     Prawn ($0.1)
                 </button>
-                <button class="bttn-second" id="bttn-two" data-choice="1">
+                <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
                     Crab ($1)
                 </button>
-                <button class="bttn-second" id="bttn-three" data-choice="2">
+                <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
                     Turtle ($10)
                 </button>
-                <button class="bttn-second" id="bttn-four" data-choice="3">
+                <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
                     Octopus ($100) 
                 </button>
-                <button class="bttn-second" id="bttn-five" data-choice="4">
+                <button class="bttn-second" onclick="userChoiceSquidValidator()" id="bttn-five" data-choice="4">
                     Squid ($500)
                 </button>
-                <button class="bttn-second" id="bttn-six" data-choice="5">
+                <button class="bttn-second" onclick="userChoiceLobsterValidator()" id="bttn-six" data-choice="5">
                     Lobster ($1k)
                 </button>
-                <button class="bttn-second" id="bttn-seven" data-choice="6">
+                <button class="bttn-second" onclick="userChoiceTunaValidator()" id="bttn-seven" data-choice="6">
                     Tuna ($10k)
                 </button>
-                <button class="bttn-second" id="bttn-eight" data-choice="7">
+                <button class="bttn-second" onclick="userChoiceDolphinValidator()" id="bttn-eight" data-choice="7">
                     Dolphin ($100k)
                 </button>
-                <button class="bttn-second" id="bttn-nine" data-choice="8">
+                <button class="bttn-second" onclick="userChoiceWhaleValidator()" id="bttn-nine" data-choice="8">
                     Whale ($1M)
                 </button>
-                <button class="bttn-second" id="bttn-ten" data-choice="9">
+                <button class="bttn-second" onclick="userChoiceDragonValidator()" id="bttn-ten" data-choice="9">
                     Dragon ($10M)
                 </button>
             </div>           
@@ -315,6 +320,12 @@ function screenNewGameCreate () {
         </div>
         <audio id="audio-game-background" autoplay loop>
             <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-error">
+            <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-button-splash">
+            <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
         </audio>
     </section>
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
@@ -329,123 +340,87 @@ function newGameSetupScores () {
     document.getElementById("past-score-counter-hw").innerHTML = "0";
     document.getElementById("past-score-counter-hl").innerHTML = "0";
     document.getElementById("past-score-counter-rw").innerHTML = "0";
-    document.getElementById("past-score-counter-rl").innerHTML = "0";    
+    document.getElementById("past-score-counter-rl").innerHTML = "0"; 
+    newGameSetupBalances(); 
 }
-/*
+
 function newGameSetupBalances () {
 
-    let userNewBalance = 
-    let robotNewBalance = 
-
-    alert unfortunate
-    alert congratulations, your lifecoin yielded ____ balance. It is your turn to start the first bet.
-    
-    let userRandomBalance = "parseInt(Math.random)"; //math random + parseInt
-    var robotRandomBalance = // math random + parseInt
+    let userBalanceDisplayed = document.getElementById('balance-total');
+    document.getElementById('balance-total').innerHTML = userRandomBalance;
+    alert ("Congratulations! Your lifecoin has yielded a new game balance.");
 }
-let robotRandomBalance = Math.floor(math.random(<100000000))
-
-// add this to run game segment
-function infuseBalanceRandom () {
-    let num1 = Math.floor(Math.random() * 1000000000000) + 1;
-    let num2 = Math.floor(Math.random() * 1000000000000) + 1;
-}
-
-
-
-userLiveBalance (infinite number or loop) = new userLiveBalance
-userCustomBet firstBet = new userCustomBet();
-userCustomBet secondBet = new userCustomBet();
-treasureVaultLive += 0.1
-    userLiveBalance -= 0.1
-    userLastBet = 0.1
-    userTotalBets += 0.1
 
 function userChoicePrawnValidator () {
-    if prawnChoice < userLiveBalance {
+    if (0.1 < userRandomBalance) {
         userChoicePrawnPush();
+    } else {
+        document.getElementById("audio-error").play();
+        document.getElementById("audio-error").volume = 0.7;
+        alert ("Low balance! Please select smaller amount.");
     }
-    else:
-        display error sound and alert: "Low balance! Please select smaller amount."
 }
 
 function userChoicePrawnPush () {
 
-    play sound fx
-    calculate exact last bet
-    push total bets increase by newBet
-    push to my balance decrease
-    push to vault reward increase
-    initiateRobotResponse();
-    amount goes processing and calculating to:
-                balance reduce
-                my bets increase
-                vault increase
-                Last bets user change to value of button pressed
-                    previous button trackerr
-                    previous button reporter
-                    previous button editor
-                initiateRobotBet
+    document.getElementById("audio-button-splash").play();
+    document.getElementById("audio-button-splash").volume = 0.7;
+    userRandomBalance -= 0.1;
+    userTotalBets += 0.1;
+    userLastBet = 0.1;
+    vaultReward += 0.1;
+    choicesUpdaters();
 }
 
-const prawnUserBet = document.getElementById("bttn-one")
-for (let button of prawnUserBet) {
-    button.addEventListener("click", function()) {
-        let userCustomBet = this.getAttribute(data-choice);
-        userLiveBalanceUpdater
-    }
+function choicesUpdaters () {
+
+    let userTotalBetseDisplayed = document.getElementById('bet-total');
+    document.getElementById('bet-total').innerHTML = userTotalBets;
+    let userLastBetDisplayed = document.getElementById('bet-user-total');
+    document.getElementById('bet-user-total').innerHTML = parseInt(userLastBet);
+    let vaultRewardDisplayed = document.getElementById('treasure-total');
+    document.getElementById('treasure-total').innerHTML = vaultReward;
+    let robotLastBetDisplayed = document.getElementById('bet-robot-total');
+    document.getElementById('bet-robot-total').innerHTML = robotLastBet;
+}
+/*
+function userChoiceCrabValidator () {
+    
 }
 
-function addTwo(num1, num2) {
-    return num1 + num2;
-  }
-  let sum = addTwo(3, 5);
-  console.log(sum);  // 8
+function userChoiceTurtleValidator () {
+    
+}
 
+function userChoiceOctopusValidator () {
+    
+}
+
+function userChoiceSquidValidator () {
+    
+}
+
+function userChoiceLobsterValidator () {
+    
+}
+
+function userChoiceTunaValidator () {
+    
+}
+
+function userChoiceDolphinValidator () {
+    
+}
+
+function userChoiceWhaleValidator () {
+    
+}
+
+function userChoiceDragonValidator () {
+    
+}
+/*
 initiateRobotResponse();
-    robot reacts
-                last bets robot to add his next one after yours is noted
-                    try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
-                    generates robot random selection from constant values that is less than robot balance
-
-                    updating vault with his last bet too
-                    alert robot has invested X amount. Your turn again.
-
-function userChoiceCrab () {
-    
-}
-
-function userChoiceTurtle () {
-    
-}
-
-function userChoiceOctopus () {
-    
-}
-
-function userChoiceSquid () {
-    
-}
-
-function userChoiceLobster () {
-    
-}
-
-function userChoiceTuna () {
-    
-}
-
-function userChoiceDolphin () {
-    
-}
-
-function userChoiceWhale () {
-    
-}
-
-function userChoiceDragon () {
-    
-}
 
 prawnRobotBet {
 
@@ -476,11 +451,26 @@ let robotRandomBet = Math.floor(math.random(0.1, 1, 10, 100, 1000, 10000, 100000
     just no need to write update to html as userLiveBalance
 }
 
-
+function addTwo(num1, num2) {
+    return num1 + num2;
+  }
+  let sum = addTwo(3, 5);
+  console.log(sum);  // 8
 
 while (robotLiveBalance < 50) {
     robotRandomBet = Math.floor(math.random(0,1 ,1, 10))
 }
+
+
+
+initiateRobotResponse();
+    robot reacts
+                last bets robot to add his next one after yours is noted
+                    try to time it with a short pause of few seconds with picture of computer calculating and audio of computer
+                    generates robot random selection from constant values that is less than robot balance
+
+                    updating vault with his last bet too
+                    alert robot has invested X amount. Your turn again.
 
 
 function newGameUpdateBalances
@@ -893,4 +883,4 @@ sends user to run game results screen appropriate to where it came from in the l
 
 Exit game option brings to the home screen
 
-*/
+        */
