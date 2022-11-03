@@ -12,10 +12,17 @@ const screenWelcome = document.getElementById('home-screen-game');
 const screenGameLoadingOne = document.getElementById('game-outro-one');
 
 const screenNewGame = document.getElementById('game');
-const userWins = document.getElementById('past-score-counter-hw');
-const userLoss = document.getElementById('past-score-counter-hl');
-const robotWins = document.getElementById('past-score-counter-rw');
-const robotLoss = document.getElementById('past-score-counter-rl');
+const userWins = 0;
+const userLoss = 0;
+const robotWins = 0;
+const robotLoss = 0;
+
+const scoreResultsWinWins = userWins + 1;
+const scoreREsultsWinLoss = userLoss + 0;
+const scoreResultsLossnWins = userWins + 0;
+const scoreREsultsLossLosses = userLoss + 1;
+const scoreResultsFoldnWins = userWins + 0;
+const scoreREsultsFoldLosses = userLoss + 1;
 
 const screenGameLoadingTwo = document.getElementById('game-outro-two');
 const screenWinGameResults = document.getElementById('winning-screen');
@@ -41,18 +48,6 @@ var userLastBet = 0;
 var vaultReward = 0;
 var robotLastBet = 0;
 
-/*
-const prawnChoice = 0.1;
-const crabChoice = 1;
-const turtleChoice = 10;
-const octopusChoice = 100;
-const squidChoice = 500;
-const lobsterChoice = 1000;
-const tunaChoice = 10000;
-const dolphinChoice = 100000;
-const whaleChoice = 1000000;
-const dragonChoice = 10000000;
-*/
 function insertLifecoinAnimation () {
     
     audioInsert.volume = 0.5;
@@ -78,8 +73,6 @@ function screenGameIntroCreate () {
     <section id="game-intro">
         <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
-    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("intro-video").volume = 0.1; 
 }
@@ -127,7 +120,7 @@ function welcomeScreenCreate () {
                     Game by:
                 </h3>
             </div>
-            <a href="https://www.lifecoin.earth" target="_blank" rel="noopener">
+            <a href="https://bono-94.github.io/Project-1-Code-Institute-HTML-CSS/" target="_blank" rel="noopener">
                 <img id="lifecoin-logo" src="./assets/media/images/coin-logo-2d-slim.png" alt="Lifecoin logo representing development and ownership organization">
             </a>
         </div>
@@ -135,8 +128,6 @@ function welcomeScreenCreate () {
             <source src="./assets/media/audio/welcome-music.mp3" type="audio/mpeg">
         </audio>
     </section>
-    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-welcome").volume = 0.2;
 }
@@ -154,8 +145,6 @@ function screenGameLoadingCreate () {
     <section id="game-outro-one">
         <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
     </section>
-    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("video-loading").volume = 0.1; 
 }
@@ -313,7 +302,7 @@ function screenNewGameCreate () {
                 </button>
             </div>           
             <div class="controls-area-bottom">
-                <button class="bttn-first" id="fold">
+                <button class="bttn-first" onclick="userFolded()" id="fold">
                     <i class="fa-solid fa-sack-xmark"></i>
                     FOLD
                 </button>
@@ -335,8 +324,6 @@ function screenNewGameCreate () {
             <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
         </audio>
     </section>
-    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="text/javascript"></script>
     `;
     document.getElementById("audio-game-background").volume = 0.7;
     document.getElementById("audio-cashout").play();
@@ -347,10 +334,10 @@ function screenNewGameCreate () {
 
 function newGameSetupScores () {
 
-    document.getElementById("past-score-counter-hw").innerHTML = "0";
-    document.getElementById("past-score-counter-hl").innerHTML = "0";
-    document.getElementById("past-score-counter-rw").innerHTML = "0";
-    document.getElementById("past-score-counter-rl").innerHTML = "0"; 
+    document.getElementById("past-score-counter-hw").innerHTML = userWins;
+    document.getElementById("past-score-counter-hl").innerHTML = userLoss;
+    document.getElementById("past-score-counter-rw").innerHTML = robotWins;
+    document.getElementById("past-score-counter-rl").innerHTML = robotLoss; 
     newGameSetupBalances(); 
 }
 
@@ -365,7 +352,7 @@ function userChoicePrawnValidator () {
         userChoicePrawnPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -387,7 +374,7 @@ function userChoiceCrabValidator () {
         userChoiceCrabPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -409,7 +396,7 @@ function userChoiceTurtleValidator () {
         userChoiceTurtlePush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -431,7 +418,7 @@ function userChoiceOctopusValidator () {
         userChoiceOctopusPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -453,7 +440,7 @@ function userChoiceSquidValidator () {
         userChoiceSquidPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -475,7 +462,7 @@ function userChoiceLobsterValidator () {
         userChoiceLobsterPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -497,7 +484,7 @@ function userChoiceTunaValidator () {
         userChoiceTunaPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -519,7 +506,7 @@ function userChoiceDolphinValidator () {
         userChoiceDolphinPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -541,7 +528,7 @@ function userChoiceWhaleValidator () {
         userChoiceWhalePush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -563,7 +550,7 @@ function userChoiceDragonValidator () {
         userChoiceDragonPush();
     } else {
         document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
+        document.getElementById("audio-error").volume = 0.2;
         alert ("Low balance! Please select smaller amount.");
     }
 }
@@ -591,32 +578,45 @@ function choicesUpdaters () {
     document.getElementById('treasure-total').innerHTML = "$" + vaultReward;
     let robotLastBetDisplayed = document.getElementById('bet-robot-total');
     document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
-    initiateRobotResponse();
+    if (robotRandomBalance < 2) {
+        alert("Robot does not have enough balance to continue the game.");
+        screenWinningTransfer();
+    } else if (userRandomBalance < 2) {
+        alert("You do not have enough balance to continue the game.");
+        screenLosingTransfer();
+    } else {
+        initiateRobotResponse(); 
+    }
+    
 }
 
 function initiateRobotResponse () {
 
     var robotRandomBet = Math.floor(Math.random() * robotRandomBalance) + 1; 
-    if (0 < robotRandomBet && robotRandomBet < 10) {
-        prawnRobotBet ();
-    } else if (10 < robotRandomBet && robotRandomBet < 50) {
-        crabRobotBet ();
-    } else if (50 < robotRandomBet && robotRandomBet < 100) {
-        turtleRobotBet
-    } else if (100 < robotRandomBet && robotRandomBet < 500) {
-        octoRobotBet ();
-    } else if (500 < robotRandomBet && robotRandomBet < 1000) {
-        squidRobotBet ();
-    } else if (1000 < robotRandomBet && robotRandomBet < 10000) {
-        lobsterRobotBet ();
-    } else if (10000 < robotRandomBet && robotRandomBet < 100000) {
-        tunaRobotBet ();
-    } else if (100000 < robotRandomBet && robotRandomBet < 1000000) {
-        dolphinRobotBet ();
-    } else if (1000000 < robotRandomBet && robotRandomBet < 5000000) {
-        whaleRobotBet ();
-    } else if (5000000 < robotRandomBet && robotRandomBet < 10000000) {
-        dragonRobotBet ();
+    if (robotRandomBet > robotRandomBalance) {
+        initiateRobotResponse();
+    } else {
+        if (0 < robotRandomBet && robotRandomBet < 10) {
+            prawnRobotBet ();
+        } else if (robotRandomBet < 50) {
+            crabRobotBet ();
+        } else if (robotRandomBet < 100) {
+            turtleRobotBet
+        } else if (robotRandomBet < 500) {
+            octoRobotBet ();
+        } else if (robotRandomBet < 1000) {
+            squidRobotBet ();
+        } else if (robotRandomBet < 10000) {
+            lobsterRobotBet ();
+        } else if (robotRandomBet < 100000) {
+            tunaRobotBet ();
+        } else if (robotRandomBet < 1000000) {
+            dolphinRobotBet ();
+        } else if (robotRandomBet < 5000000) {
+            whaleRobotBet ();
+        } else if (robotRandomBet < 10000000) {
+            dragonRobotBet ();
+        }
     }
 }
 
@@ -644,7 +644,7 @@ function turtleRobotBet () {
     choicesUpdatersRobot();
 }
 
-function octopusRobotBet () {
+function octoRobotBet () {
 
     robotRandomBalance -= 100;
     robotLastBet = 100;
@@ -703,56 +703,20 @@ function dragonRobotBet () {
 function choicesUpdatersRobot () {
 
     document.getElementById("audio-calculating").play();
-    document.getElementById("audio-calculating").volume = 0.2;
+    document.getElementById("audio-calculating").volume = 0.1;
     let vaultRewardDisplayed = document.getElementById('treasure-total');
     document.getElementById('treasure-total').innerHTML = "$" + vaultReward;
     let robotLastBetDisplayed = document.getElementById('bet-robot-total');
     document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
+    console.log(robotRandomBalance);
 }
 
-function gameTracking () {
+function userFolded () {
 
-    if (2 > userRandomBalance) {
-        screenWinningTransfer();
-    }
-    else if (2>robotRandomBalance) {
-        screenLosingTransfer
-        document.getElementById("audio-error").play();
-        document.getElementById("audio-error").volume = 0.3;
-        alert ("Low balance! Please select smaller amount.");
-    }
-
-    if (robotRandomBalance < 2) {
-        alert("game-won");
-    } else if (userRandomBalance < 2) {
-        alert("game-lost");
-    }
+    alert("You decided to escape with your remaining balance.");
+    screenFoldedTransfer();
 }
 
-/*
-
-function gameTracker () {
-
- continue runGame loop until desired parameters:
-            Game won = 
-                automatic = robot balance is under 2$
-                    throw alert that robot surrenders. It does not have enough balance to continue the game. You won. Congratulations!
-                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
-                    takes user to game winning screen + game loading
-
-            Game loss =
-                automatic = user balance is under 2$
-                    throw alert unfortunately you do not have enough balance to continue the game. You lost. Goodluck next time@!
-                    after confirming ok, your current balance + treasure vault + score go post-processing to winning screen
-                    takes user to game losing screen + game loading
-
-            Game fold =
-                - fold button = end battle
-
-                throw alert unfortunately you decided to escape this game. Not all ships have sinked yet, try again! 
-                after confirming ok, your current balance + Vault + score go post-processing to game folded screen
-                takes user to game fold screen + game loading
-}
         
 function screenWinningTransfer () {
 
@@ -774,151 +738,269 @@ function screenFoldedTransfer () {
 
 function screenWinningCreate () {
 
+    document.body.innerHTML = `
+    <section id="winning-screen">
+        <div id="winning-screen-title">
+            <h2 class="game-results-screen-h-two">
+                YOU WON!
+                <i class="fa-solid fa-trophy"></i>
+            </h2>
+        </div>
+        <div id="winning-screen-image">
+            <img class="results-covers" id="winning-cover" src="./assets/media/images/treasure-small.jpg" alt="Image of treasure chest full of coins">
+        </div>
+        <div class="results-text"id="winning-screen-text">
+            <h3>
+                Congratulations! You were the bigger fish this time.
+            </h3>
+        </div>
+        <div class="results-results" id="winning-screen-results">
+            <p>
+                - You won a treasure chest in value of <span id="treasure-results-w">$0</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span id="balance-results-w">$0</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span id="win-score-results-w">[0]</span> : <span id="loss-score-results-w">[0]</span> Losses.
+            </p>
+        </div>
+        <div class="results-button" id="winning-screen-button">
+            <button onclick="screenGameLoadingTwoNextGameTransferW()">
+                <i class="fa-regular fa-circle-play"></i>
+                Next Game
+            </button>
+        </div>
+        <audio id="audio-win">
+            <source src="./assets/media/audio/win.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    `;
+    document.getElementById("audio-win").volume = 0.4;
+    document.getElementById("audio-win").play();
+    winScreenResultsPush();
+}
 
+function winScreenResultsPush () {
+
+    var newLoss = userLoss + 1;
+    var newWins = userWins + 1;
+    let earningsResultsWin = vaultReward + userRandomBalance;
+    let resultTreasure = document.getElementById('treasure-results-w');
+    document.getElementById('treasure-results-w').innerHTML = "$" + vaultReward;
+    let resultBalance = document.getElementById('balance-results-w');
+    document.getElementById('balance-results-w').innerHTML = "$" + earningsResultsWin;
+    let resultWins = document.getElementById('win-score-results-w');
+    document.getElementById('win-score-results-w').innerHTML = newWins;
+    let resultLoss = document.getElementById('loss-score-results-w');
+    document.getElementById('loss-score-results-w').innerHTML = userLoss;
+    
 }
 
 function screenLosingCreate () {
 
+    document.body.innerHTML = `
+    <section id="losing-screen">
+        <div id="losing-screen-title">
+            <h2 class="game-results-screen-h-two">
+                GAME OVER!
+                <i class="fa-solid fa-skull-crossbones"></i>
+            </h2>
+        </div>
+        <div class="result-covers-box" id="losing-screen-image">
+            <img class="results-covers" id="losing-cover" src="./assets/media/images/broke-small.jpg" alt="Image of person emptying out their pockets with small change representing no funds to proceed">
+        </div>
+        <div class="results-text" id="losing-screen-text">
+            <h3>
+                Unfortunately, you were the smaller fish this time.
+            </h3>
+        </div>
+        <div class="results-results" id="losing-screen-results">
+            <p>
+                - You lost a treasure chest in value of <span id="treasure-results-l">$0</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span id="balance-results-l">$0</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span id="win-score-results-l">[0]</span> : <span id="loss-score-results-l">[0]</span> Losses.
+            </p>
+        </div>
+        <div class="results-button" id="losing-screen-button">
+            <button onclick="screenGameLoadingTwoNextGameTransferL()">
+                <i class="fa-solid fa-rotate-left"></i>
+                New Game
+            </button>
+        </div>
+        <audio id="audio-loss">
+            <source src="./assets/media/audio/losing.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    `;
+    document.getElementById("audio-loss").volume = 0.4;
+    document.getElementById("audio-loss").play();
+    lossScreenResultsPush();
+}
 
+function lossScreenResultsPush () {
+
+    var newLoss = userLoss + 1;
+    var newWins = userWins + 1;
+    let resultTreasureLoss = document.getElementById('treasure-results-l');
+    document.getElementById('treasure-results-l').innerHTML = "$" + vaultReward;
+    let resultBalanceLoss = document.getElementById('balance-results-l');
+    document.getElementById('balance-results-l').innerHTML = "$0";
+    let resultWinsLoss = document.getElementById('win-score-results-l');
+    document.getElementById('win-score-results-l').innerHTML = "$" + userWins;
+    let resultLossLoss = document.getElementById('loss-score-results-l');
+    document.getElementById('loss-score-results-l').innerHTML = "$" + newLoss;
 }
 
 function screenFoldedCreate () {
 
-
+    document.body.innerHTML = `
+    <section id="folded-screen">
+        <div id="folded-screen-title">
+            <h2 class="game-results-screen-h-two">
+                TRY AGAIN!
+                <i class="fa-solid fa-dice"></i>
+            </h2>
+        </div>
+        <div class="result-covers-box" id="folded-screen-image">
+            <img class="results-covers" id="folded-cover" src="./assets/media/images/orca-small.jpg" alt="Image of orca approaching surface, represents another opportunity for one of the largest fish to hunt again">
+        </div>
+        <div class="results-text" id="folded-screen-text">
+            <h3>
+                Luckily, you were a decent size of a fish. Enough to escape!
+            </h3>
+        </div>
+        <div class="results-results" id="losing-screen-results">
+            <p>
+                - You lost a treasure chest in value of <span id="treasure-results-f">$0</span>.
+            </p>
+            <p>
+                - Your available balance is now: <span id="balance-results-f">0$</span>.
+            </p>
+            <p>
+                - Your current score is now: Wins <span id="win-score-results-f">[0]</span> : <span id="loss-score-results-f">[0]</span> Losses.
+            </p>
+        </div>
+        <div class="results-button" id="folded-screen-button">
+            <button id="results-f-next-game" onclick="screenGameLoadingTwoNextGameTransferF()">
+                <i class="fa-regular fa-circle-play"></i>
+                Next Game
+            </button>
+            <button id="results-f-new-game" onclick="screenGameLoadingTwoNewGameTransferF()">
+                <i class="fa-solid fa-rotate-left"></i>
+                New Game
+            </button>
+        </div>
+        <audio id="audio-fold">
+            <source src="./assets/media/audio/folded.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    `;
+    document.getElementById("audio-fold").volume = 0.4;
+    document.getElementById("audio-fold").play();
+    foldScreenResultsPush();
 }
 
-screenGameLoadingTwoTransfer ();
+function foldScreenResultsPush () {
 
-// GAME LOADING SCREEN 2
+    var newLoss = userLoss + 1;
+    var newWins = userWins + 1;
+    let resultTreasureFold = document.getElementById('treasure-results-f');
+    document.getElementById('treasure-results-f').innerHTML = "$" + vaultReward;
+    let resultBalanceLoss = document.getElementById('balance-results-f');
+    document.getElementById('balance-results-f').innerHTML = "$" + userRandomBalance;
+    let resultWinsLoss = document.getElementById('win-score-results-f');
+    console.log(userWins);
+    document.getElementById('win-score-results-f').innerHTML = userWins;
+    let resultLossLoss = document.getElementById('loss-score-results-f');
+    console.log(userLoss);
+    document.getElementById('loss-score-results-f').innerHTML = newLoss;
+}
 
-function screenGameLoadingTwoTransfer () {
+function screenGameLoadingTwoNextGameTransferW () {
 
+    document.getElementById("winning-screen").remove();
+    screenLoadingTwoWinsNextCreate();  
+}
+
+function screenGameLoadingTwoNextGameTransferL () {
     
+    document.getElementById("losing-screen").remove();
+    screenLoadingTwoLossNewCreate();  
 }
-- get sent to by gameTracker
-        creates new element for running the game while replacing the old one
-        sends user to run game results screen appropriate to where it came from
 
-// GAME RESULTS SCREEN 
+function screenGameLoadingTwoNextGameTransferF () {
 
-- winning screen
-        add celebrating sound effect
-        add animation of image
-            treasure chest
-        add text: YOU WON!
-        how much you won, old and new balance + vault = newBalance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 win
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        Next game button (keeps the balance)
-            takes you to nextGame function
-       
-    - losing screen
-        add losing sound effect
-        add animation of image
-            safe closed
-            treasure chest
-            loss
-        add text: GAME OVER!
-        how much you lost, old and new balance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 loss
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        New game button (fresh balance)
+    document.getElementById("folded-screen").remove();
+    screenLoadingTwoFoldNexCreate();  
+}
+
+function screenGameLoadingTwoNewGameTransferF () {
+    
+    document.getElementById("folded-screen").remove();
+    screenLoadingTwoFoldNewCreate();  
+}
+
+function screenLoadingTwoWinsNextCreate () {
+
+    document.body.innerHTML = `
+    <section id="game-outro-two">
+        <video id="video-loading-two" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGame()"></video>
+    </section>
+    `;
+    document.getElementById("video-loading-two").volume = 0.1;
+}  
+
+function screenLoadingTwoLossNewCreate () {
+
+    document.body.innerHTML = `
+    <section id="game-outro-three">
+        <video id="video-loading-three" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGame()"></video>
+    </section>
+    `;
+    document.getElementById("video-loading-three").volume = 0.1;
+}
+
+function screenLoadingTwoFoldNexCreate () {
+
+    document.body.innerHTML = `
+    <section id="game-outro-four">
+        <video id="video-loading-four" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGame()"></video>
+    </section>
+    `;
+    document.getElementById("video-loading-four").volume = 0.1;
+}
+
+function screenLoadingTwoFoldNewCreate () {
+
+    document.body.innerHTML = `
+    <section id="game-outro-five">
+        <video id="video-loading-five" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGame()"></video>
+    </section>
+    `;
+    document.getElementById("video-loading-five").volume = 0.1;
+}
+
+/*
+
+function newGame () {
+
+New game button (fresh balance)
             takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-       
-    - fold screen
-        add losing sound effect of a chicken
-        add animation of image
-               how much you lost, old and new balance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 loss
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        New game button (fresh balance)
-            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-        Next game button (keeps the balance)
-            takes you to nextGame function 
+
+}
+
+function nextGame () {
+
+}
+takes you to nextGame function
+    
 
 
-            document.addEventListener("DOMContentLoaded", function() {
-                let buttons = document.getElementsByTagName("button");
-            
-                for (let button of buttons) {
-                    button.addEventListener("click", function() {
-                        if (this.getAttribute("data-type") === "new-game") {
-                            runNewGame();
-                        } else {
-                            runNextGame();
-                        }
-                    })
-                }
-                
-                document.getElementById("answer-box").addEventListener("keydown", function(event) {
-                    if (event.key === "Enter") {
-                        createIntroScreen();
-                    }
-                })
-                
-            })
-            
-
-            function calculateRemainingBalance () {
-
-            }
-            
-            function calculateInvestment () {
-            
-            }
-            
-            function calculateEarnings () {
-            
-            }
-            
-            function recordScore () {
-            
-            }
-            
-            function updateScoreWin () {
-            
-                let oldScore = parseInt(document.getElementById("score").innerText);
-                document.getElementById("score").innerText = ++oldScore;
-            }
-            
-            
-            function updateScoreLoss () {
-            
-                let oldScore = parseInt(document.getElementById("incorrect").innerText);
-                document.getElementById("incorrect").innerText = ++oldScore;
-            }
-
-// GAME LOADING SCREEN 3
-- listens for onend task
-creates new element while replacing the old one
-sends user to run new game or next game depending on choice
 
 // RUN NEXT GAME SCREEN
 nextGame

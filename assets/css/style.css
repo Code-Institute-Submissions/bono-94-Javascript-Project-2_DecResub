@@ -592,6 +592,54 @@ footer {
     height: 640px;
 }
 
+#game-outro-two {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro-two video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
+}
+
+#game-outro-three {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro-three video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
+}
+
+#game-outro-four {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro-four video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
+}
+
+#game-outro-five {
+    width: 100%;
+    height: 640px;
+    background-color:black !important;
+}
+
+#game-outro-five video { 
+    background-color: black !important;
+    width: 100%;
+    height: 640px;
+}
+
 #game {
     background-image: url('../media/images/ocean.jpg');
     background-size: cover;
