@@ -594,7 +594,7 @@ function initiateRobotResponse () {
 
     var robotRandomBet = Math.floor(Math.random() * robotRandomBalance) + 1; 
     if (robotRandomBet > robotRandomBalance) {
-        initiateRobotResponse();
+        initia();
     } else {
         if (0 < robotRandomBet && robotRandomBet < 10) {
             prawnRobotBet ();
