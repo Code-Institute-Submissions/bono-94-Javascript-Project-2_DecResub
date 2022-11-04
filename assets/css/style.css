@@ -1236,7 +1236,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 769px) and (min-width: 431px) {
+@media screen and (max-width: 770px) and (min-width: 430px) {
 
     #rules-box-title h3 {
         font-size: xx-large;
@@ -1260,10 +1260,10 @@ footer {
         margin-top: 20px;
     }
     input[type=text], input[type=email] {
-        width: 88%;
+        width: 82%;
     }
     textarea {
-        width: 88%;
+        width: 82%;
     }
     .social-networks i {
         font-size: 260%;
@@ -1374,7 +1374,7 @@ footer {
         font-size: large;
     }
     #balance-tracker {
-        width: 30%;
+        width: 34%;
     }
     #balance-tracker p {
         font-size: large;
@@ -1392,13 +1392,13 @@ footer {
         font-size: large;
     }
     #last-bets {
-        width: 30%;
-    }
-    .contols-area-right {
         width: 34%;
     }
+    .contols-area-right {
+        width: 38%;
+    }
     .bttn-second {
-        font-size: x-large;
+        font-size: large;
     }
     #fold { 
         font-size: xx-large;
@@ -1436,7 +1436,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 1279px) and (min-width: 770px) {
+@media screen and (max-width: 1280px) and (min-width: 770px) {
 
     #h1 {
         letter-spacing: 3px;
@@ -1847,7 +1847,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 1601px) and (min-width: 1371px) {
+@media screen and (max-width: 1600px) and (min-width: 1370px) {
 
     #nav-menu a {
         font-size: xx-large;
@@ -2050,7 +2050,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1602px) {
+@media screen and (min-width: 1600px) {
 
     #nav-menu a {
         font-size: xx-large;
