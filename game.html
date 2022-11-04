@@ -9,16 +9,14 @@
     <meta name="author" content="Bono Zekan">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <link rel="icon" href="./assets/media/images/logo-two.png" type="image">
+    <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>
     <title>
         Bigger Fish
     </title>
 </head>
 <body>
-    <div class="insert-lifecoin-image">
-        <img id="header-logo" src="./assets/media/images/lifecoin-coin.png" alt="Floating lifecoin on the landing game screen">
-    </div>
     <section id="game-intro">
-        <video src="./assets/media/video/intro.mp4" alt="Logo with game introduction effects"></video>
+        <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
     <section id="home-screen-game">
         <div id="home-screen-title">
@@ -40,24 +38,30 @@
             </h2>
         </div>
         <div id="start-button">
-            <button class="bttn-zero" id="start">
+            <button class="bttn-zero" id="start" onclick="gameLoadingOneTransfer()">
                 <i class="fa-regular fa-circle-play"></i>
                 START GAME
             </button>
         </div>
+        <audio id="audio-newgame" onended="screenGameLoadingCreate()">
+            <source src="./assets/media/audio/start.mp3" type="audio/mpeg">
+        </audio>
         <div id="partners">
             <div id="partners-text">
                 <h3>
                     Game by:
                 </h3>
             </div>
-            <a href="https://www.lifecoin.earth" target="_blank" rel="noopener">
+            <a href="https://bono-94.github.io/Project-1-Code-Institute-HTML-CSS/" target="_blank" rel="noopener">
                 <img id="lifecoin-logo" src="./assets/media/images/coin-logo-2d-slim.png" alt="Lifecoin logo representing development and ownership organization">
             </a>
         </div>
+        <audio id="audio-welcome" autoplay loop>
+            <source src="./assets/media/audio/welcome-music.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="game-outro-one">
-        <video src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind"></video>
+        <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
     </section>
     <section id="game">
         <div class="game-area">
@@ -115,7 +119,7 @@
                             My Balance:
                         </p>
                         <p id="balance-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -125,7 +129,7 @@
                             My Bets:
                         </p>
                         <p id="bet-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -135,7 +139,7 @@
                             Last Bet:
                         </p>
                         <p id="bet-user-total">
-                            0$
+                            $0
                         </p>
                     </div>
                 </div>
@@ -146,7 +150,7 @@
                             Vault Reward:
                         </p>
                         <p id="treasure-total">
-                            0$
+                            $0
                         </p>
                     </div>
                     <hr>
@@ -172,47 +176,59 @@
                 </div>
             </div>
             <div class="contols-area-right">
-                <button class="bttn-second" id="bttn-one" data-choice="0">
-                    Prawn ($0.1)
+                <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
+                    Prawn ($1)
                 </button>
-                <button class="bttn-second" id="bttn-two" data-choice="1">
-                    Crab ($1)
+                <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
+                    Crab ($10)
                 </button>
-                <button class="bttn-second" id="bttn-three" data-choice="2">
-                    Turtle ($10)
+                <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
+                    Turtle ($50)
                 </button>
-                <button class="bttn-second" id="bttn-four" data-choice="3">
+                <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
                     Octopus ($100) 
                 </button>
-                <button class="bttn-second" id="bttn-five" data-choice="4">
+                <button class="bttn-second" onclick="userChoiceSquidValidator()" id="bttn-five" data-choice="4">
                     Squid ($500)
                 </button>
-                <button class="bttn-second" id="bttn-six" data-choice="5">
+                <button class="bttn-second" onclick="userChoiceLobsterValidator()" id="bttn-six" data-choice="5">
                     Lobster ($1k)
                 </button>
-                <button class="bttn-second" id="bttn-seven" data-choice="6">
+                <button class="bttn-second" onclick="userChoiceTunaValidator()" id="bttn-seven" data-choice="6">
                     Tuna ($10k)
                 </button>
-                <button class="bttn-second" id="bttn-eight" data-choice="7">
+                <button class="bttn-second" onclick="userChoiceDolphinValidator()" id="bttn-eight" data-choice="7">
                     Dolphin ($100k)
                 </button>
-                <button class="bttn-second" id="bttn-nine" data-choice="8">
+                <button class="bttn-second" onclick="userChoiceWhaleValidator()" id="bttn-nine" data-choice="8">
                     Whale ($1M)
                 </button>
-                <button class="bttn-second" id="bttn-ten" data-choice="9">
+                <button class="bttn-second" onclick="userChoiceDragonValidator()" id="bttn-ten" data-choice="9">
                     Dragon ($10M)
                 </button>
             </div>           
             <div class="controls-area-bottom">
-                <button class="bttn-first" id="fold">
+                <button class="bttn-first" onclick="userFolded()" id="fold">
                     <i class="fa-solid fa-sack-xmark"></i>
                     FOLD
                 </button>
             </div>
         </div>
-    </section>
-    <section id="game-outro-two">
-        <video src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind"></video>
+        <audio id="audio-game-background" autoplay loop>
+            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-error">
+            <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-button-splash">
+            <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-cashout">
+            <source src="./assets/media/audio/cashier.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-calculating">
+            <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="winning-screen">
         <div id="winning-screen-title">
@@ -231,21 +247,24 @@
         </div>
         <div class="results-results" id="winning-screen-results">
             <p>
-                - You won a treasure chest in value of <span>0$</span>.
+                - You won a treasure chest in value of <span id="treasure-results-w">$0</span>.
             </p>
             <p>
-                - Your available balance is now: <span>0$</span>.
+                - Your available balance is now: <span id="balance-results-w">$0</span>.
             </p>
             <p>
-                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+                - Your current score is now: Wins <span id="win-score-results-w">[0]</span> : <span id="loss-score-results-w">[0]</span> Losses.
             </p>
         </div>
         <div class="results-button" id="winning-screen-button">
-            <button>
+            <button onclick="screenGameLoadingTwoNextGameTransferW()">
                 <i class="fa-regular fa-circle-play"></i>
                 Next Game
             </button>
         </div>
+        <audio id="audio-win">
+            <source src="./assets/media/audio/win.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="losing-screen">
         <div id="losing-screen-title">
@@ -264,21 +283,24 @@
         </div>
         <div class="results-results" id="losing-screen-results">
             <p>
-                - You lost a treasure chest in value of <span>0$</span>.
+                - You lost a treasure chest in value of <span id="treasure-results-l">$0</span>.
             </p>
             <p>
-                - Your available balance is now: <span>0$</span>.
+                - Your available balance is now: <span id="balance-results-l">$0</span>.
             </p>
             <p>
-                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+                - Your current score is now: Wins <span id="win-score-results-l">[0]</span> : <span id="loss-score-results-l">[0]</span> Losses.
             </p>
         </div>
         <div class="results-button" id="losing-screen-button">
-            <button>
+            <button onclick="screenGameLoadingTwoNextGameTransferL()">
                 <i class="fa-solid fa-rotate-left"></i>
                 New Game
             </button>
         </div>
+        <audio id="audio-loss">
+            <source src="./assets/media/audio/losing.mp3" type="audio/mpeg">
+        </audio>
     </section>
     <section id="folded-screen">
         <div id="folded-screen-title">
@@ -297,33 +319,32 @@
         </div>
         <div class="results-results" id="losing-screen-results">
             <p>
-                - You lost a treasure chest in value of <span>0$</span>.
+                - You lost a treasure chest in value of <span id="treasure-results-f">$0</span>.
             </p>
             <p>
-                - Your available balance is now: <span>0$</span>.
+                - Your available balance is now: <span id="balance-results-f">0$</span>.
             </p>
             <p>
-                - Your current score is now: Wins <span>[0]</span> : <span>[0]</span> Losses.
+                - Your current score is now: Wins <span id="win-score-results-f">[0]</span> : <span id="loss-score-results-f">[0]</span> Losses.
             </p>
         </div>
         <div class="results-button" id="folded-screen-button">
-            <button id="results-f-next-game">
+            <button id="results-f-next-game" onclick="screenGameLoadingTwoNextGameTransferF()">
                 <i class="fa-regular fa-circle-play"></i>
                 Next Game
             </button>
-            <button id="results-f-new-game">
+            <button id="results-f-new-game" onclick="screenGameLoadingTwoNewGameTransferF()">
                 <i class="fa-solid fa-rotate-left"></i>
                 New Game
             </button>
         </div>
+        <audio id="audio-fold">
+            <source src="./assets/media/audio/folded.mp3" type="audio/mpeg">
+        </audio>
     </section>
-    <section id="game-outro-three">
-        <video src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind"></video>
-    </section>
-    <section id="game-outro-four">
-        <video src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind"></video>
+    <section id="game-outro-two">
+        <video id="video-loading-two" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGameTransferWon()"></video>
     </section>
     <script src="https://kit.fontawesome.com/00c35bfbd1.js" crossorigin="anonymous"></script>   
-    <script src="assets/js/script.js"></script>
 </body>
 </html>

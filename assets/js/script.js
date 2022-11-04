@@ -969,181 +969,181 @@ function nextGameTransferFold () {
 
 function screenNextGameCreate () {
 
-        document.body.innerHTML = `
-        <section id="game">
-            <div class="game-area">
-                <div class="game-tracking">
-                    <div id="user-profile">
-                        <div id="user-image">
-                            <i class="fa-solid fa-head-side-virus"></i>
-                        </div>
-                        <div id="user-image-title">
-                            Human
-                        </div>
-                        <div class="past-score-area" id="past-score-box-h">
-                            <p class="past-score-box">
-                                Win:
-                                <span id="past-score-counter-hw">
-                                    0
-                                </span>
-                            </p>
-                            <p class="past-score-box">
-                                Loss:
-                                <span id="past-score-counter-hl">
-                                    0
-                                </span>
-                            </p>
-                        </div>
+    document.body.innerHTML = `
+    <section id="game">
+        <div class="game-area">
+            <div class="game-tracking">
+                <div id="user-profile">
+                    <div id="user-image">
+                        <i class="fa-solid fa-head-side-virus"></i>
                     </div>
-                    <div id="pc-profile">
-                        <div id="pc-image">
+                    <div id="user-image-title">
+                        Human
+                    </div>
+                    <div class="past-score-area" id="past-score-box-h">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-hw">
+                                0
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-hl">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div id="pc-profile">
+                    <div id="pc-image">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div id="pc-image-title">
+                        Robot
+                    </div>
+                    <div class="past-score-area" id="past-score-box-r">
+                        <p class="past-score-box">
+                            Win:
+                            <span id="past-score-counter-rw">
+                                0
+                            </span>
+                        </p>
+                        <p class="past-score-box">
+                            Loss:
+                            <span id="past-score-counter-rl">
+                                0
+                            </span>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="game-board">
+                <div id="balance-tracker">
+                    <div id="virtual-balance">
+                        <p class="virtual-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            My Balance:
+                        </p>
+                        <p id="balance-total">
+                            $0
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="total-bet">
+                        <p class="total-bet">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            My Bets:
+                        </p>
+                        <p id="bet-total">
+                            $0
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="last-bet-user">
+                        <p class="last-bet-user">
+                            <i class="fa-solid fa-user"></i>
+                            Last Bet:
+                        </p>
+                        <p id="bet-user-total">
+                            $0
+                        </p>
+                    </div>
+                </div>
+                <div id="last-bets">
+                    <div id="treasure-value">
+                        <p class="treasure-value">
+                            <i class="fa-solid fa-vault"></i>
+                            Vault Reward:
+                        </p>
+                        <p id="treasure-total">
+                            $0
+                        </p>
+                    </div>
+                    <hr>
+                    <div id="last-bet-robot">
+                        <p class="last-bet-robot">
                             <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-                        <div id="pc-image-title">
-                            Robot
-                        </div>
-                        <div class="past-score-area" id="past-score-box-r">
-                            <p class="past-score-box">
-                                Win:
-                                <span id="past-score-counter-rw">
-                                    0
-                                </span>
-                            </p>
-                            <p class="past-score-box">
-                                Loss:
-                                <span id="past-score-counter-rl">
-                                    0
-                                </span>
-                            </p>
-                        </div>
-                    </div> 
-                </div>
-                <div class="game-board">
-                    <div id="balance-tracker">
-                        <div id="virtual-balance">
-                            <p class="virtual-balance">
-                                <i class="fa-solid fa-coins"></i>
-                                My Balance:
-                            </p>
-                            <p id="balance-total">
-                                $0
-                            </p>
-                        </div>
-                        <hr>
-                        <div id="total-bet">
-                            <p class="total-bet">
-                                <i class="fa-solid fa-file-invoice-dollar"></i>
-                                My Bets:
-                            </p>
-                            <p id="bet-total">
-                                $0
-                            </p>
-                        </div>
-                        <hr>
-                        <div id="last-bet-user">
-                            <p class="last-bet-user">
-                                <i class="fa-solid fa-user"></i>
-                                Last Bet:
-                            </p>
-                            <p id="bet-user-total">
-                                $0
-                            </p>
-                        </div>
+                            Last Bet:
+                        </p>
+                        <p id="bet-robot-total">
+                            0$
+                        </p>
                     </div>
-                    <div id="last-bets">
-                        <div id="treasure-value">
-                            <p class="treasure-value">
-                                <i class="fa-solid fa-vault"></i>
-                                Vault Reward:
-                            </p>
-                            <p id="treasure-total">
-                                $0
-                            </p>
-                        </div>
-                        <hr>
-                        <div id="last-bet-robot">
-                            <p class="last-bet-robot">
-                                <i class="fa-solid fa-laptop-code"></i>
-                                Last Bet:
-                            </p>
-                            <p id="bet-robot-total">
-                                0$
-                            </p>
-                        </div>
-                        <hr>
-                        <div id="robot-balance">
-                            <p class="robot-balance">
-                                <i class="fa-solid fa-coins"></i>
-                                AI Balance:
-                            </p>
-                            <p id="robot-balance-total">
-                                [UNDISCLOSED]
-                            </p>
-                        </div>
+                    <hr>
+                    <div id="robot-balance">
+                        <p class="robot-balance">
+                            <i class="fa-solid fa-coins"></i>
+                            AI Balance:
+                        </p>
+                        <p id="robot-balance-total">
+                            [UNDISCLOSED]
+                        </p>
                     </div>
-                </div>
-                <div class="contols-area-right">
-                    <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
-                        Prawn ($1)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
-                        Crab ($10)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
-                        Turtle ($50)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
-                        Octopus ($100) 
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceSquidValidator()" id="bttn-five" data-choice="4">
-                        Squid ($500)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceLobsterValidator()" id="bttn-six" data-choice="5">
-                        Lobster ($1k)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceTunaValidator()" id="bttn-seven" data-choice="6">
-                        Tuna ($10k)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceDolphinValidator()" id="bttn-eight" data-choice="7">
-                        Dolphin ($100k)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceWhaleValidator()" id="bttn-nine" data-choice="8">
-                        Whale ($1M)
-                    </button>
-                    <button class="bttn-second" onclick="userChoiceDragonValidator()" id="bttn-ten" data-choice="9">
-                        Dragon ($10M)
-                    </button>
-                </div>           
-                <div class="controls-area-bottom">
-                    <button class="bttn-first" onclick="userFolded()" id="fold">
-                        <i class="fa-solid fa-sack-xmark"></i>
-                        FOLD
-                    </button>
                 </div>
             </div>
-            <audio id="audio-game-background" autoplay loop>
-                <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
-            </audio>
-            <audio id="audio-error">
-                <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
-            </audio>
-            <audio id="audio-button-splash">
-                <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
-            </audio>
-            <audio id="audio-cashout">
-                <source src="./assets/media/audio/cashier.mp3" type="audio/mpeg">
-            </audio>
-            <audio id="audio-calculating">
-                <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
-            </audio>
-        </section>
-        `;
-        document.getElementById("audio-game-background").volume = 0.7;
-        document.getElementById("audio-cashout").play();
-        document.getElementById("audio-cashout").volume = 0.5;
-        alert ("Congratulations! Your lifecoin has yielded a new game balance.");
-        nextGameSetupScores();
-    }
+            <div class="contols-area-right">
+                <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
+                    Prawn ($1)
+                </button>
+                <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
+                    Crab ($10)
+                </button>
+                <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
+                    Turtle ($50)
+                </button>
+                <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
+                    Octopus ($100) 
+                </button>
+                <button class="bttn-second" onclick="userChoiceSquidValidator()" id="bttn-five" data-choice="4">
+                    Squid ($500)
+                </button>
+                <button class="bttn-second" onclick="userChoiceLobsterValidator()" id="bttn-six" data-choice="5">
+                    Lobster ($1k)
+                </button>
+                <button class="bttn-second" onclick="userChoiceTunaValidator()" id="bttn-seven" data-choice="6">
+                    Tuna ($10k)
+                </button>
+                <button class="bttn-second" onclick="userChoiceDolphinValidator()" id="bttn-eight" data-choice="7">
+                    Dolphin ($100k)
+                </button>
+                <button class="bttn-second" onclick="userChoiceWhaleValidator()" id="bttn-nine" data-choice="8">
+                    Whale ($1M)
+                </button>
+                <button class="bttn-second" onclick="userChoiceDragonValidator()" id="bttn-ten" data-choice="9">
+                    Dragon ($10M)
+                </button>
+            </div>           
+            <div class="controls-area-bottom">
+                <button class="bttn-first" onclick="userFolded()" id="fold">
+                    <i class="fa-solid fa-sack-xmark"></i>
+                    FOLD
+                </button>
+            </div>
+        </div>
+        <audio id="audio-game-background" autoplay loop>
+            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-error">
+            <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-button-splash">
+            <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-cashout">
+            <source src="./assets/media/audio/cashier.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-calculating">
+            <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    `;
+    document.getElementById("audio-game-background").volume = 0.7;
+    document.getElementById("audio-cashout").play();
+    document.getElementById("audio-cashout").volume = 0.5;
+    alert ("Congratulations! Your lifecoin has yielded a new game balance.");
+    nextGameSetupScores();
+}
     
 function nextGameSetupScores () {
 
