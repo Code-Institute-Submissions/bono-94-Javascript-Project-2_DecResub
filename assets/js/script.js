@@ -47,7 +47,7 @@ function screenGameIntroCreate () {
  
     document.body.innerHTML =`
     <section id="game-intro">
-        <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
+        <video src="./assets/media/video/intro.mp4" id="intro-video" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
     `;
     document.getElementById("intro-video").volume = 0.2; 
@@ -119,7 +119,7 @@ function screenGameLoadingCreate () {
     document.getElementById("home-screen-game").remove ();
     document.body.innerHTML = `
     <section id="game-outro-one">
-        <video id="video-loading" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGameScreenTransfer()"></video>
+        <video id="video-loading" src="./assets/media/video/loading.mp4" autoplay onended="newGameScreenTransfer()"></video>
     </section>
     `;
     document.getElementById("video-loading").volume = 0.1; 
@@ -722,7 +722,7 @@ function screenWinningCreate () {
         <div id="winning-screen-image">
             <img class="results-covers" id="winning-cover" src="./assets/media/images/treasure-small.jpg" alt="Image of treasure chest full of coins">
         </div>
-        <div class="results-text"id="winning-screen-text">
+        <div class="results-text" id="winning-screen-text">
             <h3>
                 Congratulations! You were the bigger fish this time.
             </h3>
@@ -846,7 +846,7 @@ function screenFoldedCreate () {
                 Luckily, you were a decent size of a fish. Enough to escape!
             </h3>
         </div>
-        <div class="results-results" id="losing-screen-results">
+        <div class="results-results" id="folded-screen-results">
             <p>
                 - You lost a treasure chest in value of <span id="treasure-results-f">$0</span>.
             </p>
@@ -919,7 +919,7 @@ function screenLoadingTwoWinsNextCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-two">
-        <video id="video-loading-two" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGameTransferWon()"></video>
+        <video id="video-loading-two" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferWon()"></video>
     </section>
     `;
     document.getElementById("video-loading-two").volume = 0.1;
@@ -929,7 +929,7 @@ function screenLoadingTwoLossNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-three">
-        <video id="video-loading-three" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="window.location.reload()"></video>
+        <video id="video-loading-three" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
     </section>
     `;
     document.getElementById("video-loading-three").volume = 0.1;
@@ -939,7 +939,7 @@ function screenLoadingTwoFoldNexCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-four">
-        <video id="video-loading-four" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGameTransferFold()"></video>
+        <video id="video-loading-four" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferFold()"></video>
     </section>
     `;
     document.getElementById("video-loading-four").volume = 0.1;
@@ -949,7 +949,7 @@ function screenLoadingTwoFoldNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-five">
-        <video id="video-loading-five" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="window.location.reload()"></video>
+        <video id="video-loading-five" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
     </section>
     `;
     document.getElementById("video-loading-five").volume = 0.1;

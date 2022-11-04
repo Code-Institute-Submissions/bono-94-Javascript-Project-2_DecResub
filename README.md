@@ -1,42 +1,15 @@
-Next version:
-Multiplayer Mode 
-Teams and Groups Creation
-Game mode vs. Friends (custom link join)
-Game mode vs. Public (random link join)
-Usage of real digital and crypto currencies
-Digital and crypto currencies conversion
-P2P Transactions
-Multiple Accounts with free Transfers
-User Profiles & Password Protection
-Deposit Currencies & Tokens
-Withdraw Currencies & Tokens
-Virtual Bank & Balance
-Transactions List
-Balance History
-Game Breakdown Payments
-NFT Rewards
-Multiverse
-Open World Game Development
-Variety of Game Maps
-Integration with Revolut, Paypal, etc…
-Live Chat
-Rating the Opponent
-Live Leaderboard List
-Rankings, Levels & Memberships
-Opponent Last Scores
-Custom Avatars
-Multipliers and Combo’s
-Alternative Staking Options 
-Periodical Visit and Play Time Reward System
-Tournaments and Challenges
-Professional Designs and Animations
-Inclusion of secondary layer games such as card games or sport event
-Investing Custom Amount
-Amounts Mathematical Calculations
+# [Bigger Fish](https://bono-94.github.io/Javascript-Project-2/) 
 
+Bigger Fish is an online game with various financial and entertainment elements. The game has been created for possible participation of users from any target group. Besides play-to-earn model with real currencies,this concept has been design to complement new global economy system as one of the main utilities. [
 
-# [Lifecoin](https://lifecoin.earth) 
+More about the game + bridge statement
 
+Currently game is only singleplayer mode against robot while our full concept will feature real funds and earnings, multiplayer, professional graphics and animations in one of our open world, next to many more upcoming surprises for users.
+
+Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience.
+
+For example, Love Maths is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also maths. Love Maths is a fully responsive JavaScript maths game that will allow users to add, subtract, multiply and divide numbers.
+g
 Lifecoin site is a digital representation of an interaction platform powering an alternative and independent new economy system. The reason for the development of this site is to slowly introduce to the public this innovative and collaborative environment for purposes of financial education, poverty reduction, and improvement of lifestyles while achieving life-long goals. This site is for every human's personal and business use no matter their unique life experiences.
 
 In our live public area, all humans are encouraged to contribute and grow together towards a better tomorrow. Users will be able to join our public workspace where they can increase and store their wealth through various missions offers and financial tools. All efforts are additionally rewarded with infinite options to purchase from real-world service providers with extremely large discounts. Our focus will always remain on only supporting sustainable products and services. While covering one of the key aspects of life, users are also paying unnoticeable taxation that transparently funds the charity and business missions.
@@ -48,11 +21,34 @@ Please note this is only a basic version of our website created by our main Life
 
 ## Features 
 
+In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+f
 In the first demonstrative version, minimum features have been disclosed in order to create a rich experience for users over longer periods of time. Also,  for initial attention from investors, a large amount of information has been summarized to cover main topics and categories before planned full disclosure. We will continue to improve consistently while strategically releasing new content and features according to our planned agenda. This site is made fully responsive across variety of devices with lowest guaranteed width of 280px for new age foldeable screens. Next size is normal phones, tablet portrait, landscape, laptop, PC and larger.
 
 ### Existing Features
 
 - __Navigation Bar__
+
+Featured at the top of the page, the Love Maths logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
+
+
+
+The Game Area
+
+This section will allow the user to play the maths game. The user will be able to easily see icons for addition, subtraction, multiplication, and division games.
+The user will be able to select the type of maths game they will be playing by clicking on the different icons.
+
+
+The Question section
+
+The question section is where the user will be able to see the elementary arithmetic question to answer as part of the game. The user will be able answer the questions in the answer box provide
+The user will be able to submit their answer and a pop-up will make it known to the user if they answered correctly.
+
+
+The Score Area
+
+This section will allow the user to see exactly how many correct and incorrect answers they have provided.
+
 
   Consistently repeating on all nine pages, a fully responsive navigation bar includes the Title area, main menu, and sub-menu. The main background is a very light blue background instead of plain white adding some life to an unknown concept while fitting well and discreetly between the main site's colors orange and teal.
   
@@ -188,80 +184,72 @@ In the first demonstrative version, minimum features have been disclosed in orde
 
 Next version:
 
-- Website functional on every device and resolution
-- Website Animations
-- Content improvement and additions
-- Business Software
-- Education Software
-- Updates on Timelines and Features
-- Global Social Network	
-- Designs and development refresh
-- Sound Libraries
-- Video Platform
-- Galleries
-- Secure Login System
-- Multi-factor Verification
-- Collaboration Advertising Banner
-- Testimonies
-- Live counters 
-- Professional Whitepaper 
-- Transparent Business Documentation
-- Website Traffic Count
-- Live Knowledge Capturing
-- Newsletters
-- Communication Notifications
-- Voting Form
-- Feedback / Complaint / Compliment Form
-- Sharing Form
-- Invitation Form ( Referral + Commission)
-- Privacy Statements
-- Legal Protection Disclosure
-- Universal and  simple new Coding Language
-- Collaboration Environment Dashboard
-- Steps to Success Instruction Manuals
-- New communication protocol
-- Creation of new WEB 
-- Creation of new global online commerce shop
-- Creation of new WEB browsers and tools
-- Disclosure on our Operational System
-- Creation of all websites for projects
-- Creation of all websites for businesses
-- Creation of all remaining websites
-- Team Structure page
-- Team Members Profiles
-- Business Collaborators Profiles
-- Community Profiles Feedback / Complaint / Compliment Form
-- Feedback / Complaint / Compliment Form	
-- Collective and Individual Tracking & Reporting
-- Transparent business model once officially registered
-- All new confidential content and inventions
-- Total investments expandable button live counter
-- Entertainment Games
-- Financial Games
-- Real-Life Utility Games
-- Contribution and Request interactive segment
-- Transaction Tracker, Reporter and Claimer
-- Maps
-- Limited accessibility mode
-- Browse around Timeline Section for more information
-- New timeline for Ruling and Legacy for period after 21.4.2024.
-- ! Infinite more possibilities are coming soon !
-- All Business, Education and Personal Knowledge with missions dashboard will be available upon reaching first funding goal for legal protection or The Great Disclosure 21042024. Including the collaboration platform that will feature Lifecoin in the Lifeconomy 
-
+- Next version:
+- Multiplayer Mode 
+- Teams and Groups Creation
+- Game mode vs. Friends (custom link join)
+- Game mode vs. Public (random link join)
+- Usage of real digital and crypto currencies
+- Digital and crypto currencies conversion
+- P2P Transactions
+- Multiple Accounts with free Transfers
+- User Profiles & Password Protection
+- Deposit Currencies & Tokens
+-  Withdraw Currencies & Tokens
+- Virtual Bank & Balance
+- Transactions List
+- Balance History
+- Game Breakdown Payments
+- NFT Rewards
+- Multiverse
+- Open World Game Development
+- Variety of Game Maps
+- Integration with Revolut, Paypal, etc…
+- Live Chat
+- Rating the Opponent
+- Live Leaderboard List
+- Rankings, Levels & Memberships
+- Opponent Last Scores
+- Custom Avatars
+- Multipliers and Combo’s
+- Alternative Staking Options 
+- Periodical Visit and Play Time Reward System
+- Tournaments and Challenges
+- Professional Designs and Animations
+- Inclusion of secondary layer games such as card games or sport event
+- Investing Custom Amount
+- Amounts Mathematical Calculations
   
 ---
 
 ## Testing 
+
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 - I have conducted enough hours of testing across all screen sizes and different browsers to conclude that now site works well and all discussed features included. Internet Explorer, Google Chrome, Safari, Firefox on large PC monitor, average laptop, tablet and various mobile devices.
 
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  - No errors when passing through the official [W3C validator](https://validator.w3.org)
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator)
+  - No errors when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator)
+
+- Jshint
+  -  No errors when passing through the official [Jshint validator](https://jshint.com)
+  - Metrics returned:
+
+    - There are 67 functions in this file.
+    - Function with the largest signature take 0 arguments, while the median is 0.
+    - Largest function has 16 statements in it, while the median is 4.
+    - The most complex function has a cyclomatic complexity value of 13 while the median is 1.
 
 - Accessibility
   - This test confirms that the colors and fonts chosen are easy to read and accessible. All scores are satisfactory besides performance since the site uses complex visuals and large media which will be solved with the next update. All common practices and SEO levels have passed with a full percentage
@@ -271,6 +259,10 @@ Next version:
 ### Bugs
 
 Since all code is running smoothly and has been verified from the first attempt, there were no bugs left to solve.
+
+#### Unsolved Bugs
+
+You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 ---
 
