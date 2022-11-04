@@ -1,45 +1,19 @@
 const screenInsertLifecoin = document.getElementById('insert-lifecoin');
 const placeLifecoinBackground = document.getElementById('insert-lifecoin-background');
-const insertButton = document.getElementById('insert-button');
 const placeLifecoin = document.getElementById('insert-lifecoin-image');
 const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation');
 
-const gameIntroCreate = document.getElementById('game-intro');
-const rulesBox = document.getElementById('rules');
-
-const screenWelcome = document.getElementById('home-screen-game');
-
-const screenGameLoadingOne = document.getElementById('game-outro-one');
-
-const screenNewGame = document.getElementById('game');
 const userWins = 0;
 const userLoss = 0;
 const robotWins = 0;
 const robotLoss = 0;
 
-const scoreResultsWinWins = userWins + 1;
-const scoreREsultsWinLoss = userLoss + 0;
-const scoreResultsLossnWins = userWins + 0;
-const scoreREsultsLossLosses = userLoss + 1;
-const scoreResultsFoldnWins = userWins + 0;
-const scoreREsultsFoldLosses = userLoss + 1;
-
-const screenGameLoadingTwo = document.getElementById('game-outro-two');
-const screenWinGameResults = document.getElementById('winning-screen');
-const screenLoseGameResults = document.getElementById('losing-screen');
-const screenFoldGameResults = document.getElementById('folded-screen');
-const screenGameLoadingThree = document.getElementById('game-outro-three');
-const screenNextGame = document.getElementById('new-game');
-const screenGameLoadingFour = document.getElementById('game-outro-four');
-
 var audioInsert = document.getElementById("audio-insert");
 var audioRocks = document.getElementById("audio-insert-rocks");
 var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
-var audioError = document.getElementById("audio-error")
-var audioBetSplash = document.getElementById("audio-button-splash")
-
-var videoIntro = document.getElementById("intro-video");
+var audioError = document.getElementById("audio-error");
+var audioBetSplash = document.getElementById("audio-button-splash");
 
 var userRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var robotRandomBalance = Math.floor(Math.random() * 21042004) + 2;
@@ -47,6 +21,8 @@ var userTotalBets = 0;
 var userLastBet = 0;
 var vaultReward = 0;
 var robotLastBet = 0;
+
+let earningsResultsWin = vaultReward + userRandomBalance;
 
 function insertLifecoinAnimation () {
     
@@ -74,7 +50,7 @@ function screenGameIntroCreate () {
         <video src="./assets/media/video/intro.mp4" id="intro-video" alt="Logo with game introduction effects" autoplay onended="welcomeScreenTransfer()"></video>
     </section>
     `;
-    document.getElementById("intro-video").volume = 0.1; 
+    document.getElementById("intro-video").volume = 0.2; 
 }
 
 function welcomeScreenTransfer () {
@@ -353,7 +329,7 @@ function userChoicePrawnValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -375,7 +351,7 @@ function userChoiceCrabValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -397,7 +373,7 @@ function userChoiceTurtleValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -419,7 +395,7 @@ function userChoiceOctopusValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -441,7 +417,7 @@ function userChoiceSquidValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -463,7 +439,7 @@ function userChoiceLobsterValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -485,7 +461,7 @@ function userChoiceTunaValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -507,7 +483,7 @@ function userChoiceDolphinValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -529,7 +505,7 @@ function userChoiceWhaleValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -551,7 +527,7 @@ function userChoiceDragonValidator () {
     } else {
         document.getElementById("audio-error").play();
         document.getElementById("audio-error").volume = 0.2;
-        alert ("Low balance! Please select smaller amount.");
+        alert ("Low balance! Please select a smaller amount.");
     }
 }
 
@@ -587,23 +563,22 @@ function choicesUpdaters () {
     } else {
         initiateRobotResponse(); 
     }
-    
 }
 
 function initiateRobotResponse () {
 
     var robotRandomBet = Math.floor(Math.random() * robotRandomBalance) + 1; 
     if (robotRandomBet > robotRandomBalance) {
-        initia();
+        var robotRandomBet = Math.floor(Math.random() * robotRandomBalance) + 1; 
     } else {
         if (0 < robotRandomBet && robotRandomBet < 10) {
             prawnRobotBet ();
         } else if (robotRandomBet < 50) {
             crabRobotBet ();
         } else if (robotRandomBet < 100) {
-            turtleRobotBet
+            turtleRobotBet ();
         } else if (robotRandomBet < 500) {
-            octoRobotBet ();
+            octopusRobotBet ();
         } else if (robotRandomBet < 1000) {
             squidRobotBet ();
         } else if (robotRandomBet < 10000) {
@@ -644,7 +619,7 @@ function turtleRobotBet () {
     choicesUpdatersRobot();
 }
 
-function octoRobotBet () {
+function octopusRobotBet () {
 
     robotRandomBalance -= 100;
     robotLastBet = 100;
@@ -708,16 +683,14 @@ function choicesUpdatersRobot () {
     document.getElementById('treasure-total').innerHTML = "$" + vaultReward;
     let robotLastBetDisplayed = document.getElementById('bet-robot-total');
     document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
-    console.log(robotRandomBalance);
 }
 
 function userFolded () {
 
-    alert("You decided to escape with your remaining balance.");
+    alert("You have decided to swim away with your remaining balance.");
     screenFoldedTransfer();
 }
 
-        
 function screenWinningTransfer () {
 
     document.getElementById("game").remove();
@@ -776,7 +749,7 @@ function screenWinningCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-win").volume = 0.4;
+    document.getElementById("audio-win").volume = 0.2;
     document.getElementById("audio-win").play();
     winScreenResultsPush();
 }
@@ -791,10 +764,9 @@ function winScreenResultsPush () {
     let resultBalance = document.getElementById('balance-results-w');
     document.getElementById('balance-results-w').innerHTML = "$" + earningsResultsWin;
     let resultWins = document.getElementById('win-score-results-w');
-    document.getElementById('win-score-results-w').innerHTML = newWins;
+    document.getElementById('win-score-results-w').innerHTML = "[" + newWins + "]";
     let resultLoss = document.getElementById('loss-score-results-w');
-    document.getElementById('loss-score-results-w').innerHTML = userLoss;
-    
+    document.getElementById('loss-score-results-w').innerHTML = "[" + userLoss + "]";
 }
 
 function screenLosingCreate () {
@@ -837,7 +809,7 @@ function screenLosingCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-loss").volume = 0.4;
+    document.getElementById("audio-loss").volume = 0.2;
     document.getElementById("audio-loss").play();
     lossScreenResultsPush();
 }
@@ -851,9 +823,9 @@ function lossScreenResultsPush () {
     let resultBalanceLoss = document.getElementById('balance-results-l');
     document.getElementById('balance-results-l').innerHTML = "$0";
     let resultWinsLoss = document.getElementById('win-score-results-l');
-    document.getElementById('win-score-results-l').innerHTML = "$" + userWins;
+    document.getElementById('win-score-results-l').innerHTML = "[" + userWins + "]";
     let resultLossLoss = document.getElementById('loss-score-results-l');
-    document.getElementById('loss-score-results-l').innerHTML = "$" + newLoss;
+    document.getElementById('loss-score-results-l').innerHTML = "[" + newLoss + "]";
 }
 
 function screenFoldedCreate () {
@@ -900,7 +872,7 @@ function screenFoldedCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-fold").volume = 0.4;
+    document.getElementById("audio-fold").volume = 0.2;
     document.getElementById("audio-fold").play();
     foldScreenResultsPush();
 }
@@ -914,11 +886,9 @@ function foldScreenResultsPush () {
     let resultBalanceLoss = document.getElementById('balance-results-f');
     document.getElementById('balance-results-f').innerHTML = "$" + userRandomBalance;
     let resultWinsLoss = document.getElementById('win-score-results-f');
-    console.log(userWins);
-    document.getElementById('win-score-results-f').innerHTML = userWins;
+    document.getElementById('win-score-results-f').innerHTML = "[" + userWins + "]";
     let resultLossLoss = document.getElementById('loss-score-results-f');
-    console.log(userLoss);
-    document.getElementById('loss-score-results-f').innerHTML = newLoss;
+    document.getElementById('loss-score-results-f').innerHTML = "[" + newLoss + "]";
 }
 
 function screenGameLoadingTwoNextGameTransferW () {
@@ -949,7 +919,7 @@ function screenLoadingTwoWinsNextCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-two">
-        <video id="video-loading-two" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGame()"></video>
+        <video id="video-loading-two" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGameTransferWon()"></video>
     </section>
     `;
     document.getElementById("video-loading-two").volume = 0.1;
@@ -959,7 +929,7 @@ function screenLoadingTwoLossNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-three">
-        <video id="video-loading-three" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGame()"></video>
+        <video id="video-loading-three" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="window.location.reload()"></video>
     </section>
     `;
     document.getElementById("video-loading-three").volume = 0.1;
@@ -969,7 +939,7 @@ function screenLoadingTwoFoldNexCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-four">
-        <video id="video-loading-four" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGame()"></video>
+        <video id="video-loading-four" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="nextGameTransferFold()"></video>
     </section>
     `;
     document.getElementById("video-loading-four").volume = 0.1;
@@ -979,158 +949,216 @@ function screenLoadingTwoFoldNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-five">
-        <video id="video-loading-five" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="newGame()"></video>
+        <video id="video-loading-five" src="./assets/media/video/loading.mp4" alt="Loading screen logo with heavy storms behind" autoplay onended="window.location.reload()"></video>
     </section>
     `;
     document.getElementById("video-loading-five").volume = 0.1;
 }
 
-/*
+function nextGameTransferWon () {
 
-function newGame () {
-
-New game button (fresh balance)
-            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-
+    document.getElementById("game-outro-two").remove();
+    screenNextGameCreate();
 }
 
-function nextGame () {
+function nextGameTransferFold () {
 
+    document.getElementById("game-outro-four").remove();
+    screenNextGameCreate();
 }
-takes you to nextGame function
+
+function screenNextGameCreate () {
+
+        document.body.innerHTML = `
+        <section id="game">
+            <div class="game-area">
+                <div class="game-tracking">
+                    <div id="user-profile">
+                        <div id="user-image">
+                            <i class="fa-solid fa-head-side-virus"></i>
+                        </div>
+                        <div id="user-image-title">
+                            Human
+                        </div>
+                        <div class="past-score-area" id="past-score-box-h">
+                            <p class="past-score-box">
+                                Win:
+                                <span id="past-score-counter-hw">
+                                    0
+                                </span>
+                            </p>
+                            <p class="past-score-box">
+                                Loss:
+                                <span id="past-score-counter-hl">
+                                    0
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="pc-profile">
+                        <div id="pc-image">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div id="pc-image-title">
+                            Robot
+                        </div>
+                        <div class="past-score-area" id="past-score-box-r">
+                            <p class="past-score-box">
+                                Win:
+                                <span id="past-score-counter-rw">
+                                    0
+                                </span>
+                            </p>
+                            <p class="past-score-box">
+                                Loss:
+                                <span id="past-score-counter-rl">
+                                    0
+                                </span>
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="game-board">
+                    <div id="balance-tracker">
+                        <div id="virtual-balance">
+                            <p class="virtual-balance">
+                                <i class="fa-solid fa-coins"></i>
+                                My Balance:
+                            </p>
+                            <p id="balance-total">
+                                $0
+                            </p>
+                        </div>
+                        <hr>
+                        <div id="total-bet">
+                            <p class="total-bet">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                My Bets:
+                            </p>
+                            <p id="bet-total">
+                                $0
+                            </p>
+                        </div>
+                        <hr>
+                        <div id="last-bet-user">
+                            <p class="last-bet-user">
+                                <i class="fa-solid fa-user"></i>
+                                Last Bet:
+                            </p>
+                            <p id="bet-user-total">
+                                $0
+                            </p>
+                        </div>
+                    </div>
+                    <div id="last-bets">
+                        <div id="treasure-value">
+                            <p class="treasure-value">
+                                <i class="fa-solid fa-vault"></i>
+                                Vault Reward:
+                            </p>
+                            <p id="treasure-total">
+                                $0
+                            </p>
+                        </div>
+                        <hr>
+                        <div id="last-bet-robot">
+                            <p class="last-bet-robot">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                Last Bet:
+                            </p>
+                            <p id="bet-robot-total">
+                                0$
+                            </p>
+                        </div>
+                        <hr>
+                        <div id="robot-balance">
+                            <p class="robot-balance">
+                                <i class="fa-solid fa-coins"></i>
+                                AI Balance:
+                            </p>
+                            <p id="robot-balance-total">
+                                [UNDISCLOSED]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contols-area-right">
+                    <button class="bttn-second" onclick="userChoicePrawnValidator()" id="bttn-one" data-choice="0">
+                        Prawn ($1)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceCrabValidator()" id="bttn-two" data-choice="1">
+                        Crab ($10)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceTurtleValidator()" id="bttn-three" data-choice="2">
+                        Turtle ($50)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceOctopusValidator()" id="bttn-four" data-choice="3">
+                        Octopus ($100) 
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceSquidValidator()" id="bttn-five" data-choice="4">
+                        Squid ($500)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceLobsterValidator()" id="bttn-six" data-choice="5">
+                        Lobster ($1k)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceTunaValidator()" id="bttn-seven" data-choice="6">
+                        Tuna ($10k)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceDolphinValidator()" id="bttn-eight" data-choice="7">
+                        Dolphin ($100k)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceWhaleValidator()" id="bttn-nine" data-choice="8">
+                        Whale ($1M)
+                    </button>
+                    <button class="bttn-second" onclick="userChoiceDragonValidator()" id="bttn-ten" data-choice="9">
+                        Dragon ($10M)
+                    </button>
+                </div>           
+                <div class="controls-area-bottom">
+                    <button class="bttn-first" onclick="userFolded()" id="fold">
+                        <i class="fa-solid fa-sack-xmark"></i>
+                        FOLD
+                    </button>
+                </div>
+            </div>
+            <audio id="audio-game-background" autoplay loop>
+                <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-error">
+                <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-button-splash">
+                <source src="./assets/media/audio/splash-button.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-cashout">
+                <source src="./assets/media/audio/cashier.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="audio-calculating">
+                <source src="./assets/media/audio/calculating.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        `;
+        document.getElementById("audio-game-background").volume = 0.7;
+        document.getElementById("audio-cashout").play();
+        document.getElementById("audio-cashout").volume = 0.5;
+        alert ("Congratulations! Your lifecoin has yielded a new game balance.");
+        nextGameSetupScores();
+    }
     
+function nextGameSetupScores () {
 
+    var newWins = userWins + 1;
+    var newRobotLoss = robotLoss + 1;
+    document.getElementById("past-score-counter-hw").innerHTML = newWins;
+    document.getElementById("past-score-counter-hl").innerHTML = userLoss;
+    document.getElementById("past-score-counter-rw").innerHTML = robotWins;
+    document.getElementById("past-score-counter-rl").innerHTML = newRobotLoss; 
+    nextGameSetupBalances(); 
+}
 
+function nextGameSetupBalances () {
 
-// RUN NEXT GAME SCREEN
-nextGame
-        play background music until game won, loss or fold next Screen
-    gameSetup
-    - Records
-        - since coming to nextGame (won or strategically fold)
-                transfer over previous record with increase or decrease
-                Robot record is reverse user record
-    - Balances 
-        - since coming from nextGame 
-                Transfer over user's balance
-                Robot balance is random again and undisclosed
-                    Reminder: "Generate robot amount privately (minimum and equal and 4, max 1bn)"
-                alert congratulations, your balance ___ is transferred to your balance. It is your starting turn.  
-    Game battle
-        - if stake with any of buttons 
-            rules
-                exceeding balance errors
-                    only buttons with value less than balance work 
-                        alert exceeded balance, please start a new game or enter lower amount
-
-            amount goes processing and calculating to:
-                balance reduce
-                my bets increase
-                vault increase
-                Last bets user change to value of button pressed
-                    previous button trackerr
-                    previous button reporter
-                    previous button editor
-
-            robot reacts
-                last bets robot to add his next one after yours is noted
-                    try to time it with a short pause of few seconds
-                    generates robot random selection from constant values that is less than robot balance
-
-                    updating vault with his last bet too
-                    alert robot has invested X amount. Your turn again.
-
-        continue runGame loop until desired parameters:
-
-            Game won = 
-                automatic = robot balance is under 5$
-                    throw alert that robot does not have enough balance to continue the game. You won.
-                    after confirming ok, your balance and score go post-processing to winning screen
-                    takes user to game winning screen + game loading
-
-            Game loss =
-                automatic = user balance is under 5$
-                    throw alert unfortunately you dont have enough balance to continue the game. You lost
-                    after confirming ok, your balance and score go post-processing to losing screen
-                    takes user to game losing screen + game loading
-
-            Game fold =
-                - fold button = end battle
-                    throw alert unfortunately you decided to escape the game.
-                    after confirming ok, 
-                    takes user to game folded screen + game loading
-
-// GAME LOADING SCREEN 4 
-- listens for onend task
-creates new element for running the game while replacing the old one
-sends user to run game results screen appropriate to where it came from in the last game
-
-
-// GAME RESULTS SCREEN 2 = SCREEN 1 + rename variables 
-
-- winning screen
-        add celebrating sound effect
-        add animation of image
-            treasure chest
-        add text: YOU WON!
-        how much you won, old and new balance + vault = newBalance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 win
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        Next game button (keeps the balance)
-            takes you to nextGame function
-       
-    - losing screen
-        add losing sound effect
-        add animation of image
-            safe closed
-            treasure chest
-            loss
-        add text: GAME OVER!
-        how much you lost, old and new balance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 loss
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        New game button (fresh balance)
-            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-       
-    - fold screen
-        add losing sound effect of a chicken
-        add animation of image
-               how much you lost, old and new balance
-            values listener & value updater 
-            balance score tracker
-            balance score reporter
-            balance score editor
-            balance transporter
-        update the score to +1 loss
-            values listener & value updater 
-            win-loss score tracker
-            win-loss score reporter
-            win-loss score editor
-            win-loss transporter
-        New game button (fresh balance)
-            takes to insert coin function which is new function that automatically loops without code by creating html that is already in place on index page
-        Next game button (keeps the balance)
-            takes you to nextGame function
-
-
-Exit game option brings to the home screen
-
-        */
+    let earningsResultsWin = vaultReward + userRandomBalance;
+    let userBalanceDisplayed = document.getElementById('balance-total');
+    document.getElementById('balance-total').innerHTML = earningsResultsWin;
+}
