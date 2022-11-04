@@ -99,7 +99,6 @@ hr {
     width: 70%;
     margin: auto;
     margin: auto;
-    
 }
 
 #insert-lifecoin-image {
@@ -491,7 +490,6 @@ footer {
     margin-bottom: 60px;
     width: fit-content;
     font-size: x-small;
-    
 }
 
 #home-screen-tag h2{
@@ -534,7 +532,7 @@ footer {
 }
 
 #partners {
-    height: 120px;
+    height: fit-content;
     width: 100%;
     margin-top: 70px;
 }
@@ -930,8 +928,7 @@ footer {
     bottom: 1px;
 }
 
-#fold {
-    
+#fold { 
     width: 100%;
     padding-bottom: 5px;
     padding-top:5px;
@@ -1088,9 +1085,121 @@ footer {
 
     #insert-lifecoin {
         min-height: 800px;
+        padding-top: 100px;
     }
+    #insert-lifecoin-background {
+        height: 400px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 80%;
+    }
+    textarea {
+        width: 80%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #home-screen-title {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    #avatars {
+        margin-bottom: 50px;
+    }
+    #home-screen-tag {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: fit-content;
+        font-size: x-small;
+    }
+    #start-button button {
+        margin-bottom: 65px;
+    }
+    #partners a {
+        width: 40%;
+        height: 68px;
+    }
+    #partners img {
+        width: 40%;
+        margin-left: 10px;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 800px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 800px;
+    }    
     #game {
-        min-height: 800px;
+        height: 800px;
     }
     #balance-tracker {
         width: 36%;
@@ -1098,44 +1207,1054 @@ footer {
     #last-bets {
         width: 36%;
     }
+    .contols-area-right {
+        width: 32%;
+    }
+    #winning-screen {
+        height: 800px;
+    }
+    #losing-screen {
+        height: 800px;
+    }
+    #folded-screen {
+        height: 800px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 70px;
+    }
+    .results-covers {
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }    
+    .results-text {
+        margin-top: 60px;
+    }
+    .results-results {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
 }
 
 @media screen and (max-width: 769px) and (min-width: 431px) {
 
+    #rules-box-title h3 {
+        font-size: xx-large;
+    }
+    .rules-box-content p {
+        font-size: x-large;
+    }
     #insert-lifecoin {
-        min-height: 800px;
+        min-height: 900px;
+        padding-top: 100px;
+    }
+    #insert-lifecoin-background {
+        height: 500px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 40%;
+        margin-top: 40%;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 88%;
+    }
+    textarea {
+        width: 88%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #home-screen-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: large;
+    }
+    #avatars {
+        margin-bottom: 70px;
+    }
+    #home-screen-tag {
+        font-size: medium;
+        margin-bottom: 70px;
+    }
+    .insert-lifecoin-text button {
+        font-size: x-large;
+    }
+    #start-button button {
+        margin-bottom: 80px;
+        font-size: x-large;
+    }
+    #partners img {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: fit-content;
+        width: 30%;
+    }
+    #partners-text {
+        font-size: medium;
+        margin-left: 70px;
+        margin-top: 30px;
+        width: fit-content;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }    
+    #game {
+        height: 900px;
+    }
+    #user-image-title {
+        font-size: large;
+    }
+    #pc-image-title {
+        font-size: large;
+    }
+    #balance-tracker {
+        width: 30%;
+    }
+    #balance-tracker p {
+        font-size: large;
+    }
+    #balance-tracker i {
+        font-size: large;
+    }
+    #last-bets {
+        bottom: 58px;
+    }
+    #last-bets p {
+        font-size: large;
+    }
+    #last-bets i {
+        font-size: large;
+    }
+    #last-bets {
+        width: 30%;
+    }
+    .contols-area-right {
+        width: 34%;
+    }
+    .bttn-second {
+        font-size: x-large;
+    }
+    #fold { 
+        font-size: xx-large;
+    }
+    #winning-screen {
+        height: 900px;
+    }
+    #losing-screen {
+        height: 900px;
+    }
+    #folded-screen {
+        height: 900px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 70px;
+        font-size: xx-large;
+    }
+    .results-covers {
+        margin-top: 40px;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+    }    
+    .results-text {
+        margin-top: 50px;
+        font-size: medium;
+    }
+    .results-results {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: medium;
+    }
+    .results-button {
+        font-size: medium;
     }
 }
 
 @media screen and (max-width: 1279px) and (min-width: 770px) {
 
+    #h1 {
+        letter-spacing: 3px;
+    }
+    #nav-menu a {
+        font-size: x-large;
+    }
+    #rules-box-title h3 {
+        font-size: xx-large;
+    }
+    .rules-box-content p {
+        font-size: x-large;
+    }
     #insert-lifecoin {
-        min-height: 1000px;
+        height: 1000px;
+        padding-top: 100px;
+    }
+    #insert-lifecoin-background {
+        height: 300px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 400px;
+        margin-top: 80px;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 88%;
+    }
+    textarea {
+        width: 88%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #home-screen-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: large;
+    }
+    #avatars {
+        margin-bottom: 70px;
+    }
+    #home-screen-tag {
+        font-size: medium;
+        margin-bottom: 70px;
+    }
+    .insert-lifecoin-text button {
+        font-size: x-large;
+    }
+    #start-button button {
+        margin-bottom: 80px;
+        font-size: x-large;
+    }
+    #partners img {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: fit-content;
+        width: 30%;
+    }
+    #partners-text {
+        font-size: medium;
+        margin-left: 270px;
+        margin-top: 60px;
+        width: fit-content;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }    
+    #game {
+        height: 1000px;
+    }
+    #user-image-title {
+        font-size: large;
+    }
+    #pc-image-title {
+        font-size: large;
+    }
+    #balance-tracker {
+        width: 30%;
+    }
+    #balance-tracker p {
+        font-size: large;
+    }
+    #balance-tracker i {
+        font-size: large;
+    }
+    #last-bets {
+        bottom: 58px;
+    }
+    #last-bets p {
+        font-size: large;
+    }
+    #last-bets i {
+        font-size: large;
+    }
+    #last-bets {
+        width: 30%;
+    }
+    .contols-area-right {
+        width: 34%;
+    }
+    .bttn-second {
+        font-size: x-large;
+    }
+    #fold { 
+        font-size: xx-large;
+    }
+    #winning-screen {
+        height: 1000px;
+    }
+    #losing-screen {
+        height: 1000px;
+    }
+    #folded-screen {
+        height: 1000px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 70px;
+        font-size: xx-large;
+    }
+    .results-covers {
+        margin-top: 40px;
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 40%;
+    }    
+    .results-text {
+        margin-top: 50px;
+        font-size: medium;
+    }
+    .results-results {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: medium;
+    }
+    .results-button {
+        font-size: medium;
     }
 }
 
 @media screen and (max-width: 1370px) and (min-width: 1280px) {
 
+    #h1 {
+        letter-spacing: 3px;
+    }
+    #nav-menu a {
+        font-size: x-large;
+    }
+    #rules-box-title h3 {
+        font-size: xx-large;
+    }
+    .rules-box-content p {
+        font-size: x-large;
+    }
     #insert-lifecoin {
-        min-height: 700px;
+        height: 700px;
+        padding-top: 100px;
+    }
+    #insert-lifecoin-background {
+        height: 200px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 420px;
+        margin-top: 60px;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 92%;
+    }
+    textarea {
+        width: 92%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #home-screen-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: medium;
+    }
+    #avatars {
+        margin-bottom: 50px;
+    }
+    #home-screen-tag {
+        font-size: small;
+        margin-bottom: 50px;
+    }
+    .insert-lifecoin-text button {
+        font-size: medium;
+    }
+    #start-button button {
+        margin-bottom: 10px;
+        font-size: large;
+    }
+    #partners img {
+        margin-left: 10px;
+        height: 100px;
+        width: 20%;
+    }
+    #partners-text {
+        font-size: medium;
+        margin-left: 340px;
+        margin-top: 30px;
+        width: fit-content;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 700px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 700px;
+    }    
+    #game {
+        height: 700px;
+    }
+    #user-image-title {
+        font-size: large;
+    }
+    #pc-image-title {
+        font-size: large;
+    }
+    #balance-tracker {
+        width: 30%;
+    }
+    #balance-tracker p {
+        font-size: medium;
+    }
+    #balance-tracker i {
+        font-size: medium;
+    }
+    #last-bets {
+        bottom: 58px;
+    }
+    #last-bets p {
+        font-size: medium;
+    }
+    #last-bets i {
+        font-size: medium;
+    }
+    #last-bets {
+        width: 30%;
+    }
+    .contols-area-right {
+        width: 34%;
+    }
+    .bttn-second {
+        font-size: large;
+    }
+    #fold { 
+        font-size: xx-large;
+    }
+    #winning-screen {
+        height: 700px;
+    }
+    #losing-screen {
+        height: 700px;
+    }
+    #folded-screen {
+        height: 700px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 50px;
+        font-size: x-large;
+    }
+    .results-covers {
+        margin-top: 20px;
+        margin-left: 40%;
+        margin-right: 40%;
+        width: 20%;
+    }    
+    .results-text {
+        margin-top: 30px;
+        font-size: medium;
+    }
+    .results-results {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: medium;
+    }
+    .results-button {
+        font-size: medium;
     }
 }
 
 @media screen and (max-width: 1601px) and (min-width: 1371px) {
 
+    #nav-menu a {
+        font-size: xx-large;
+    }
+    #rules-box-title h3 {
+        font-size: xx-large;
+    }
+    .rules-box-content p {
+        font-size: x-large;
+    }
     #insert-lifecoin {
         min-height: 900px;
+        padding-top: 100px;
+    }
+    #insert-lifecoin-background {
+        height: 500px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 45%;
+        margin-top: 25%;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 93%;
+    }
+    textarea {
+        width: 93%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #home-screen-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: large;
+    }
+    #avatars {
+        margin-bottom: 70px;
+    }
+    #home-screen-tag {
+        font-size: medium;
+        margin-bottom: 70px;
+    }
+    .insert-lifecoin-text button {
+        font-size: x-large;
+    }
+    #start-button button {
+        margin-bottom: 80px;
+        font-size: x-large;
+    }
+    #partners img {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 100px;
+        width: 15%;
+    }
+    #partners-text {
+        font-size: medium;
+        margin-left: 420px;
+        margin-top: 30px;
+        width: fit-content;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 900px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 900px;
+    }    
+    #game {
+        height: 900px;
+    }
+    #user-image-title {
+        font-size: large;
+    }
+    #pc-image-title {
+        font-size: large;
+    }
+    #balance-tracker {
+        width: 27%;
+    }
+    #balance-tracker p {
+        font-size: large;
+    }
+    #balance-tracker i {
+        font-size: large;
+    }
+    #last-bets {
+        bottom: 58px;
+    }
+    #last-bets p {
+        font-size: large;
+    }
+    #last-bets i {
+        font-size: large;
+    }
+    #last-bets {
+        width: 27%;
+    }
+    .contols-area-right {
+        width: 30%;
+    }
+    .bttn-second {
+        font-size: x-large;
+    }
+    #fold { 
+        font-size: xx-large;
+    }
+    #winning-screen {
+        height: 900px;
+    }
+    #losing-screen {
+        height: 900px;
+    }
+    #folded-screen {
+        height: 900px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 70px;
+        font-size: xx-large;
+    }
+    .results-covers {
+        margin-top: 40px;
+        margin-left: 40%;
+        margin-right: 40%;
+        width: 20%;
+    }    
+    .results-text {
+        margin-top: 50px;
+        font-size: medium;
+    }
+    .results-results {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: medium;
+    }
+    .results-button {
+        font-size: medium;
     }
 }
 
 @media screen and (min-width: 1602px) {
 
+    #nav-menu a {
+        font-size: xx-large;
+    }
+    #h1 {
+        letter-spacing: 3px;
+    }
+    #nav-menu a {
+        font-size: x-large;
+    }
+    #rules-box-title h3 {
+        font-size: xx-large;
+    }
+    .rules-box-content p {
+        font-size: x-large;
+    }
     #insert-lifecoin {
-        min-height: 1000px;
+        height: 1000px;
+        padding-top: 100px;
+    }
+    #insert-lifecoin-background {
+        height: 300px;
+    }
+    #insert-lifecoin-image {
+        width: fit-content;
+        margin-left: 550px;
+        margin-top: 90px;
+    }
+    .insert-lifecoin-text {
+        margin-top: 20px;
+    }
+    input[type=text], input[type=email] {
+        width: 93%;
+    }
+    textarea {
+        width: 93%;
+    }
+    .social-networks i {
+        font-size: 260%;
+    }
+    #game-intro {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-intro video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #home-screen-game {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #home-screen-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: large;
+    }
+    #avatars {
+        margin-bottom: 70px;
+    }
+    #home-screen-tag {
+        font-size: medium;
+        margin-bottom: 70px;
+    }
+    .insert-lifecoin-text button {
+        font-size: x-large;
+    }
+    #start-button button {
+        margin-bottom: 80px;
+        font-size: x-large;
+    }
+    #partners img {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 100px;
+        width: 20%;
+    }
+    #partners-text {
+        font-size: medium;
+        margin-left: 470px;
+        margin-top: 40px;
+        width: fit-content;
+    }
+    #game-outro-one {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-one video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-two {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-two video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-three {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-three video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-four {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-four video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-five {
+        background-color:black !important;
+        width: 100%;
+        height: 1000px;
+    }
+    #game-outro-five video { 
+        background-color: black !important;
+        width: 100%;
+        height: 1000px;
+    }    
+    #game {
+        height: 1000px;
+    }
+    #user-image-title {
+        font-size: large;
+    }
+    #pc-image-title {
+        font-size: large;
+    }
+    #balance-tracker {
+        width: 30%;
+    }
+    #balance-tracker p {
+        font-size: large;
+    }
+    #balance-tracker i {
+        font-size: large;
+    }
+    #last-bets {
+        bottom: 58px;
+    }
+    #last-bets p {
+        font-size: large;
+    }
+    #last-bets i {
+        font-size: large;
+    }
+    #last-bets {
+        width: 30%;
+    }
+    .contols-area-right {
+        width: 34%;
+    }
+    .bttn-second {
+        font-size: x-large;
+    }
+    #fold { 
+        font-size: xx-large;
+    }
+    #winning-screen {
+        height: 1000px;
+    }
+    #losing-screen {
+        height: 1000px;
+    }
+    #folded-screen {
+        height: 1000px;
+    }
+    .game-results-screen-h-two {
+        padding-top: 70px;
+        font-size: xx-large;
+    }
+    .results-covers {
+        margin-top: 40px;
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 40%;
+    }    
+    .results-text {
+        margin-top: 50px;
+        font-size: medium;
+    }
+    .results-results {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: medium;
+    }
+    .results-button {
+        font-size: medium;
     }
 }
-
-
-
-
-
