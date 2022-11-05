@@ -1,33 +1,50 @@
 # [Bigger Fish](https://bono-94.github.io/Javascript-Project-2/) 
 
-Bigger Fish is an online game with various financial and entertainment elements. The game has been created for possible participation of users from any target group. Besides play-to-earn model with real currencies,this concept has been design to complement new global economy system as one of the main utilities. [
+Bigger Fish is an online game with various financial and entertainment elements. Randomly generated balance for user and robot allows everyone to experience the resources battle, both from domination and strategical point of views. The game has been created for possible participation of users from any target group. Besides upcoming play-to-earn model with real currencies, this concept has been design to complement new global economy system as one of the main utilities and revenue streams. Project hopes to achieve reduction of global poverty levels, bridging gap between crypto investors and gamers and educate on relevant topics and technologies while providing a fun, relaxing and colorful game that is directly linked to real life financials of users. Overall site Bigger Fish aims to demonstrate developers proficiency in coding languages HTML, CSS and JAVASCRIPT while disclosing one of the main products / services from the parent brand.
 
-More about the game + bridge statement
-
-Currently game is only singleplayer mode against robot while our full concept will feature real funds and earnings, multiplayer, professional graphics and animations in one of our open world, next to many more upcoming surprises for users.
-
-Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience.
-
-For example, Love Maths is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also maths. Love Maths is a fully responsive JavaScript maths game that will allow users to add, subtract, multiply and divide numbers.
-g
-Lifecoin site is a digital representation of an interaction platform powering an alternative and independent new economy system. The reason for the development of this site is to slowly introduce to the public this innovative and collaborative environment for purposes of financial education, poverty reduction, and improvement of lifestyles while achieving life-long goals. This site is for every human's personal and business use no matter their unique life experiences.
-
-In our live public area, all humans are encouraged to contribute and grow together towards a better tomorrow. Users will be able to join our public workspace where they can increase and store their wealth through various missions offers and financial tools. All efforts are additionally rewarded with infinite options to purchase from real-world service providers with extremely large discounts. Our focus will always remain on only supporting sustainable products and services. While covering one of the key aspects of life, users are also paying unnoticeable taxation that transparently funds the charity and business missions.
-
-Please note this is only a basic version of our website created by our main Life Developer who had no experience yet in global coding languages. In the period of: (26.6.2022. - 26.9. 2022.) basic theory on HTML and CSS has been covered through university-level certified Code Institute and a first website has been created for grading purposes. In addition, this public version has been included to continue collectively build the site without any limitations. This website and product will be our economic foundation to upcoming official organizations and projects in the real world. For now, only few details have been strategically selected to be shared with public. Full-scale project and the depth of it is unimaginable and therefore has to be deployed in many phases to prevent oversaturation of ocean-size information content and poor user experience.
-
-![Multi-devices Views](./assets/media/images/Readme/responsiveness.jpg)
+![Multi-devices Views](./assets/media/images/responsive.jpg)
 ------
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-f
+In this section, you should go over the different parts of your project, and 
+describe each in a sentence or so. 
+You will need to explain what value each of the features provides for the user, 
+focusing on who this website is for,
+what it is that they want to achieve 
+and how your project is the best way to help them achieve these things.
+
 In the first demonstrative version, minimum features have been disclosed in order to create a rich experience for users over longer periods of time. Also,  for initial attention from investors, a large amount of information has been summarized to cover main topics and categories before planned full disclosure. We will continue to improve consistently while strategically releasing new content and features according to our planned agenda. This site is made fully responsive across variety of devices with lowest guaranteed width of 280px for new age foldeable screens. Next size is normal phones, tablet portrait, landscape, laptop, PC and larger.
 
 ### Existing Features
 
 - __Navigation Bar__
+
+- __Cover Media__
+
+- __Rules__
+
+- __Insert Coin__
+
+- __Feedback__
+
+- __Footer__
+
+- __Intro Logo Video__
+
+- __Welcome Screen__
+
+- __Loading Logo Video__
+
+- __Game Board__
+
+- __Winning Screen__
+
+- __Losing Screen__
+
+- __Folded Screen__
+
+
 
 Featured at the top of the page, the Love Maths logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
 
