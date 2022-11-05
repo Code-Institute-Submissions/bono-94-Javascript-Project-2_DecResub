@@ -7,194 +7,142 @@ Bigger Fish is an online game with various financial and entertainment elements.
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and 
-describe each in a sentence or so. 
-You will need to explain what value each of the features provides for the user, 
-focusing on who this website is for,
-what it is that they want to achieve 
-and how your project is the best way to help them achieve these things.
-
-In the first demonstrative version, minimum features have been disclosed in order to create a rich experience for users over longer periods of time. Also,  for initial attention from investors, a large amount of information has been summarized to cover main topics and categories before planned full disclosure. We will continue to improve consistently while strategically releasing new content and features according to our planned agenda. This site is made fully responsive across variety of devices with lowest guaranteed width of 280px for new age foldeable screens. Next size is normal phones, tablet portrait, landscape, laptop, PC and larger.
+In the first demonstrative version, minimum features and their elements have been disclosed in order to create a rich experience for users over longer periods of time. Also, for legal protection and initial attention from investors, a large amount of information has been summarized to cover main topics and categories before planned full disclosure. Meaning all of our aspects will be expanded shortly, proffesional media uploaded and final legally protected branding released. We will continue to improve consistently while strategically releasing new content and features according to our planned agenda and current state of users. This site is made fully responsive across variety of devices with lowest guaranteed working width of 360px and height of 640px taking older cellular models into consideration in order to establish global presence.
 
 ### Existing Features
 
 - __Navigation Bar__
 
+  - Navigation bar is set at the top of the page. However, when the game mode starts, it gets removed until users decides to start again and lands back here from any of the results screens: winning, losing and folded
+  - Navigation bar provides user with identication that it is correct game next to shortcuts of accessing desired sections of the page
+  - Navigation bar is intuitive and all types of users can navigate to desired section without needing any further explanation
+  - The main title is written in coral color standing out with largest font-size. It takes user back to the same page but refreshed
+  - The menu bar to the right of the game title is directing users to the main four categories of the page: Rules, Game, Feedback and Contact. On the larger screens, menu is shown next to the main title, while for tablet and phone sizes of screen, is is located under the title stretching across the screen  
+  
+    ![Home Page](./assets/media/images/home.jpg)
+
 - __Cover Media__
+
+  - The landing cover media includes a professional custom-made logo that is also used as a current tab icon. There is the main mascotte of the brand, Sharky above the title of the game. Logo has been made considering all ages
+  - This section introduces the user to Bigger Fish page with an eye-catching sharp and creative animation of logo increasing size from the dot to full size. This will grab users' attention and increase the chances for a great first impression
+  - Without exensive text introduction requiering serious participation, image relaxes the user with smooth light-skyblue colors smoothly guiding over to the next section that discloses the rules. Instead first reading, then relaxing, we wanted user to built up the energy instead dropping it before the game due to too many textual distractions
+
+    ![Header Cover Image](./assets/media/images/home.jpg)
 
 - __Rules__
 
+  - Once users' attention is captured from landing elements, highly important and summarized information how to play game is given to process
+  - Full game rules have been disclosed in this section assuring smooth gameplay for user and answering any potential general questions proactively
+  - Following the bright coral-style and reef-style visuals and captivating background of shallow water, user is provided with text blocks that have the effect of being overtaken by algae after spent long time sitting in the water. This tells user that rules are always consistent and remained this way for long time already. Again, main colors of green, coral and gray are utilitized to achieve the contrastual purpose and visual categorization. Overal design is made for all ages implementing playful yet informative rules section
+
+    ![Rules](./assets/media/images/rules.jpg)
+
 - __Insert Coin__
 
-- __Feedback__
+  - This section serves the purpose of being the bridge that leads user to the actual game screen from home page.
+  - There is an animation where after user presses the insert lifecoin button, a 3D logo of coin appears and animates being placed inside a window on megalithic temple. Shortly after the animation start, small earthquake trembling sound effect starts
+  - Once trembling is done, entire screen is wiped clean and transferred to Video Intro section
+  - Having elements of image animation and button click arcade sound effects for youth, cryptocurrency coin for adults and meghalitic segment for older generation and history lovers, this section is also made to satisfy criteria of possible usage for any type of user no matter their age or favourite knowledge topics
+
+    ![Insert Coin Static](./assets/media/images/insert-coin.jpg)
+
+    ![Insert Coin Response](./assets/media/images/insert-two.jpg)
+
+- __Feedback Form__
+
+  - The feedback form will allow the users to enter the second level of participation. First one is obviously to play the game and communication with social media. With this form, player is engaged to share his opions and criticism, next to even more important ideas generation. This way user is provided with option to construct on top of the original game without limitation and this way to become the game. As well, there are benefits to customize game from life experiences based on personal preferences or past without or with othe player's participation
+  - By completing this short online form, users' personal information of name and email is presented in order to being able to contact them back with a response and address them properly. Location is requiered in order to know to which regional server of the game user belongs to so their request can be forwarded to the correct regional office and team. Also allows multi-langual support
+  - Feedback form has been designed to fit every user with white sheet representing a piece of paper which is general global way of reading. All segments have been separated and categorized with subtle coloring of main website colors: coral, gray and green
+  There is a sand in the background representing the point of view that user is standing on the beach reading or writing feedback form. This is very important and creates subliminal experience and deeper connection between all home page and gaming sections. The reason is that looking from bottom towards up, footer with gray color represents a road and coral line on copyright envisions fence or separation between road and grass. Grass is represented with green social media icons which are usually the small green pathes of grass on majority of beaches at the entrance. The next layer or level in constructing this site was our beach sand and feeback form that guides user to another green part which can be a beach park or beach towel with meghalitic ruins that launch the game. If users wish to know if "there are fishes in the waters", they need to go to the shallows and read the rules box. Above rules box and shallow water, there is cover media with light-skyblue background representing the sky and the navigation bar in user imagination would be a big fixed box in the sky. Once users explores the "beach area" they can interact with inserting lifecoin that takes them to all gaming segments with hints on deep waters. Therefore, feedback form is the key to separating game mode from home screen mode and creating specific atmosphere based on current status
+  
+    ![Feedback Form](./assets/media/images/feedback.jpg)
 
 - __Footer__
 
+  - The footer section includes links to the selected few social media sites for Bigger Fish. There is also copyright section and version control. Footer is broken down visually into those three parts, all made up of the main site's colors green, coral and dark gray
+  - The social media links from icons will open into a new tab to allow easy navigation for the user and to keep our site always open. This project's first version is for demonstrative purposes and links for now guide to the general sites, not our main social media accounts since they are being built under the actual name that will be copyrighted and branded. Footer is very important to the users because it also gives further options to visit that expand to other widely used sites, connect with the Team, and even directly contact with any requests or problems 
+  - Copyright segment offers direct information of copyrighted status of the game and the year
+  - Third and final part is the version control for users familiar with the development's team products and services. Here is where user can find out instantly which version they are using with accompanying release date. Next row discloses to users who is the parent brand or sponsor that is powering Bigger Fish website and team. And finally at the bottom there is a README link to the Bigger Fish README for all users unfamiliar with GitHub. This is extremely useful because users can see what is the full concept and partial development behind their favourite game. Eventually, this will lead us to offer packages to users with percentages of full code and/or knowledge sharing and disclosure of our products and services
+  
+    ![Footer](./assets/media/images/footer.jpg)
+
 - __Intro Logo Video__
+
+  - This section is the first thing that users can see upon entering the "game mode" coming from "home screen mode"
+  - Professional short video is being used to replicate common approach in starting the game with brand logo animation
+  - Gaming transforming sound is also included in the video that adds quality levels to the user experience and serious branding
+  - There is a black background behind the black video allowing it to stretch to any screen size
+  - Upon ending of the video, users are being automatically transferred to the Welcome Screen
+
+  
+    ![Intro Video](./assets/media/images/intro.jpg)
 
 - __Welcome Screen__
 
+  - Welcome Screen or Game Landing screen is the first interactive segment of the Game Screen
+
+  
+    ![Welcome Screen](./assets/media/images/welcome.jpg)
+
 - __Loading Logo Video__
+
+  - This section contains a loading vido that users can see after starting the game
+  - Professional short video is being used to replicate common approach in game loading screens to prevent too rapid switching between game screens under the price of user experience
+  - Dramatic music and ocean storm are included in the video that add quality levels to the user experience 
+  - There is a black background behind the black video allowing it to stretch to any screen size
+  - Upon ending of the video, users are being automatically transferred to the New Game Screen
+  
+    ![Loading Video](./assets/media/images/loading.jpg)
 
 - __Game Board__
 
-- __Winning Screen__
+  - This section will allow the user to play the maths game. The user will be able to easily see icons for addition, subtraction, multiplication, and division games.
+  - The user will be able to select the type of maths game they will be playing by clicking on the different icons.
 
-- __Losing Screen__
-
-- __Folded Screen__
-
-
-
-Featured at the top of the page, the Love Maths logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
-
-
-
-The Game Area
-
-This section will allow the user to play the maths game. The user will be able to easily see icons for addition, subtraction, multiplication, and division games.
-The user will be able to select the type of maths game they will be playing by clicking on the different icons.
-
-
-The Question section
-
+  This section will allow the user to see exactly how many correct and incorrect answers they have provided.
 The question section is where the user will be able to see the elementary arithmetic question to answer as part of the game. The user will be able answer the questions in the answer box provide
 The user will be able to submit their answer and a pop-up will make it known to the user if they answered correctly.
 
+  - Game Board consist of 2 parts: Tracker and Battlefield
 
-The Score Area
-
-This section will allow the user to see exactly how many correct and incorrect answers they have provided.
-
-
-  Consistently repeating on all nine pages, a fully responsive navigation bar includes the Title area, main menu, and sub-menu. The main background is a very light blue background instead of plain white adding some life to an unknown concept while fitting well and discreetly between the main site's colors orange and teal.
+  - Tracker is the top part separated clearly with gray color as it is representing technicalities
+  - Tracker displays player's categorization clearly separating user from their opponents with players names and logos.
+  - Next to names, there is a live tracking score board which always clearly informs user on their record
+  - Once that balances and scores are uploaded, battle between players starts
+  - When the user clicks on the bet in any amount, user balance is subtracted by selected betting value
+  - Robot initiation of response gets activated
+  - Computer chooses a random option for Robot's bet through JavaScript
+  - Robot's balance gets subtracted by selected betting value
+  - Robot's last bet changes value to be equal to the last selected betting value
+  - Tresure vault gets increased by Robot's selection
+  ---
+  - These events occur until one of the player's balance drops below $2, or one of them folds while retaining their balance
+  - If users win, they are sent to "Winning Screen"
+  - If users lose, they are sent to the "Losing Screen"
+  - If user folds, they are send to the "Folded Screen"
   
-  - Title is created out of a professional custom-made unique logo next to the products name styled in CSS to match the colors of the logo and all Earth's elements since it is a Life Coin. Both are linked back to the home page across all pages
+    ![Game Board](./assets/media/images/game.jpg)
 
-  - The main teal menu is leading users to the main four categories of the page: Home, Recruitment, Journey, and Register. Active page indication coloring in orange is included. Page is shown in PC screen sizes next to the main title while in tablet and phone sizes are placed under the title stretching across the entire screen
+- __Winning Screen__
 
-  - Sub-menu in the black background color serves the purpose of dividing content according to the main categories of the page. Teal font coloring is included for a smoother transition and better connection to the main menu bar's visually for users. Sizing is smaller in comparison to the main menu in order to emphasize its importance. Active sub-menu coloring has been included as well as proper functioning links on each navigational button. Positioning is under the main menu for phones and tablets users while for PC users, it is found under the both title and main menu stretching across the screen dividing area between headers and navigation on each page
+  - T
   
-  - Strategical and categorical division allows users to easily navigate from page to page across all devices without having to return back to the previous page via the ‘back’ button in the browser. This is extremely helpful when getting to know a new service or a website
+    ![Winning Screen](./assets/media/images/winning.jpg)
 
-  ![Navigation Bar - Wide](./assets/media/images/Readme/nav_large.jpg)
+- __Losing Screen__
 
-  ![Navigation Bar - Slim](./assets/media/images/Readme/nav_small.jpg)
+  - T
   
-- __Landing Video__
+    ![Losing Screen](./assets/media/images/losing.jpg)
 
-  - The landing includes a professional custom-made promotional video that features main Earth's elements hinting at the overall team of this brand
+- __Folded Screen__
 
-  - This section introduces the user to Life Coin with an eye-catching sharp and creative animation to grab their attention and increase the chances for a great first impression
-
-  - This video is auto-played but not looped so it does not distract users from reading the bottom content with active autoplay sound. The user is given a control bar to give full control on replaying the missed content in any circumstance of user distraction, internal or external. Video is larger for phones and tablets websites while for PC is not too large to guide users to the next section easier. Due to the control bar user is in full control of his ultimate first experience with the site
-
-  ![Landing Page Video](./assets/media/images/Readme/landing_video.jpg)
-
-- __Landing Quotation__
-
-  - Calming effect of the sunset background is allowing users to gradually enter the feeling of reflecting back on life and planning the future during the natural sun's cycles and impact on the human mind and body. This is where users can be shortly debriefed on how besides these visuals, service can bring utility value to them and allow more sunsets in a more comfortable situation for them and the close ones. Being one of the hints of solutions for users' problems or ideas font is given the subtle effect of glowing as it seems to be an answer falling from the sky. Colors have been picked from the top division of colors focusing on purple and black as their location on the page is also on the top. This also builds subliminal users' natural ability to further digest and separate high quantities of quality content
-
-  ![Londing Quotation](./assets/media/images/Readme/info.jpg)
-
-- __About Section__
-
-  - Once users' attention is present from landing elements, some highly important and new summarized information is given following the graphic media and captivating quotation. Here, the main business aspects, values, and predicted journey is disclosed to the user as an about section or personal introduction for users to understand our positive intentions better and earlier
-
-  - Styling has been added to emphasize horizontal division with a black background such as the sub-menu's role. Orange color brings deliberate high contrast to guide users from the first-impression stage over the smooth bridge to the actual content. Again, the teal background indicates a boxed divider such as nav-menu to break down areas in familiar patterns for users
-
-  ![About Section](./assets/media/images/Readme/about.jpg)
-
-- __Home Headers__
-
-  - The similar pattern landing image media includes an interactive photograph custom made for this website with color alternation to demonstrate the main topics and sections of the predominately informative home page. Headers with blue and white colors are representing the following features section where blue skies and white sun and clouds are the main visuals. Orange and teal headers are the main colors and therefore subliminally indicate this is the most important area that contains the full agenda and timeline of the Life Coin. This is the site's business strategy and priority highest priority next to the private sale. For a private sale, the header is black to create a full stop and divide the important region and upon interaction also transparent showing through true body color as a deep metaphor or creating a feeling of "transparency" when dealing with our financial service and project now or in the future
+  - Upcoming game-type decision is presented at the bottom of the screen through "NEXT GAME" and "NEW GAME" buttons options
+  - Being interactive elements, users can be taken then either to the loading screen and "Next Game" mode or back to the home screen where they initiate another "New Game" mode by "inserting lifecoin"
+  - This provides fully closed and infinite loop of gaming for users by providing experience without interruptions
+  -
   
-  ![3x Home Header Pictures](./assets/media/images/Readme/header_blue.jpg)
-
-  ![3x Home Header Pictures](./assets/media/images/Readme/header_teal.jpg)
-
-  ![3x Home Header Pictures](./assets/media/images/Readme/header_black.jpg)
-
-- __Features Section__
-
-  - First main sections of the home page has been done with the best background visuals in order to step-by-step bring users from stage of introduction to content with basic background and font to the full-scale first-hand experience of participating in our life reality and services
-
-  - Having bright yellow color in the middle of the logo has been an inspiration to use a sun background as the title rises over the fixed blue skies on the scroll separating all Life Coin's service features. This section is one of the most important ones for potential investors and has been done with a special design in order to always remind them when they look up at the sky
-
-  ![Features Section Sun](./assets/media/images/Readme/features_sun.jpg)
-
-  ![Features Section Clouds](./assets/media/images/Readme/features_cloud.jpg)
-
-
-- __Timeline Section__
-
-  - Another home page main section that through the main colors of the site and sleek clean and sharp text-shadow backgrounds creates a categorized easy-to-digest process for users going through both agendas. Short-term and long-term have been clearly divided with the horizontal teal box while main content has been ordered through yearly quarters and plans for users. This is also of high importance to investors but this time even for the team and community to know which periods and products are upcoming next
-
-  ![Timeline Section](./assets/media/images/Readme/timeline.jpg)
-
-- __Private Sale Section__
-
-  - Being a unique coin in the entire universe that develops in a direction of universal physical and digital currency for the whole Earth and beyond, the star background has been added to the pre-sale section. Teal boxes for content are fitting well with a background image of stars and orange coloring is used to emphasize the most important segments: tile, subtitle, network, crypto addresses, contact, registration form link, and a launch date. There is an additional thin top banner with a button indicating the private sale is live while viewing the header without the need to scroll down to be able to jump right in
-
-  ![Private Sale Section](./assets/media/images/Readme/private_sale.jpg)
-
-  ![Private Sale Section](./assets/media/images/Readme/private_sale_addresses.jpg)
-
-- __Recruitment__
-
-  - Following the home page, the second largest out of 4 sub-pages of the Life Coin site is oriented towards building relationships with the users after all values and solutions have been presented. The landing recruitment page allows users to explore and determine if they would like to join our business team, build a relationship with our business, or register as actual consumers and community members. Those three categories of users have been each assigned a button to follow to the belonging page where further and detailed information is disclosed. Each button has a descriptive sentence to indicate the next destination through a formal palette of colors shades on teal with sharp orange emphasis color. The header is of complimenting colors and coin design on it contracts within itself as a hovering effect such as pressing a button, subliminally telling the user he needs to select his one single button. As the screen size drops below PC size, the header picture is not anymore floating left of the content boxes, but stretching full width above the content boxes
-
-  ![Recruitment](./assets/media/images/Readme/recruiting.jpg)
-
-- __Team Recruitment__
-
-  - Since the brand's associated products and services are based on education and business progress, the main font background and coloring for employees and contractors recruitment is designed inspired by a traditional chalkboard. Information that is written there for everyone will stay as permanent as the chalk and all the promises will be kept that user can benefit from in this section. In addition, the presented list of all urgent positions sought opens real-life opportunities for all users. Main sections such as the title for the careers and subtitle per job advertising segment are again colored with the main colors of the page teal and orange. This time, another icon is introduced in order to add some variety to the visuals. Background color to hovering over the floating coin and all content has been matched with the body color and navigational menu light blue color to add the natural spacing instead of using white color to sloppy cut through smooth water/green experience offered to users through including various shades of teal
-
-  ![Team Recruitment](./assets/media/images/Readme/team_one.jpg)
-
-- __Business Recruitment__
-
-  - Almost identical concept to the Team Recruitment features. The only difference is that different type of users browses and uses this part of the site to grow business relationships, while another user follows other pathways such as joining the community as a consumer or Team as an employee or contractor. Styling difference to give some distinction is in the main board with an explanation of the title Business Symbiosis. Since the user could make many assumptions or give up not knowing, an informative block has been added with a sleek modern styling division between concepts and board advertisement. In contrast to the Team page where the user automatically understands the concept almost intuitively by seeing many job postings that page with employment environment description, conditions, payment, open positions, and similar. Here user needs to be given a small explanation banner. Boxes on the business relationship page are slightly more distanced for better division between concepts emphasizing different models and possibilities for users with capitalization and font-increase of the keywords of each single box
-
-  ![Business Recruitment](./assets/media/images/Readme/collab.jpg)
-
-- __Journey__
-
-  - Usually when users stumble on the page with a big orange cone with a wording construction and that page is not built yet. This user rarely comes back bumping into a brick wall without any time frame for "construction works". What is trying to be achieved for our users in this part of the site is to disclose to the user that there are more features and plans in making or that we even completed the next version without losing the excitement and smooth navigation. Instead, we are informing the user that one of our completed sections cannot be open due to certain agenda milestones and already planned dates for launch. This converts any disappointing energy into pure enthusiasm about the version update date. The user gains another advantage of constantly positively looking forward to the next release while still being briefly introduced to the concept of the new page. Having gifts locked instead of them being built in a "boring" factory, makes a child's brain want them even more 
-
-  - Once the target date reaches, this segment will allow the user to see exactly when the public meetings will happen, in which online or offline room, and how long they will last next to the disclosure of the main topic or topics. The full site will eventually turn into full-scale progress collaboration software and a social network. Orange color dominates here as subtle information of construction progress which is usually associated with orange, not teal color. However, a user is primarily being guided to think it is locked and ready to launch for a better long-term experience with strategic releasement of versions previously discussed
-
-  ![Journey](./assets/media/images/Readme/journey.jpg)
-
-- __Funding__
-
-  - The Funding section allows user to immediately interact with our concept and explore the foundations of our new economy concept. The structure of the page guides user first throught the funding concept, investment instructions and some basic terms on the landing page. The pageis design to be relaxed to bring serious information to the wall that contains features of bamboo and specific type of leaves to leave user with a feeling that it is almost at the tropical rewarding location. Sub-menu allows user to enter the Projects page which only features each project open to users to participate or invest into. Each featured project is built identically placing a relevant picture at the top followed by the key short information and at the end long description of what project aims to achieve. Projects section is not overdesigned in order to avoid distractions from important conent. Only based on black, white orange and teal color for strategic categorization
-
-  ![Funding Info](./assets/media/images/Readme/funding_one.jpg)
-
-  ![Funding Info](./assets/media/images/Readme/funding_two.jpg)
-
-  ![Funding Projects](./assets/media/images/Readme/projects_one.jpg)
-  
-  ![Funding Projects](./assets/media/images/Readme/projects_two.jpg)
-
-  ![Funding Projects](./assets/media/images/Readme/projects_three.jpg)
-
-- __Registration__
-
-  - The registration form will allow the user to fully integrate into the community, as well as the benefits to customize upcoming life experiences based on personal preferences or past. By completing this short online form, users' life will significantly change their daily schedule towards the life they always dreamed about without hurting others. Healthy habits and services will be introduced immediately to users. Once that new versions of this site will be released, they will be able to specify which exact tasks they want to create for themselves or others or even join already posted global tasks and missions. 
-
-  ![Registration 1](./assets/media/images/Readme/register_one.jpg)
-
-  ![Registration 2](./assets/media/images/Readme/register_two.jpg)
-
-  ![Registration 3](./assets/media/images/Readme/register_three.jpg)
-
-- __The Footer__ 
-
-  - The footer section includes links to the selected few social media sites for Life Coin. The links will open to a new tab to allow easy navigation for the user and to keep our site always open. Footer is very important to the users since it gives further options to visit that expand to other widely used sites, connect with the Team, and even directly contact with any requests or problems. Footer is broken down into two parts, both made up of the main site's colors orange and teal. The first one consists of strictly recognized social platforms, while the second part offers direct contact information of the site and brand. Main inspiration for the background was black volcanic sand which gets very hot with the sun (light) reaching it. In full PC mode, users can see the video as if they are holding the phone above the sand standing up. And the form has zoomed-in background to the sand, as if user has already looked down in the sand and found a form while watching a video
-
-  ![Footer](./assets/media/images/Readme/footer.jpg)
+    ![Folded Screen](./assets/media/images/folded.jpg)
 
 ---
 ### Upcoming Features
@@ -212,7 +160,7 @@ Next version:
 - Multiple Accounts with free Transfers
 - User Profiles & Password Protection
 - Deposit Currencies & Tokens
--  Withdraw Currencies & Tokens
+- Withdraw Currencies & Tokens
 - Virtual Bank & Balance
 - Transactions List
 - Balance History
@@ -249,7 +197,7 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-- I have conducted enough hours of testing across all screen sizes and different browsers to conclude that now site works well and all discussed features included. Internet Explorer, Google Chrome, Safari, Firefox on large PC monitor, average laptop, tablet and various mobile devices.
+- I have conducted enough hours of testing across all screen sizes and different browsers to conclude that now site works well and all discussed features included. Internet Explorer, Google Chrome, Safari, Firefox on large PC monitor, average laptop, tablet and various mobile devices all in different screen sizes. Website was given to friends and family to test out the game representing different types of users and their playing styles next to personal background. All content is readable and understandeable styled with good contrasted colors that also visually create a good combination. Game tracking works every time.
 
 ### Validator Testing 
 
@@ -271,11 +219,18 @@ If this section grows too long, you may want to split it off into a separate fil
 - Accessibility
   - This test confirms that the colors and fonts chosen are easy to read and accessible. All scores are satisfactory besides performance since the site uses complex visuals and large media which will be solved with the next update. All common practices and SEO levels have passed with a full percentage
 
-  ![Lighthouse Results](./assets/media/images/Readme/results_lighthouse.jpg)
+  ![Lighthouse Results](./assets/media/images/lighthouse.jpg)
 
 ### Bugs
 
-Since all code is running smoothly and has been verified from the first attempt, there were no bugs left to solve.
+### Solved Bugs
+
+icons not displaying
+
+- problem statement
+- problem troubleshoot with media
+- problem solved with media
+
 
 #### Unsolved Bugs
 
@@ -290,10 +245,9 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live links can be found here 
+The live link can be found below:
 
-  - [Official Public Site](https://lifecoin.earth)
-  - [GitHub Public Site](https://bono-94.github.io/Life_Coin_Live/)
+  - [GitHub Public Site](https://bono-94.github.io/Javascript-Project-2/)
 
 ---
 
