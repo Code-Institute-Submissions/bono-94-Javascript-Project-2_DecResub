@@ -651,6 +651,11 @@ footer {
     height: 640px;
 }
 
+#video-loading-two {
+    position: fixed;
+    z-index: 0;
+}
+
 #game-outro-three {
     background-color:black !important;
     width: 100%;
@@ -661,6 +666,11 @@ footer {
     background-color: black !important;
     width: 100%;
     height: 640px;
+}
+
+#video-loading-three {
+    position: fixed;
+    z-index: 0;
 }
 
 #game-outro-four {
@@ -675,6 +685,11 @@ footer {
     height: 640px;
 }
 
+#video-loading-four {
+    position: fixed;
+    z-index: 0;
+}
+
 #game-outro-five {
     background-color:black !important;
     width: 100%;
@@ -685,6 +700,11 @@ footer {
     background-color: black !important;
     width: 100%;
     height: 640px;
+}
+
+#video-loading-five {
+    position: fixed;
+    z-index: 0;
 }
 
 .skip-loading {

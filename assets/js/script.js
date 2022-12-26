@@ -939,7 +939,15 @@ function screenLoadingTwoWinsNextCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-two">
-        <video id="video-loading-two" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferWon()"></video>
+        <div>
+            <video id="video-loading-two" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferWon()"></video>
+        </div>
+        <div class="skip-load-button">
+            <button class="skip-loading" onclick="nextGameTransferWon()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("video-loading-two").volume = 0.1;
@@ -949,7 +957,15 @@ function screenLoadingTwoLossNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-three">
-        <video id="video-loading-three" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
+        <div>
+            <video id="video-loading-three" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
+        </div>
+        <div class="skip-load-button">
+            <button class="skip-loading" onclick="window.location.reload()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("video-loading-three").volume = 0.1;
@@ -959,7 +975,15 @@ function screenLoadingTwoFoldNexCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-four">
-        <video id="video-loading-four" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferFold()"></video>
+        <div>
+            <video id="video-loading-four" src="./assets/media/video/loading.mp4" autoplay onended="nextGameTransferFold()"></video>
+        </div>
+        <div class="skip-load-button">
+            <button class="skip-loading" onclick="nextGameTransferFold()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("video-loading-four").volume = 0.1;
@@ -969,7 +993,15 @@ function screenLoadingTwoFoldNewCreate () {
 
     document.body.innerHTML = `
     <section id="game-outro-five">
-        <video id="video-loading-five" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
+        <div>
+            <video id="video-loading-five" src="./assets/media/video/loading.mp4" autoplay onended="window.location.reload()"></video>
+        </div>
+        <div class="skip-load-button">
+            <button class="skip-loading" onclick="window.location.reload()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("video-loading-five").volume = 0.1;
