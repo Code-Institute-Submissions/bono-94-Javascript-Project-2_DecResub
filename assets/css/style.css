@@ -427,6 +427,30 @@ footer {
     height: 640px;
 }
 
+#intro-video {
+    position: fixed;
+    z-index: 0;
+}
+
+#skip-intro {
+    background-color: rgb(44, 110, 73);
+    text-shadow: 0px 0px 1px black;
+    color: coral;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-family: 'Titan One', cursive;
+    font-size: large;
+}
+
+#skip-button {
+    padding: 5px;
+    position: fixed;
+    z-index: 1;
+}
+
 #home-screen-game {
     background-color:black !important;
     width: 100%;
@@ -854,7 +878,6 @@ footer {
 #bttn-one {
     background-color: white;
     box-shadow: 0px 0px 3px 3px inset orange;
-
 }
 
 #bttn-two {

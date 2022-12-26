@@ -47,7 +47,15 @@ function screenGameIntroCreate () {
  
     document.body.innerHTML =`
     <section id="game-intro">
-        <video src="./assets/media/video/intro.mp4" id="intro-video" autoplay onended="welcomeScreenTransfer()"></video>
+        <div>
+            <video src="./assets/media/video/intro.mp4" id="intro-video" autoplay onended="welcomeScreenTransfer()"></video>
+        </div>
+        <div id="skip-button">
+            <button id="skip-intro" onclick="welcomeScreenTransfer()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("intro-video").volume = 0.2; 
