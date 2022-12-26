@@ -14,7 +14,6 @@ var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
 var audioError = document.getElementById("audio-error");
 var audioBetSplash = document.getElementById("audio-button-splash");
-var startMusicMute = document.getElementById("audio-welcome");
 
 var userRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var robotRandomBalance = Math.floor(Math.random() * 21042004) + 2;
@@ -138,7 +137,15 @@ function screenGameLoadingCreate () {
     document.getElementById("home-screen-game").remove ();
     document.body.innerHTML = `
     <section id="game-outro-one">
-        <video id="video-loading" src="./assets/media/video/loading.mp4" autoplay onended="newGameScreenTransfer()"></video>
+        <div>
+            <video id="video-loading" src="./assets/media/video/loading.mp4" autoplay onended="newGameScreenTransfer()"></video>
+        </div>
+        <div class="skip-load-button">
+            <button class="skip-loading" onclick="newGameScreenTransfer()">
+                <i class="fa-solid fa-forward"></i>
+                SKIP
+            </button>
+        </div>
     </section>
     `;
     document.getElementById("video-loading").volume = 0.1; 
