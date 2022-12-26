@@ -699,16 +699,6 @@ footer {
     padding-left: 10px;
 }
 
-#user-image-title {
-    position: absolute;
-    bottom: 16%;
-    left: 127px;
-    font-size: medium;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 900;
-}
-
 #pc-image {
     float: right;
     position: relative;
@@ -723,16 +713,6 @@ footer {
     margin-top: 15px;
     margin-right: 15px;
     padding: 8px;
-}
-
-#pc-image-title {
-    position: absolute;
-    bottom: 17%;
-    right: 130px;
-    font-size: medium;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 900;
 }
 
 .past-score-area p {

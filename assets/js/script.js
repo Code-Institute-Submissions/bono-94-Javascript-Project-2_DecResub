@@ -140,9 +140,6 @@ function screenNewGameCreate () {
                     <div id="user-image">
                         <i class="fa-solid fa-head-side-virus"></i>
                     </div>
-                    <div id="user-image-title">
-                        Human
-                    </div>
                     <div class="past-score-area" id="past-score-box-h">
                         <p class="past-score-box">
                             Win:
@@ -161,9 +158,6 @@ function screenNewGameCreate () {
                 <div id="pc-profile">
                     <div id="pc-image">
                         <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <div id="pc-image-title">
-                        Robot
                     </div>
                     <div class="past-score-area" id="past-score-box-r">
                         <p class="past-score-box">
