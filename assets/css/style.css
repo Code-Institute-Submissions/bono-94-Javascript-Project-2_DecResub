@@ -726,7 +726,7 @@ footer {
 }
 
 #past-score-box-h {
-    font-size: x-small;
+    font-size: xx-large;
     font-weight: 900;
     position: absolute;
     bottom: 6%;
@@ -734,7 +734,7 @@ footer {
 }
 
 #past-score-box-r {
-    font-size: x-small;
+    font-size: xx-large;
     position: absolute;
     bottom: 6%;
     right: 85px;
