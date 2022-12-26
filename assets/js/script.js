@@ -304,9 +304,6 @@ function screenNewGameCreate () {
                 </button>
             </div>
         </div>
-        <audio id="audio-game-background" autoplay loop>
-            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
-        </audio>
         <audio id="audio-error">
             <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
         </audio>
@@ -321,7 +318,6 @@ function screenNewGameCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-game-background").volume = 0.7;
     document.getElementById("audio-cashout").play();
     document.getElementById("audio-cashout").volume = 0.5;
     alert ("Congratulations! Your lifecoin has yielded a new game balance.");
@@ -1167,9 +1163,6 @@ function screenNextGameCreate () {
                 </button>
             </div>
         </div>
-        <audio id="audio-game-background" autoplay loop>
-            <source src="./assets/media/audio/background-ocean.mp3" type="audio/mpeg">
-        </audio>
         <audio id="audio-error">
             <source src="./assets/media/audio/error.mp3" type="audio/mpeg">
         </audio>
@@ -1184,7 +1177,6 @@ function screenNextGameCreate () {
         </audio>
     </section>
     `;
-    document.getElementById("audio-game-background").volume = 0.7;
     document.getElementById("audio-cashout").play();
     document.getElementById("audio-cashout").volume = 0.5;
     alert ("Congratulations! Your lifecoin has yielded a new game balance.");
