@@ -14,6 +14,7 @@ var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
 var audioError = document.getElementById("audio-error");
 var audioBetSplash = document.getElementById("audio-button-splash");
+var startMusicMute = document.getElementById("audio-welcome");
 
 var userRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var robotRandomBalance = Math.floor(Math.random() * 21042004) + 2;
@@ -71,6 +72,11 @@ function welcomeScreenCreate () {
 
     document.body.innerHTML = `
     <section id="home-screen-game">
+        <div id="start-mute">
+            <button id="mute-start" onclick="startMusicStop()">
+                <i class="fa-solid fa-volume-xmark"></i>
+            </button>
+        </div>
         <div id="home-screen-title">
             <h2>
                 Welcome to the Bigger Fish game!
@@ -114,6 +120,11 @@ function welcomeScreenCreate () {
     </section>
     `;
     document.getElementById("audio-welcome").volume = 0.2;
+}
+
+function startMusicStop () {
+    
+    document.getElementById("audio-welcome").volume = 0.0;
 }
 
 function gameLoadingOneTransfer () {
