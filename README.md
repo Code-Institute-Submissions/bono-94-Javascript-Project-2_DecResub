@@ -279,7 +279,7 @@ I have conducted enough hours of testing across all screen sizes and different b
 - Result
   - Both features responded as intended by only directly clicking on them, not around them or empty gray space
 
-![Nav Bar](./assets/media/images/lighthouse.jpg)
+![Nav Bar](./assets/media/images/manual-testing/nav-bar.jpg)
 
 #### Email Field - Feeback Form
 
@@ -290,7 +290,7 @@ I have conducted enough hours of testing across all screen sizes and different b
 - Result
   - Window error returned automatic fault that symbol "@" needs to be included
 
-![Email Field](./assets/media/images/lighthouse.jpg)
+![Email Field](./assets/media/images/manual-testing/email-field.jpg)
 
 #### Footer Links
 
@@ -302,7 +302,7 @@ I have conducted enough hours of testing across all screen sizes and different b
 - Result
   - Both features responded as intended by only directly clicking on them, not around them or empty gray space
 
-![Footer]](./assets/media/images/lighthouse.jpg)
+![Footer](./assets/media/images/manual-testing/footer.jpg)
 
 #### Insert Coin Animation
 
@@ -318,9 +318,9 @@ I have conducted enough hours of testing across all screen sizes and different b
   - When animation ends, everything user sees is removed and game intro video starts
   - Nothing happens when I click around the button
 
-![Insert Coin 1](./assets/media/images/lighthouse.jpg)
-![Insert Coin 2](./assets/media/images/lighthouse.jpg)
-![Insert Coin 3](./assets/media/images/lighthouse.jpg)
+![Insert Coin 1](./assets/media/images/manual-testing/insert-1.jpg)
+![Insert Coin 2](./assets/media/images/manual-testing/insert-2.jpg)
+![Insert Coin 3](./assets/media/images/manual-testing/insert-3.jpg)
 
 #### Intro Video
 
@@ -334,8 +334,8 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Video runs smoothly when all inserting coin animation and sound effects end
   - Skip button, when directly clicked, sends user correctly to the next section without having to watch entire video
 
-![Intro Video 1](./assets/media/images/lighthouse.jpg)
-![Intro Video 2](./assets/media/images/lighthouse.jpg)
+![Intro Video 1](./assets/media/images/manual-testing/intro-video-1.jpg)
+![Intro Video 2](./assets/media/images/manual-testing/intro-video-2.jpg)
 
 #### Welcome Screen Features
 
@@ -358,7 +358,7 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Start game button by directly clicking on it takes user to the next section of the game, loading screen
   - Anchor with image by directly clicking on it opens a new tab for user to explore development team's website
 
-![Welcome Screen Features](./assets/media/images/lighthouse.jpg)
+![Welcome Screen Features](./assets/media/images/manual-testing/welcome.jpg)
 
 #### Loading Video
 
@@ -372,8 +372,8 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Video runs smoothly as soon as user presses start button and ends with alert of new balance upon ending
   - Skip button, when directly clicked, raises alert of new balance generated for user without having to watch entire video
 
-![Loading Video 1](./assets/media/images/lighthouse.jpg)
-![Loading Video 2](./assets/media/images/lighthouse.jpg)
+![Loading Video 1](./assets/media/images/manual-testing/loading-1.jpg)
+![Loading Video 2](./assets/media/images/manual-testing/loading-2.jpg)
 
 #### Game Board Features
 
@@ -410,8 +410,7 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Fold button correctly raises alert for user that they decided to exit keeping their balance and transfers user to the next screen
   - Both losing balances of user and robot direct user to the appropriate Results Screen being either Winning or Losing
 
-
-![Game Board Features](./assets/media/images/lighthouse.jpg)
+![Game Board Features](./assets/media/images/manual-testing/game-board.jpg)
 
 #### Folded Screen
 
@@ -443,7 +442,7 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Next game button always brings user to the loading screen before initiating another game with remaining balance
   - New game button always reloads the screen for the user bringing them back to the home page to insert more coins to continue
 
-![Folded Screen](./assets/media/images/lighthouse.jpg)
+![Folded Screen](./assets/media/images/manual-testing/folded.jpg)
 
 #### Winning Screen
 
@@ -473,7 +472,7 @@ I have conducted enough hours of testing across all screen sizes and different b
   - User's score record is always correctly transferred over to the winning screen
   - Next game button always brings user to the loading screen before initiating another game with remaining balance
 
-![Winning Screen](./assets/media/images/lighthouse.jpg)
+![Winning Screen](./assets/media/images/manual-testing/winning.jpg)
 
 #### Losing Screen
 
@@ -502,7 +501,7 @@ I have conducted enough hours of testing across all screen sizes and different b
   - User's score record is always correctly transferred over to the losing screen
   - New game button always reloads the screen for the user bringing them back to the home page to insert more coins to continue
 
-![Losing Screen](./assets/media/images/lighthouse.jpg)
+![Losing Screen](./assets/media/images/manual-testing/losing.jpg)
 
 ----
 
