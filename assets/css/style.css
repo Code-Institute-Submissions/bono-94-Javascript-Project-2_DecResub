@@ -2330,21 +2330,10 @@ footer {
 #fourofour {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px;
+    padding-top: 100px;
     width: fit-content;
-}
-
-#error-message {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 80px;
 }
 
 #link-home {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 80px;
-    font-size: x-large;
+    font-size: xx-large;
 }
