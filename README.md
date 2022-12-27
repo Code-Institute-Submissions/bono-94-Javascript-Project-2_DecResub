@@ -321,6 +321,19 @@ I have conducted enough hours of testing across all screen sizes and different b
 
 ----
 
+#### User Stories Validation
+
+- USER STORY 1: As a crypto investor, I want to engage into Play-to-Earn gaming so that I can multiply my investment
+  - The completed game has not only set up the entertainment gaming aspect but a solid foundation to introduce play-to-earn mechanism in the version 2. For now investors can play demo version and get familiar how it works
+- USER STORY 2: As a young gamer, I want to play games online with friendly characters so that I can enjoy visual aspects
+  - By introducing Sharky, the character from the logo, younger audience is more open to enter the entertaining game with characters that they can relate to and get introduced to financial world
+- USER STORY 3: As an older gamer, I want to play strategic game so that I can keep engaging and developing my brain
+  - During the gameplay, there is endless combinations of betting amounts to achieve the victory, user can explore and test various strategies in order to force the opponent's loss, a lot of thinking can be used to gain competitive advantage while keeping brain neural links active
+- USER STORY 4: As an innovator, I want to play inspirative new game concepts so that I can create my own similar game
+  - Since a completely new and original gaming concept is introduced in the game, innovators can take this concept and create their own twist of the game, such as monopoly and UNO can be played various different ways but core concept remains the same
+- USER STORY 5: As unemployed citizen, I want to play time consuming financial games so that I can think about money more ofter
+  - For people with a lot of time on their hands, this game can be played on a loop with endless balances and outcomes. Those people are pushed to understand more value of money in the world and how much it is necessary to survive
+----
 ### Bugs
 
   - #### Solved Bug - Icons Not Displaying
