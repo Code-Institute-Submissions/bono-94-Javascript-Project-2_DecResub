@@ -15,10 +15,21 @@ Bigger Fish is an online game with various financial and entertainment elements.
 
 ## Design
 
-- Color palette
-- Fonts
-- Layout
+- Colors:
+  - Main colors - coral, green, light skyblue and dark gray which compliment and contrast each other (structural coloring purpose)
+  - Secondary colors - black, light gray, brown are used as separators between main content and main colors (organizational coloring purpose)
+  - Tertiary colors - yellow, red, purple, pink, dark blue are used for game board buttons to represent each ocean animal (color-matching purpose)
+- Fonts:
+  - Oswald - used as fisherman-like font for main important to read information such as title, pages, footer, rules and similar
+  - Titan One - used as bubbly retro contrast to Oswald which is used for all in-game text to change the mode of user from reading to entertaintainment mood
+- Layout - besides coloring separation, main page structure can be separated on Website Mode and Game Mode
+  - Website Mode - main landing page where user can take their time and explore rules, fill up forms, and follow social media links
+  - Game Mode - once user starts the game with inserting a coin, structure is not anymore one long solid html page
+    - instead, different smaller sections written in html are constantly exchanging with each other with use of Javascript
+    - snappy screen width and height to the users' devices without scrolling to get the feeling of using a gaming app instead a long website page
 - Media
+  - Custom Media - Professional custom work for the most important visual aspect of game logo, intro video and loading video  
+  - Imported Media - Stock images that can fill up mostly backgrounds and the relevant image for the Results Screens
 
 ------
 
