@@ -245,17 +245,20 @@ I have conducted enough hours of testing across all screen sizes and different b
 
 - HTML
   - No errors when passing through the official [W3C validator](https://validator.w3.org)
+  - ![HTML Test](./assets/media/images/testing/html.jpg)
 
 - CSS
   - No errors when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator)
+  - ![CSS Test](./assets/media/images/testing/css.jpg)
 
 - Jshint
   -  No errors when passing through the official [Jshint validator](https://jshint.com)
   - Metrics returned:
-    - There are 67 functions in this file
+    - There are 68 functions in this file
     - Function with the largest signature take 0 arguments, while the median is 0
     - Largest function has 16 statements in it, while the median is 4
     - The most complex function has a cyclomatic complexity value of 13 while the median is 1
+  - ![Java Test](./assets/media/images/testing/java.jpg)
 
 - Accessibility
   - This test confirms that the colors and fonts chosen are easy to read and accessible to users. All scores are satisfactory besides performance since the site uses complex visuals and animation and large media which will be solved with the next update. The only issue found by the Lighthouse is referring to picture sizes, which are not impacting any animation or positioning of additional elements. It causes more taxation on the computing system and increases loading time, but the final results are as coded across all screens. All common practices and SEO levels have passed with a full percentage
