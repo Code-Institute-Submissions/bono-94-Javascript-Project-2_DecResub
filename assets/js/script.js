@@ -1,29 +1,31 @@
+/*List of all global and constant variables that are used across functions*/
 const screenInsertLifecoin = document.getElementById('insert-lifecoin');
 const placeLifecoinBackground = document.getElementById('insert-lifecoin-background');
 const placeLifecoin = document.getElementById('insert-lifecoin-image');
 const placeLifecoinImage = document.getElementById('insert-lifecoin-image-animation');
-
 const userWins = 0;
 const userLoss = 0;
 const robotWins = 0;
 const robotLoss = 0;
-
 var audioInsert = document.getElementById("audio-insert");
 var audioRocks = document.getElementById("audio-insert-rocks");
 var audioWelcome = document.getElementById("audio-welcome");
 var audioNewGame = document.getElementById("audio-select");
 var audioError = document.getElementById("audio-error");
 var audioBetSplash = document.getElementById("audio-button-splash");
-
 var userRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var robotRandomBalance = Math.floor(Math.random() * 21042004) + 2;
 var userTotalBets = 0;
 var userLastBet = 0;
 var vaultReward = 0;
 var robotLastBet = 0;
-
 let earningsResultsWin = vaultReward + userRandomBalance;
 
+/* INTRODUCTION */
+
+/*This function starts animated process with sound effects after pressing the INSERT button on pre-created HTML file
+- inserts a coin image to the correct slot
+- plays sound of retro coin including earth shaking effect*/
 function insertLifecoinAnimation () {
     
     audioInsert.volume = 0.5;
@@ -37,12 +39,14 @@ function insertLifecoinAnimation () {
     audioRocks.play();
 }  
 
+/*This function removes entire pre-structured HTML code and sends user to the next function*/
 function gameIntroTransfer () {
     
     screenInsertLifecoin.remove (); 
     screenGameIntroCreate ();
 }
 
+/*This function inserts new HTML code in the empty console and plays brand intro video that is skippable*/
 function screenGameIntroCreate () {
  
     document.body.innerHTML =`
@@ -61,12 +65,17 @@ function screenGameIntroCreate () {
     document.getElementById("intro-video").volume = 0.2; 
 }
 
+/*This function removes entire intro video's HTML code and sends user to the next function*/
 function welcomeScreenTransfer () {
     
     document.getElementById("game-intro").remove (); 
     welcomeScreenCreate ();
 }
 
+/*This function creates Welcome Screen, a landing page where user is introduced to game characters
+- when user has landed, retro gaming melody plays on loop which is muteable by mute button
+- there is an anchor image of development company logo that leads to external page
+- start button plays retro sound effect before proceeding further*/
 function welcomeScreenCreate () {
 
     document.body.innerHTML = `
@@ -121,17 +130,20 @@ function welcomeScreenCreate () {
     document.getElementById("audio-welcome").volume = 0.2;
 }
 
+/*This function mutes Welcome Screen background melody after pressed mute button*/
 function startMusicStop () {
     
     document.getElementById("audio-welcome").volume = 0.0;
 }
 
+/*This function plays retro sound effect that indicates the new game start*/
 function gameLoadingOneTransfer () {
     
     document.getElementById("audio-newgame").volume = 0.4;
     document.getElementById("audio-newgame").play();
 }
 
+/*This function removes everythong from the Welcome Screen and inserts code with a skippable loading video*/
 function screenGameLoadingCreate () {
 
     document.getElementById("home-screen-game").remove ();
@@ -151,11 +163,18 @@ function screenGameLoadingCreate () {
     document.getElementById("video-loading").volume = 0.1; 
 }
 
+/*This function removes entire loading screen video's HTML code and sends user to the next function*/
 function newGameScreenTransfer () {
     document.getElementById("game-outro-one").remove (); 
     screenNewGameCreate ();
 }
 
+/* NEW GAME BOARD */
+
+/*This function creates new Game Board by insterting new HTML code
+- first alert from the website is raised reporting to user that the new game balance has been generated
+- followed by sound effect of cash register
+- user can now see the entire Game Board*/
 function screenNewGameCreate () {
 
     document.body.innerHTML = `
@@ -324,6 +343,7 @@ function screenNewGameCreate () {
     newGameSetupScores();
 }
 
+/*This function resets the user and robot(AI) score back to zero being a new game, not next game*/
 function newGameSetupScores () {
 
     document.getElementById("past-score-counter-hw").innerHTML = userWins;
@@ -333,12 +353,17 @@ function newGameSetupScores () {
     newGameSetupBalances(); 
 }
 
+/*This function updates user's randomly generated balance and displays it on the game board
+- user can now interact with the buttons and place bets*/
 function newGameSetupBalances () {
 
     let userBalanceDisplayed = document.getElementById('balance-total');
     document.getElementById('balance-total').innerHTML = userRandomBalance;
 }
 
+/*This function validates first betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoicePrawnValidator () {
     if (1 < userRandomBalance) {
         userChoicePrawnPush();
@@ -349,6 +374,9 @@ function userChoicePrawnValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoicePrawnPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -360,6 +388,9 @@ function userChoicePrawnPush () {
     choicesUpdaters();
 }
 
+/*This function validates second betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceCrabValidator () {
     
     if (10 < userRandomBalance) {
@@ -371,6 +402,9 @@ function userChoiceCrabValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceCrabPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -382,6 +416,9 @@ function userChoiceCrabPush () {
     choicesUpdaters();
 }
 
+/*This function validates third betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceTurtleValidator () {
     
     if (50 < userRandomBalance) {
@@ -393,6 +430,9 @@ function userChoiceTurtleValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceTurtlePush () {
 
     document.getElementById("audio-button-splash").play();
@@ -404,6 +444,9 @@ function userChoiceTurtlePush () {
     choicesUpdaters();
 }
 
+/*This function validates fourth betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceOctopusValidator () {
     
     if (100 < userRandomBalance) {
@@ -415,6 +458,9 @@ function userChoiceOctopusValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceOctopusPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -426,6 +472,9 @@ function userChoiceOctopusPush () {
     choicesUpdaters();
 }
 
+/*This function validates fifth betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceSquidValidator () {
     
     if (500 < userRandomBalance) {
@@ -437,6 +486,9 @@ function userChoiceSquidValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceSquidPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -448,6 +500,9 @@ function userChoiceSquidPush () {
     choicesUpdaters();
 }
 
+/*This function validates sixth betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceLobsterValidator () {
     
     if (1000 < userRandomBalance) {
@@ -459,6 +514,9 @@ function userChoiceLobsterValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceLobsterPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -470,6 +528,9 @@ function userChoiceLobsterPush () {
     choicesUpdaters();
 }
 
+/*This function validates seventh betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceTunaValidator () {
     
     if (10000 < userRandomBalance) {
@@ -481,6 +542,9 @@ function userChoiceTunaValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceTunaPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -492,6 +556,9 @@ function userChoiceTunaPush () {
     choicesUpdaters();
 }
 
+/*This function validates eight betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceDolphinValidator () {
     
     if (100000 < userRandomBalance) {
@@ -503,6 +570,9 @@ function userChoiceDolphinValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceDolphinPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -514,6 +584,9 @@ function userChoiceDolphinPush () {
     choicesUpdaters();
 }
 
+/*This function validates ninth betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceWhaleValidator () {
     
     if (1000000 < userRandomBalance) {
@@ -525,6 +598,9 @@ function userChoiceWhaleValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceWhalePush () {
 
     document.getElementById("audio-button-splash").play();
@@ -536,6 +612,9 @@ function userChoiceWhalePush () {
     choicesUpdaters();
 }
 
+/*This function validates tenth betting option if it is above the user's remaining balance
+- if betting amount is smaller than the balance, user is sent to the next stage
+- if betting amount is larger than the balance, website throws alert with sound effect that smaller amount needs to be chosen*/
 function userChoiceDragonValidator () {
     
     if (10000000 < userRandomBalance) {
@@ -547,6 +626,9 @@ function userChoiceDragonValidator () {
     }
 }
 
+/*This function calculates all relevant values on the tracking side of the Game Board with appropriate button value
+- splashing sound effect informs the user that bet has been successfuly sent
+- user is sent to the function that updates the new calculated values to the screen*/
 function userChoiceDragonPush () {
 
     document.getElementById("audio-button-splash").play();
@@ -558,6 +640,12 @@ function userChoiceDragonPush () {
     choicesUpdaters();
 }
 
+/*This function updates all calculated increases and decreases on the tracking board based on user's betting choice
+- user's balance, total bets, last bet, total reward are changed on the Game Board
+- function checks balance of both user and robot(AI) 
+- if user's balance is less than 2$, they are sent to the Losing Screen
+- if robot's(AI) balance is less than 2$, user is sent to the Winning Screen
+- if both balances are above 2$, function initiates robot's response to user's bet*/
 function choicesUpdaters () {
 
     let userBalanceDisplayedUpdater = document.getElementById('balance-total');
@@ -581,6 +669,10 @@ function choicesUpdaters () {
     }
 }
 
+/*This function intiates robot(AI) to generate a random betting choice as a response to user's input
+- first it generates random number above robot's current balance
+- random number is then filtered and matched with the closest 10 values that user can also only choose from
+- each matched value initiates relevant calculating function*/
 function initiateRobotResponse () {
 
     var robotRandomBet = Math.floor(Math.random() * robotRandomBalance) + 1; 
@@ -611,6 +703,10 @@ function initiateRobotResponse () {
     }
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function prawnRobotBet () {
 
     robotRandomBalance -= 1;
@@ -619,6 +715,10 @@ function prawnRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function crabRobotBet () {
 
     robotRandomBalance -= 10;
@@ -627,6 +727,10 @@ function crabRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function turtleRobotBet () {
 
     robotRandomBalance -= 50;
@@ -635,6 +739,10 @@ function turtleRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function octopusRobotBet () {
 
     robotRandomBalance -= 100;
@@ -643,6 +751,10 @@ function octopusRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function squidRobotBet () {
 
     robotRandomBalance -= 500;
@@ -651,6 +763,10 @@ function squidRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function lobsterRobotBet () {
 
     robotRandomBalance -= 1000;
@@ -659,6 +775,10 @@ function lobsterRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function tunaRobotBet () {
 
     robotRandomBalance -= 10000;
@@ -667,6 +787,10 @@ function tunaRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function dolphinRobotBet () {
 
     robotRandomBalance -= 100000;
@@ -675,6 +799,10 @@ function dolphinRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function whaleRobotBet () {
 
     robotRandomBalance -= 1000000;
@@ -683,6 +811,10 @@ function whaleRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function calculates new values for aspects relevant to robot's totals
+- robot's undisclosed total balance is decreased and total vault reward increased by the robot's betting choice value
+- robot's last bet tracker is replaced by the same value chosen
+- initiates robot's values updating function*/
 function dragonRobotBet () {
 
     robotRandomBalance -= 10000000;
@@ -691,6 +823,8 @@ function dragonRobotBet () {
     choicesUpdatersRobot();
 }
 
+/*This function updates all new calculated relevant robot's values to the tracking board
+- ending of entire robot betting processes is indicated by retro calculation sound effect*/
 function choicesUpdatersRobot () {
 
     document.getElementById("audio-calculating").play();
@@ -701,30 +835,40 @@ function choicesUpdatersRobot () {
     document.getElementById('bet-robot-total').innerHTML = "$" + robotLastBet;
 }
 
+/*When user folds and decides to escape with remaining balance, alert in thrown and user transferred to the Folded Screen*/
 function userFolded () {
 
     alert("You have decided to swim away with your remaining balance.");
     screenFoldedTransfer();
 }
 
+/*This function removes entire game board's HTML code and sends user to the Winning Screen*/
 function screenWinningTransfer () {
 
     document.getElementById("game").remove();
     screenWinningCreate();
 }
 
+/*This function removes entire game board's HTML code and sends user to the Losing Screen*/
 function screenLosingTransfer () {
 
     document.getElementById("game").remove();
     screenLosingCreate();
 }
 
+/*This function removes entire game board's HTML code and sends user to the Folded Screen*/
 function screenFoldedTransfer () {
 
     document.getElementById("game").remove();
     screenFoldedCreate();
 }
 
+/*RESULTS SCREENS*/
+
+/*This function creates Winning Screen by insterting new HTML code
+- user is presented with winning outcome followed by appropriate short sound effect
+- user is presented with a winning amount, new balance including winning amount and winning score icrease
+- user can press a button to start a next game*/
 function screenWinningCreate () {
 
     document.body.innerHTML = `
@@ -770,6 +914,7 @@ function screenWinningCreate () {
     winScreenResultsPush();
 }
 
+/*This function calculates and updates winning scores*/
 function winScreenResultsPush () {
 
     var newLoss = userLoss + 1;
@@ -785,6 +930,10 @@ function winScreenResultsPush () {
     document.getElementById('loss-score-results-w').innerHTML = "[" + userLoss + "]";
 }
 
+/*This function creates Losing Screen by insterting new HTML code
+- user is presented with losing outcome followed by appropriate short sound effect
+- user is presented with a losing amount, no balance and losing score icrease
+- user can press a button to start a new game*/
 function screenLosingCreate () {
 
     document.body.innerHTML = `
@@ -830,6 +979,7 @@ function screenLosingCreate () {
     lossScreenResultsPush();
 }
 
+/*This function calculates and updates losing scores*/
 function lossScreenResultsPush () {
 
     var newLoss = userLoss + 1;
@@ -844,6 +994,10 @@ function lossScreenResultsPush () {
     document.getElementById('loss-score-results-l').innerHTML = "[" + newLoss + "]";
 }
 
+/*This function creates Folded Screen by insterting new HTML code
+- user is presented with losing outcome followed by appropriate short sound effect
+- user is presented with a lost amount, remaining not betted balance and losing score icrease
+- user can press buttons to either start a new game or next game*/
 function screenFoldedCreate () {
 
     document.body.innerHTML = `
@@ -893,6 +1047,7 @@ function screenFoldedCreate () {
     foldScreenResultsPush();
 }
 
+/*This function calculates and updates folded scores*/
 function foldScreenResultsPush () {
 
     var newLoss = userLoss + 1;
@@ -907,30 +1062,35 @@ function foldScreenResultsPush () {
     document.getElementById('loss-score-results-f').innerHTML = "[" + newLoss + "]";
 }
 
+/*This function removes entire Winning Screen's HTML code and sends user to the next game function*/
 function screenGameLoadingTwoNextGameTransferW () {
 
     document.getElementById("winning-screen").remove();
     screenLoadingTwoWinsNextCreate();  
 }
 
+/*This function removes entire Losing Screen's HTML code and sends user to the new game function*/
 function screenGameLoadingTwoNextGameTransferL () {
     
     document.getElementById("losing-screen").remove();
     screenLoadingTwoLossNewCreate();  
 }
 
+/*This function removes entire Folded Screen's HTML code and sends user to the next game function*/
 function screenGameLoadingTwoNextGameTransferF () {
 
     document.getElementById("folded-screen").remove();
     screenLoadingTwoFoldNexCreate();  
 }
 
+/*This function removes entire Folded Screen's HTML code and sends user to the new game function*/
 function screenGameLoadingTwoNewGameTransferF () {
     
     document.getElementById("folded-screen").remove();
     screenLoadingTwoFoldNewCreate();  
 }
 
+/*This function inserts new HTML code for the second skippable loading screen before transferring to the next game phase*/
 function screenLoadingTwoWinsNextCreate () {
 
     document.body.innerHTML = `
@@ -949,6 +1109,7 @@ function screenLoadingTwoWinsNextCreate () {
     document.getElementById("video-loading-two").volume = 0.1;
 }  
 
+/*This function inserts new HTML code for the second skippable loading screen before reloading the window and bringing user to the home page*/
 function screenLoadingTwoLossNewCreate () {
 
     document.body.innerHTML = `
@@ -967,6 +1128,7 @@ function screenLoadingTwoLossNewCreate () {
     document.getElementById("video-loading-three").volume = 0.1;
 }
 
+/*This function inserts new HTML code for the second skippable loading screen before transferring to the next game phase*/
 function screenLoadingTwoFoldNexCreate () {
 
     document.body.innerHTML = `
@@ -985,6 +1147,8 @@ function screenLoadingTwoFoldNexCreate () {
     document.getElementById("video-loading-four").volume = 0.1;
 }
 
+
+/*This function inserts new HTML code for the second skippable loading screen before reloading the window and bringing user to the home page*/
 function screenLoadingTwoFoldNewCreate () {
 
     document.body.innerHTML = `
@@ -1003,18 +1167,26 @@ function screenLoadingTwoFoldNewCreate () {
     document.getElementById("video-loading-five").volume = 0.1;
 }
 
+/*This function removes entire second loading screen video's HTML code and sends user to the next game function*/
 function nextGameTransferWon () {
 
     document.getElementById("game-outro-two").remove();
     screenNextGameCreate();
 }
 
+/*This function removes entire second loading screen video's HTML code and sends user to the next game function*/
 function nextGameTransferFold () {
 
     document.getElementById("game-outro-four").remove();
     screenNextGameCreate();
 }
 
+/*NEXT GAME BOARD*/
+
+/*This function creates next Game Board by insterting new HTML code
+- first alert from the website is raised reporting to user that the new game balance has been generated
+- followed by sound effect of cash register
+- user can now see the entire Game Board*/
 function screenNextGameCreate () {
 
     document.body.innerHTML = `
@@ -1182,7 +1354,8 @@ function screenNextGameCreate () {
     alert ("Congratulations! Your lifecoin has yielded a new game balance.");
     nextGameSetupScores();
 }
-    
+  
+/*This function updates the user and robot(AI) scores based on the Winning or Folded Screens results*/
 function nextGameSetupScores () {
 
     var newWins = userWins + 1;
@@ -1194,6 +1367,8 @@ function nextGameSetupScores () {
     nextGameSetupBalances(); 
 }
 
+/*This function updates user's previous total balance and displays it on the next game board
+- user can now interact with the buttons and place bets*/
 function nextGameSetupBalances () {
 
     let earningsResultsWin = vaultReward + userRandomBalance;
