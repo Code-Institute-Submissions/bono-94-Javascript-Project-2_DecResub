@@ -2326,3 +2326,21 @@ footer {
         font-size: medium;
     }
 }
+
+#fourofour {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+}
+
+#error-message {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+}
+
+#link-home {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70%;
+}
