@@ -1,13 +1,32 @@
 # [Bigger Fish](https://bono-94.github.io/Javascript-Project-2/) 
 
+## Inroduction
 Bigger Fish is an online game with various financial and entertainment elements. Randomly generated balance for user and robot allows everyone to experience the resources battle, both from a domination and strategical point of view. The game has been created for the possible participation of users from any target group. Besides the upcoming play-to-earn model with real currencies, this concept has been designed to complement the new global economic system as one of the main utilities and revenue streams. The project hopes to achieve a reduction of global poverty levels, bridge the gap between crypto investors and gamers and educate on relevant topics and technologies while providing a fun, relaxing, and colorful game that is directly linked to the real-life financials of users. Overall site Bigger Fish aims to demonstrate the developer's proficiency in coding languages HTML, CSS, and JAVASCRIPT while simultaneously disclosing one of the main products / services from the parent brand.
 
 ![Multi-devices Views](./assets/media/images/responsive.jpg)
+
+## User Stories
+
+- As a crypto investor, I want to engage into Play-to-Earn gaming so that I can multiply my investment
+- As a young gamer, I want to play games online with friendly characters so that I can enjoy visual aspects
+- As an older gamer, I want to play strategic game so that I can keep engaging and developing my brain
+- As an innovator, I want to play inspirative new game concepts so that I can create my own similar game
+- As unemployed citizen, I want to play time consuming financial games so that I can think about money more ofter
+
+## Design
+
+- Color palette
+- Fonts
+- Layout
+- Media
+
 ------
 
 ## Features 
 
 In the first demonstrative version, minimum features and their elements have been disclosed in order to create a rich experience for users over longer periods of time. Also, for legal protection and initial attention from investors, a large amount of information has been summarized to cover main topics and categories before planned full disclosure. Meaning all of our aspects will be expanded shortly, professional media uploaded and final legally protected branding released. We will continue to improve consistently while strategically releasing new content and features according to our planned agenda and the current state of users. This site is made fully responsive across a variety of devices with the lowest guaranteed working width of 360px and height of 640px taking older cellular models into consideration in order to establish a global presence.
+
+------
 
 ### Existing Features
 
