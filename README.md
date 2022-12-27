@@ -666,7 +666,7 @@ The live link can be found below:
 
       Math.floor(Math.random() * 100) + 1;
 
-
+- [Draft.dev](https://draft.dev/learn/github-pages-404) has been used to build custom 404 error page when user tries to access non-existing pages
 
 ### Media
 
@@ -699,6 +699,8 @@ The live link can be found below:
 - [Grammarly](https://app.grammarly.com/) software has been used to verify grammar on the site and this README file
 
 - [Formsubmit](https://formsubmit.co/) website has been used to mail form results to the developer's email address
+
+- [Responsive Design Checker](https://responsivedesignchecker.com/) website has been used to test various screen sizes and website responsiveness for popular devices
 
 ---
 Thank you for READING ME!
