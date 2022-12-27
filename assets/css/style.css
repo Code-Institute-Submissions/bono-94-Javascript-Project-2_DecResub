@@ -2327,20 +2327,24 @@ footer {
     }
 }
 
-#fourofour h1 {
+#fourofour {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    padding-top: 80px;
+    width: fit-content;
 }
 
-#error-message h3 {
+#error-message {
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    padding-top: 80px;
 }
 
-#link-home a {
+#link-home {
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    padding-top: 80px;
+    font-size: x-large;
 }
