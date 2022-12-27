@@ -266,6 +266,246 @@ I have conducted enough hours of testing across all screen sizes and different b
     ![Lighthouse Results](./assets/media/images/lighthouse.jpg)
 
 ----
+
+### Manual Testing
+
+#### Nav Menu Bar
+
+- Expected:
+  - Nav menu bar is expected to take user to different sections of the page when user presses one of the 4 options
+  - Title "Bigger Fish" is expected to take user again to the same page
+- Testing: 
+  - Tested both features by clicking on them and around them
+- Result
+  - Both features responded as intended by only directly clicking on them, not around them or empty gray space
+
+![Nav Bar](./assets/media/images/lighthouse.jpg)
+
+#### Email Field - Feeback Form
+
+- Expected:
+  - Email inpuit field is expected not to allow any values that are not inclding symbol "@"
+- Testing: 
+  - Tested this by entering word "example"
+- Result
+  - Window error returned automatic fault that symbol "@" needs to be included
+
+![Email Field](./assets/media/images/lighthouse.jpg)
+
+#### Footer Links
+
+- Expected:
+  - Social media icons are expected to take user to social media sites when clicking directly on their icons
+  - README link is expected to take user to the README page of the project repository
+- Testing: 
+  - Tested both features by clicking on them directly and around them
+- Result
+  - Both features responded as intended by only directly clicking on them, not around them or empty gray space
+
+![Footer]](./assets/media/images/lighthouse.jpg)
+
+#### Insert Coin Animation
+
+- Expected:
+  - Insert Coin button is expected to start the image animation placing coin inside the stone gateway
+  - Also to play "ting" sound effect followed by "earthquake" sound effect
+  - When animation ends, entire homepage is removed and new segment of game intro video starts
+- Testing: 
+  - Tested this feature in many devices viewpoint combinations and by clicking on the button and around it 
+- Result
+  - Whole animation of placing coin inside the gateway successfully shows
+  - All sound effects play at their designated time
+  - When animation ends, everything user sees is removed and game intro video starts
+  - Nothing happens when I click around the button
+
+![Insert Coin 1](./assets/media/images/lighthouse.jpg)
+![Insert Coin 2](./assets/media/images/lighthouse.jpg)
+![Insert Coin 3](./assets/media/images/lighthouse.jpg)
+
+#### Intro Video
+
+- Expected:
+  - Intro video is expected to play automatically after insert coin button is pressed
+  - Skip button on top of the video is expected to allow user to skip the video
+- Testing: 
+  - Intro video autoplay is tested by pressing insert coin button
+  - Skip button is tested by clicking directly on it and around it
+- Result
+  - Video runs smoothly when all inserting coin animation and sound effects end
+  - Skip button, when directly clicked, sends user correctly to the next section without having to watch entire video
+
+![Intro Video 1](./assets/media/images/lighthouse.jpg)
+![Intro Video 2](./assets/media/images/lighthouse.jpg)
+
+#### Welcome Screen Features
+
+- Expected:
+  - Direction to the welcome screen should be automatic after intro video is skipped or finished
+  - Background welcome music on loop is expected to play automatically too
+  - Mute button is expected to mute background welcome music while user is on the welcome screen
+  - Start game button is expected to take user to the next section
+  - Anchor with image of Lifecoin logo is expected to take user to their website
+- Testing: 
+  - Arrival to the welcome screen is tested by both skipping the intro video and by waiting for it to finish
+  - Background music autoplay is tested with speakers
+  - Mute button is tested by clicking on it and around it
+  - Start game button is tested by clicking on it and around it
+  - Anchor with development team logo is tested by clicking on it and around it
+- Result
+  - User safely and automatically arrives to the welcome screen
+  - Background music plays as soon as user lands on the page
+  - Mute button permanently mutes background music
+  - Start game button by directly clicking on it takes user to the next section of the game, loading screen
+  - Anchor with image by directly clicking on it opens a new tab for user to explore development team's website
+
+![Welcome Screen Features](./assets/media/images/lighthouse.jpg)
+
+#### Loading Video
+
+- Expected:
+  - Lading video is expected to play automatically after start button is pressed
+  - Skip button on top of the video is expected to allow user to skip the video until the alert with new balance pops up
+- Testing: 
+  - Loading video autoplay is tested by pressing start game button
+  - Skip button is tested by clicking directly on it and around it
+- Result
+  - Video runs smoothly as soon as user presses start button and ends with alert of new balance upon ending
+  - Skip button, when directly clicked, raises alert of new balance generated for user without having to watch entire video
+
+![Loading Video 1](./assets/media/images/lighthouse.jpg)
+![Loading Video 2](./assets/media/images/lighthouse.jpg)
+
+#### Game Board Features
+
+- Expected:
+  - Upon landing automatically after balance alert to the game board screen, random balance is expected to be generated for both user and robot(AI) under 21 million
+  - With new random balances generated, both user's and robot's wins and losses are reset to zero being a new game intiated
+  - All animal-named buttons are expected to allow user to place their bets with relevant amount
+  - After amount and button is selected, it automatically:
+    - reduces user's balance on the screen by the betting choice
+    - adds betting amount to the total bets
+    - replaces previous last betting value with the selected one
+    - adds betting amount to the reward vault for the winner
+    - initiates robot's random bet choice within its balance
+    - replaces previous robot's last bet value with the new one
+    - reduces robot's balance by its random amount but does not show the balance to the user
+    - increases reward vault by the robot's betting choice
+  - Fold button is expected to allow user to leave the current game with the remaining balance if decided at any time but under the cost of one loss being added to the record
+  - Fold button raises alert message before transferring to the next section: Folding Screen
+  - User's balance is verified after every betting round not to be smaller than 2$ which takes user to Losing Screen
+  - Robot's balance is verified after every betting round not to be smaller than 2$ which takes user to Winning Screen
+- Testing: 
+  - User's random balance is tested by running the game over 20 times assuring the different random number, user's balance can be checked on the screen and robot's balance with a print statement
+  - User's and robot's records of wins and losses are tested by running the game over 20 times assuring all values stay on 0
+  - All buttons that user can choose from have been tested by looking reflections on the tracking board
+  - All robot's random betting responses have been tested with a print statement and following the tracking score
+  - Fold button is tested by directly clicking on it, and around it
+  - User's balance under 2$ directing to the Losing Screen is tested by betting largest amounts possible
+  - Robot's balance under 2$ directing to the Winning Screen is tested by betting smallest amounts possible until robot bets all their money
+- Result
+  - Both user's and robot's random balance is generating different number every time under 21 million as inteded
+  - Both user's and robot's records are always back to 0 upon running a new game
+  - All users animal-categorized calculate their values correctly and adjust tracking board as intended
+  - All robot's betting choices are correctly updating its balance, last bet and total vault
+  - Fold button correctly raises alert for user that they decided to exit keeping their balance and transfers user to the next screen
+  - Both losing balances of user and robot direct user to the appropriate Results Screen being either Winning or Losing
+
+
+![Game Board Features](./assets/media/images/lighthouse.jpg)
+
+#### Folded Screen
+
+- Expected:
+  - Folded Screen is expected to start automatically when user presses fold button
+  - Plays folded sound effect as soon as landed on the page
+  - Image of Orca is presented with a folded message
+  - Displays total rewards in the treasure chest that user has lost to the opponent
+  - Displays user's available unbetted balance
+  - Displays and updates Losing Score of the user by 1
+  - Offers possibility of continuing to the next game with remaining balance with next game button
+  - Offers possibility of starting the new game by automatically reloading screen for the user and bringing them to the home page with new game button
+- Testing: 
+  - Fold button is pressed to initiate folded screen
+  - Automatic sound effect is tested by speakers
+  - Image is tested if it remains withing borders on all different screen sizes
+  - Treasure vault value is tested by writing down amount before pressing button fold
+  - User's unbetted balance is tested by writing down amount before pressing button fold
+  - User's score is tested by writing down current score before pressing button fold
+  - Next game button is tested by clicking directly on it and around it
+  - New game button is tested by clicking directly on it and around it
+- Result
+  - Every time folded button is pressed and alert is raised, user is always taken only to the Folded Screen
+  - Sound effect plays correctly every time that page is loaded
+  - Image of Orca shows correctly across all viewports
+  - Total treasure value is always correctly transferred over to the folded screen
+  - User's remaining balance is always correctly transferred over to the folded screen
+  - User's score record is always correctly transferred over to the folded screen
+  - Next game button always brings user to the loading screen before initiating another game with remaining balance
+  - New game button always reloads the screen for the user bringing them back to the home page to insert more coins to continue
+
+![Folded Screen](./assets/media/images/lighthouse.jpg)
+
+#### Winning Screen
+
+- Expected:
+  - Winning Screen is expected to start automatically when robot's balance falls under 2$
+  - Plays winning sound effect as soon as landed on the page
+  - Image of treasure chest is presented with a winning message
+  - Displays total rewards in the treasure chest that user has won from the battle
+  - Displays user's new available balance by adding the treasure vault value with user's unbetted balance
+  - Displays and increases Winning Score of the user by 1
+  - Offers possibility of continuing to the next game with remaining balance with next game button
+ with new game button
+- Testing: 
+  - Keep pressing bets of value of 1$ to force robot to bet all their money away first and initiate Winning Screen
+  - Automatic sound effect is tested by speakers
+  - Image is tested if it remains withing borders on all different screen sizes
+  - Treasure vault value is tested by remembering the amount before each press of the 1$ bet
+  - User's unbetted balance is tested by remembering the amount before each press of the 1$ bet
+  - User's score is tested by writing down current score before start betting
+  - Next game button is tested by clicking directly on it and around it
+- Result
+  - Every time robot's balance falls under 2$, Winning Screen transfer procedure is initiated
+  - Sound effect plays correctly every time that page is loaded
+  - Image of treasure chest shows correctly across all viewports
+  - Total treasure value is always correctly transferred over to the winning screen
+  - User's remaining balance is always correctly transferred over to the winning screen
+  - User's score record is always correctly transferred over to the winning screen
+  - Next game button always brings user to the loading screen before initiating another game with remaining balance
+
+![Winning Screen](./assets/media/images/lighthouse.jpg)
+
+#### Losing Screen
+
+- Expected:
+  - Losing Screen is expected to start automatically when user's balance falls under 2$
+  - Plays losing sound effect as soon as landed on the page
+  - Image of empty pockets is presented with a folded message
+  - Displays total rewards in the treasure chest that user has lost to the opponent
+  - Displays user's available balance as 0
+  - Displays and updates Losing Score of the user by 1
+  - Offers possibility of starting the new game by automatically reloading screen for the user and bringing them to the home page with new game button
+- Testing: 
+  - Keep pressing bets of highest possible and available value to force user to lose all their money away first and initiate Losing Screen
+  - Automatic sound effect is tested by speakers
+  - Image is tested if it remains withing borders on all different screen sizes
+  - Treasure vault value is tested by remembering the amount before last lowest bets
+  - User's unbetted balance is tested by remembering the amount before last lowest bets
+  - User's score is tested by writing down current score before start betting
+  - New game button is tested by clicking directly on it and around it
+- Result
+  - Every time user's balance falls under 2$, Losing Screen transfer procedure is initiated
+  - Sound effect plays correctly every time that page is loaded
+  - Image of empty pockets shows correctly across all viewports
+  - Total treasure value is always correctly transferred over to the losing screen
+  - User's remaining balance is always correctly transferred over to the losing screen
+  - User's score record is always correctly transferred over to the losing screen
+  - New game button always reloads the screen for the user bringing them back to the home page to insert more coins to continue
+
+![Losing Screen](./assets/media/images/lighthouse.jpg)
+
+----
+
 ### Responsiveness (Responsive Design Checker)
 
 #### PC
@@ -333,7 +573,9 @@ I have conducted enough hours of testing across all screen sizes and different b
   - Since a completely new and original gaming concept is introduced in the game, innovators can take this concept and create their own twist of the game, such as monopoly and UNO can be played various different ways but core concept remains the same
 - USER STORY 5: As unemployed citizen, I want to play time consuming financial games so that I can think about money more ofter
   - For people with a lot of time on their hands, this game can be played on a loop with endless balances and outcomes. Those people are pushed to understand more value of money in the world and how much it is necessary to survive
+
 ----
+
 ### Bugs
 
   - #### Solved Bug - Icons Not Displaying
