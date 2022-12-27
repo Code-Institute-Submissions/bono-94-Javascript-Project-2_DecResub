@@ -261,7 +261,63 @@ I have conducted enough hours of testing across all screen sizes and different b
   - This test confirms that the colors and fonts chosen are easy to read and accessible to users. All scores are satisfactory besides performance since the site uses complex visuals and animation and large media which will be solved with the next update. The only issue found by the Lighthouse is referring to picture sizes, which are not impacting any animation or positioning of additional elements. It causes more taxation on the computing system and increases loading time, but the final results are as coded across all screens. All common practices and SEO levels have passed with a full percentage
 
     ![Lighthouse Results](./assets/media/images/lighthouse.jpg)
----
+
+----
+### Responsiveness (Responsive Design Checker)
+
+#### PC
+
+- 24 inch (1920x1200)
+
+![24 inch - 1](./assets/media/images/mistake.jpg)
+![24 inch - 2](./assets/media/images/mistake.jpg)
+![24 inch - 3](./assets/media/images/mistake.jpg)
+
+- 13 inch (1024x600)
+
+![13 inch - 1](./assets/media/images/mistake.jpg)
+![13 inch - 2](./assets/media/images/mistake.jpg)
+![13 inch - 3](./assets/media/images/mistake.jpg)
+![13 inch - 4](./assets/media/images/mistake.jpg)
+
+#### Tablet
+
+- Amazon Kindle Fire HD (768x1024)
+
+![Kindle - 1](./assets/media/images/mistake.jpg)
+![Kindle - 2](./assets/media/images/mistake.jpg)
+![Kindle - 3](./assets/media/images/mistake.jpg)
+![Kindle - 4](./assets/media/images/mistake.jpg)
+![Kindle - 5](./assets/media/images/mistake.jpg)
+
+
+- Apple Ipad Pro (1366x1024)
+
+![Ipad Pro - 1](./assets/media/images/mistake.jpg)
+![Ipad Pro - 2](./assets/media/images/mistake.jpg)
+![Ipad Pro - 3](./assets/media/images/mistake.jpg)
+
+#### Mobile
+
+- Samsung Galaxy S5/S6/S7 (360x640)
+
+![Samsung - 1](./assets/media/images/mistake.jpg)
+![Samsung - 2](./assets/media/images/mistake.jpg)
+![Samsung - 3](./assets/media/images/mistake.jpg)
+![Samsung - 4](./assets/media/images/mistake.jpg)
+![Samsung - 5](./assets/media/images/mistake.jpg)
+![Samsung - 6](./assets/media/images/mistake.jpg)
+
+
+- iPhone 6s Plus/7 Plus (414x736)
+
+![iPhone - 1](./assets/media/images/mistake.jpg)
+![iPhone - 2](./assets/media/images/mistake.jpg)
+![iPhone - 3](./assets/media/images/mistake.jpg)
+![iPhone - 4](./assets/media/images/mistake.jpg)
+![iPhone - 5](./assets/media/images/mistake.jpg)
+
+----
 ### Bugs
 
   - #### Solved Bug - Icons Not Displaying
